@@ -1,0 +1,8 @@
+Origin: Redentic’s Repo
+Label: Redentic’s Repo
+Suite: stable
+Version: 1.0
+Codename: cydia-ios
+Architectures: iphoneos-arm
+Components: main
+Description: All tweaks from RedenticDev

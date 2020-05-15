@@ -1,0 +1,40 @@
+body {
+    font-family: Helvetica,  Arial, sans-serif;
+    padding-top: 50px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+    background: url(https://images.unsplash.com/photo-1513569771920-c9e1d31714af?ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80) no-repeat top fixed;
+    background-size: cover;
+}
+
+.link {
+    display: inline-block;
+    color: white;
+}
+
+.link:after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: white;
+    transition: 300ms;
+    text-shadow: 2px 2px 8px black;
+}
+
+.link:hover:after {
+    width: 100%;
+}
+
+body a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+body a img {
+    height: 20px;
+    vertical-align: -4px;
+    box-shadow: 2px 2px 8px grey;
+    border-radius: 5px;
+}

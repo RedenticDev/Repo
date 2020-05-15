@@ -1,0 +1,40 @@
+<packageInfo>
+    <bundleId>com.redenticdev.sbcolors</bundleId>
+    <name>SBColors</name>
+    <version>1.0.0</version>
+    <descriptions>
+        <description>
+            Easily change your status bar colors!
+        </description>
+        <description>
+            This tweaks allows you to change the color of your status bar items, individually.
+        </description>
+        <description>
+            Features:
+            - Individual change of the color of each status bar element
+            - Juice Beta and Prysm support!
+            - Modern and clean settings
+            - Use of both libcolorpicker and the brand new Alderis Color Picker
+            - Reset or disable options
+            - Support from iOS 11 to iOS 13
+            - Support for both notched and non-notched iPhone (12 and A13 included)
+            - More to come! (Background support, individual reset...)
+        </description>
+    </descriptions>
+    <compatibility>
+        <miniOS>11.0</miniOS>
+        <maxiOS>13.5</maxiOS>
+    </compatibility>
+    <dependencies>
+        <dependency>mobilesubstrate</dependency>
+        <dependency>preferenceloader</dependency>
+        <dependency>Cephei</dependency>
+        <dependency>Alderis or libcolorpicker</dependency>
+    </dependencies>
+    <changelog>
+        <change>
+            <changeVersion>v1.0.0</changeVersion>
+            <changeDescription>Initial Release</changeDescription>
+        </change>
+    </changelog>
+</packageInfo>
