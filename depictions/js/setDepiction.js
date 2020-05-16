@@ -1,7 +1,7 @@
 $(function() {
     var bundle = getQueryVariable('p');
 
-    if (bundle != undefined){
+    if (bundle != undefined) {
         //Now fetch the appropriate file from this query string
     }
 
@@ -16,7 +16,7 @@ $(function() {
         type: "GET",
         url: baseUrl + "/" + bundle + "/info.xml",
         dataType: "xml",
-        success: function (xml) {
+        success: function(xml) {
             console.log("Beginning XML Parsing");
 
             // Parse the xml file and get data
