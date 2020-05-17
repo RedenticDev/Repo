@@ -47,11 +47,11 @@ $(function() {
                     $("#screenshots").append('<li><a href="' + pathTo + "/" + $(this).text() + '"><img src="' + pathTo + "/" + $(this).text() + '" draggable="false" /></a></li>');
                 });
 
-                $("#tableInfo").append('<tr><th>Developer</th><td>' + $(this).find("developer").text() + '</td></tr>');
-                $("#tableInfo").append('<tr><th>Price</th><td>' + $(this).find("price").text() + '</td></tr>');
-                $("#tableInfo").append('<tr><th>Version</th><td>iOS ' + $(this).find("miniOS").text() + ' to ' + $(this).find("maxiOS").text() + '</td></tr>');
-                // $("#tableInfo").append('<tr><th>Downloads</th><td>' +  + '</td></tr>');
-                $("#tableInfo").append('<tr><th>Category</th><td>' + $(this).find("category").text() + '</td></tr>');
+                $("#infoTable").append('<tr><th>Developer</th><td>' + $(this).find("developer").text() + '</td></tr>');
+                $("#infoTable").append('<tr><th>Price</th><td>' + $(this).find("price").text() + '</td></tr>');
+                $("#infoTable").append('<tr><th>Version</th><td>iOS ' + $(this).find("miniOS").text() + ' to ' + $(this).find("maxiOS").text() + '</td></tr>');
+                // $("#infoTable").append('<tr><th>Downloads</th><td>' +  + '</td></tr>');
+                $("#infoTable").append('<tr><th>Category</th><td>' + $(this).find("category").text() + '</td></tr>');
 
                 $("#links").append('<tr><td><a href="' + $(this).find("github").text() + '"><img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/4b/75/74/4b757442-8ff0-1bcb-dfde-8d39fba370c4/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.png" />Github</a></td></tr>');
                 $("#links").append('<tr><td><a href="' + $(this).find("twitter").text() + '"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/d3/95/33/d3953380-0fbb-a92e-3be4-d9c0daf90499/ProductionAppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.png" />Twitter</a></td></tr>');

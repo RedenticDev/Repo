@@ -185,12 +185,14 @@ td {
 
 #links tr a:after {
 	content: "›";
+	font-weight: 300;
 	font-size: 30px;
 	float: right;
 }
 
 #links tr a img {
 	height: 20px;
+	border-radius: 5px;
     vertical-align: -4px;
     margin-right: 3px;
 }
