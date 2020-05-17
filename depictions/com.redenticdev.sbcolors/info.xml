@@ -37,4 +37,10 @@
             <changeDescription>Initial Release</changeDescription>
         </change>
     </changelog>
+    <screenshots>
+        <screen>1.png</screen>
+        <screen>2.png</screen>
+        <screen>3.png</screen>
+        <screen>4.png</screen>
+    </screenshots>
 </packageInfo>

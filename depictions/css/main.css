@@ -20,7 +20,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -63,7 +62,8 @@ body {
 	margin-bottom: 10px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 260px;
+	width: 88vw;
+	max-width: 760px;
 	text-align: left;
 	font-size: 17px;
 }
@@ -71,7 +71,8 @@ body {
 .box {
 	background-color: #fffdfd;
 	margin-bottom: 20px;
-	width: 240px;
+	width: 90vw;
+	max-width: 800px;
 	border-radius: 10px;
 	padding: 10px;
 	margin-left: auto;
@@ -121,4 +122,23 @@ body {
 #changeLog h1 {
 	margin-top: 20px;
 	margin-bottom: 5px;
+}
+
+#screenshots {
+	overflow-x: scroll;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+#screenshots li {
+	display: inline;
+}
+
+#screenshots img {
+	border-radius: 8px;
+	max-width: 90%;
+	max-height: 400px;
+	padding: 16px;
+	-webkit-user-drag: none;
 }

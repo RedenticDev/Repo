@@ -10,11 +10,11 @@ $(function() {
     console.log("Fetching XML");
     var getUrl = window.location;
     var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
-    console.log(baseUrl + "/"+ bundle + "/info.xml");
+    var pathTo = baseUrl + "/" + bundle;
 
     $.ajax({
         type: "GET",
-        url: baseUrl + "/" + bundle + "/info.xml",
+        url: pathTo + "/info.xml",
         dataType: "xml",
         success: function(xml) {
             console.log("Beginning XML Parsing");
@@ -40,17 +40,27 @@ $(function() {
                 });
 
                 $(xml).find('change').each(function() {
-                    $("#changeLog").append('<li><h1>' + $(this).find("changeVersion").text() + '</h1>');
+                    $("#changeLog").append('<li><h1>' + $(this).find('changeVersion').text() + '</h1>');
                     $(this).find('changeDescription').each(function() {
                         $("#changeLog").append('<h2>' + $(this).text() + '<h2>');
                     });
                     $("#changeLog").append('<li>');
+                });
+
+                $(xml).find('screen').each(function() {
+                    $("#screenshots").append('<li><a href="' + pathTo + "/" + $(this).text() + '"><img src="' + pathTo + "/" + $(this).text() + '" draggable="false" /></a></li>');
                 });
             });
         }
     });
 });
 
+$("img").bind('dragstart', function(){
+    return false;
+});
+$("img").bind('mousedown', function(){
+    return false;
+});
 
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
