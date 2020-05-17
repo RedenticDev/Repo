@@ -22,8 +22,9 @@ body {
     transition: 300ms;
 }
 
-body a img:hover > .link:after, .link:hover:after {
+body a img:hover + .link:after, .link:hover:after {
     width: 100%;
+    box-shadow: 2px 2px 8px black;
 }
 
 body a {
@@ -34,7 +35,7 @@ body a {
 body a img {
     height: 20px;
     vertical-align: -4px;
-    box-shadow: 2px 2px 10px grey;
+    box-shadow: 2px 2px 8px grey;
     border-radius: 5px;
     margin-right: 3px;
 }
