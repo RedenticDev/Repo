@@ -9,6 +9,15 @@
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166936804-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-166936804-1');
+        </script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="js/setDepiction.js"></script>
     </head>
@@ -46,6 +55,14 @@
             <ul id="screenshots"></ul>
         </div>
 
-        <ul id="links"></ul>
+        <h1 class="boxTitle">Informations</h1>
+        <div class="box">
+            <table id="infoTable"></table>
+        </div>
+
+        <h1 class="boxTitle">Links</h1>
+        <div class="box">
+            <table id="links"></table>
+        </div>
     </body>
 </html>
