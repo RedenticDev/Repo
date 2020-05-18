@@ -24,8 +24,10 @@ $(function() {
                 // document.getElementById("packageTitle").innerHTML = $(this).find("name").text();
                 // document.getElementById("bundleId").innerHTML = $(this).find("bundleId").text();
                 // document.getElementById("version").innerHTML = $(this).find("version").text();
-                document.getElementById("miniOS").innerHTML = $(this).find("miniOS").text();
-                document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
+                // document.getElementById("miniOS").innerHTML = $(this).find("miniOS").text();
+                // document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
+
+                compatible($(this).find("miniOS").text(), $(this).find("maxiOS").text());
 
                 $(xml).find("description").each(function() {
                     $("#description").append("<li>" + $(this).text() + "</li>");
@@ -68,6 +70,34 @@ $("img").bind("dragstart", function(){
 $("img").bind("mousedown", function(){
     return false;
 });
+
+function compatible(works_min, works_max) {
+    let currentiOS = parseFloat(('' + (/CPU.*OS ([0-9_]{1,})|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0,''])[1]).replace('undefined', '3_2').replace('_', '.').replace('_', ''));
+    works_min = numerize(works_min);
+    works_max = numerize(works_max);
+    let text = document.getElementById("compatibility");
+    let text_container = document.getElementById("compatibility-box");
+    if (currentiOS < works_min) {
+        text.innerHTML = "Your version of iOS is too old for this package. This package works from iOS " + works_min + "to iOS " + works_max + ".";
+        text.style.color = "red";
+        text_container.style.backgroundColor = "lightpink";
+        text_container.style.border = "1px solid red";
+    } else if (currentiOS > works_max) {
+        text.innerHTML = "This package has not been tested with your iOS version. This package works from iOS " + works_min + "to iOS " + works_max + ".";
+        text.style.color = "goldenrod";
+        text_container.style.backgroundColor = "lightyellow";
+        text_container.style.border = "1px solid goldenrod";
+    } else if (String(currentiOS) != "NaN") {
+        text.innerHTML = "This package works on your device!";
+        text.style.color = "green";
+        text_container.style.backgroundColor = "lightgreen";
+        text_container.style.border = "1px solid green";
+    }
+}
+
+function numerize(x) {
+    return x.substring(0, x.indexOf(".")) + "." + x.substring(x.indexOf(".") + 1).replace(".", "")
+}
 
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);

@@ -84,10 +84,6 @@ body {
 	display: inline-block;
 }
 
-#MINIOS, #MAXIOS{
-	display: inline-block;
-}
-
 #description {
 	text-align: left;
 	white-space: pre-line;
