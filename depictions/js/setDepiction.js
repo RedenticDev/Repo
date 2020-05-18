@@ -44,7 +44,7 @@ $(function() {
                 });
 
                 $(xml).find("screen").each(function() {
-                    $("#screenshots").append('<li><a href="' + pathTo + "/" + $(this).text() + '"><img src="' + pathTo + "/" + $(this).text() + '" draggable="false" /></a></li>');
+                    $("#screenshots").append('<li><a href="' + pathTo + "/" + $(this).text() + '" target="_blank"><img src="' + pathTo + "/" + $(this).text() + '" draggable="false" /></a></li>');
                 });
 
                 $("#infoTable").append('<tr><th>Developer</th><td>' + $(this).find("developer").text() + '</td></tr>');
@@ -53,10 +53,10 @@ $(function() {
                 // $("#infoTable").append('<tr><th>Downloads</th><td>' +  + '</td></tr>');
                 $("#infoTable").append('<tr><th>Category</th><td>' + $(this).find("category").text() + '</td></tr>');
 
-                $("#links").append('<tr><td><a href="' + $(this).find("github").text() + '"><img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/4b/75/74/4b757442-8ff0-1bcb-dfde-8d39fba370c4/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.png" />Github</a></td></tr>');
-                $("#links").append('<tr><td><a href="' + $(this).find("twitter").text() + '"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/d3/95/33/d3953380-0fbb-a92e-3be4-d9c0daf90499/ProductionAppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.png" />Twitter</a></td></tr>');
-                $("#links").append('<tr><td><a href="' + $(this).find("mail").text() + '"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/c7/40/e5/c740e5f0-2a62-4fa7-dc1b-66ea3d519545/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-10.png/460x0w.png" />Mail</a></td></tr>');
-                $("#links").append('<tr><td><a href="' + $(this).find("paypal").text() + '"><img src="https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/47/91/55/4791557c-5d1e-7357-9d5e-1eb20d3bb42b/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.png" />Paypal</a></td></tr>');
+                $("#links").append('<tr><td><a href="' + $(this).find("github").text() + '" target="_blank"><img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/4b/75/74/4b757442-8ff0-1bcb-dfde-8d39fba370c4/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.png" />Github</a></td></tr>');
+                $("#links").append('<tr><td><a href="' + $(this).find("twitter").text() + '" target="_blank"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/d3/95/33/d3953380-0fbb-a92e-3be4-d9c0daf90499/ProductionAppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.png" />Twitter</a></td></tr>');
+                $("#links").append('<tr><td><a href="' + $(this).find("mail").text() + '" target="_blank"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/c7/40/e5/c740e5f0-2a62-4fa7-dc1b-66ea3d519545/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-10.png/460x0w.png" />Mail</a></td></tr>');
+                $("#links").append('<tr><td><a href="' + $(this).find("paypal").text() + '" target="_blank"><img src="https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/47/91/55/4791557c-5d1e-7357-9d5e-1eb20d3bb42b/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.png" />Paypal</a></td></tr>');
             });
         }
     });

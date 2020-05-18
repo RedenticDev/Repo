@@ -180,7 +180,9 @@ td {
 }
 
 #links tr a:hover {
-	color: #7eb6fc;
+	color: #023d85;
+	background-color: rgb(240, 240, 240);
+	border-radius: 10px;
 }
 
 #links tr a:after {
@@ -188,11 +190,13 @@ td {
 	font-weight: 300;
 	font-size: 30px;
 	float: right;
+	margin-right: 5px;
+	transform: translateY(-2px);
 }
 
 #links tr a img {
 	height: 20px;
 	border-radius: 5px;
-    vertical-align: -4px;
-    margin-right: 3px;
+    vertical-align: -5px;
+    margin-right: 5px;
 }
