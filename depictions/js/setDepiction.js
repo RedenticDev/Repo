@@ -6,7 +6,7 @@ $(function() {
     }
 
 
-    console.log(getQueryVariable('p'));
+    console.log("Package:" + getQueryVariable('p'));
     console.log("Fetching XML");
     var getUrl = window.location;
     var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
@@ -113,15 +113,4 @@ function compatible(works_min, works_max) {
 
 function numerize(x) {
     return x.substring(0, x.indexOf(".")) + "." + x.substring(x.indexOf(".") + 1).replace(".", "")
-}
-
-function darkMode(isOled) {
-    var darkColor = isOled ? "black" : "#161616";
-    document.querySelector("body:not(#compatibility-box)").style.color = "white";
-    document.querySelector("body:not(#compatibility-box)").style.background = darkColor;
-    document.querySelector(".box").style.background = "grey";
-}
-
-if (navigator.userAgent.toLowerCase().indexOf("dark") != -1) {
-    darkMode(navigator.userAgent.toLowerCase().indexOf("oled") != -1);
 }

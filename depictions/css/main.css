@@ -196,3 +196,14 @@ td {
     vertical-align: -5px;
     margin-right: 5px;
 }
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: black;
+		color: white;
+	}
+
+	.box {
+		background-color: dimgrey;
+	}
+}
