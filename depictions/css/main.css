@@ -206,4 +206,9 @@ td {
 	.box {
 		background-color: dimgrey;
 	}
+
+	#links tr a {
+		color: white;
+		font-weight: bold;
+	}
 }
