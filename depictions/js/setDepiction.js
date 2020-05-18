@@ -52,6 +52,7 @@ $(function() {
                 $("#infoTable").append('<tr><th>Developer</th><td>' + $(this).find("developer").text() + '</td></tr>');
                 $("#infoTable").append('<tr><th>Price</th><td>' + $(this).find("price").text() + '</td></tr>');
                 $("#infoTable").append('<tr><th>Version</th><td>iOS ' + $(this).find("miniOS").text() + ' to ' + $(this).find("maxiOS").text() + '</td></tr>');
+                $("#infoTable").append('<tr><th>Last update</th><td>' + $(this).find("lastdate").text() + '</td></tr>');
                 // $("#infoTable").append('<tr><th>Downloads</th><td>' +  + '</td></tr>');
                 $("#infoTable").append('<tr><th>Category</th><td>' + $(this).find("category").text() + '</td></tr>');
 
