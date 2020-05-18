@@ -71,6 +71,19 @@ $("img").bind("mousedown", function(){
     return false;
 });
 
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    console.log("Query variable %s not found", variable);
+}
+
+// Inspired by repo.conorthedev.me/depiction/web
 function compatible(works_min, works_max) {
     let currentiOS = parseFloat(('' + (/CPU.*OS ([0-9_]{1,})|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0,''])[1]).replace('undefined', '3_2').replace('_', '.').replace('_', ''));
     works_min = numerize(works_min);
@@ -92,6 +105,9 @@ function compatible(works_min, works_max) {
         text.style.color = "green";
         text_container.style.backgroundColor = "lightgreen";
         text_container.style.border = "1px solid green";
+    } else {
+        text.innerHTML = "Cannot determine your version. Open this page on an iPhone to check compatibility.";
+        text.style.fontStyle = "italic";
     }
 }
 
@@ -99,14 +115,13 @@ function numerize(x) {
     return x.substring(0, x.indexOf(".")) + "." + x.substring(x.indexOf(".") + 1).replace(".", "")
 }
 
-function getQueryVariable(variable) {
-    var query = window.location.search.substring(1);
-    var vars = query.split('&');
-    for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split('=');
-        if (decodeURIComponent(pair[0]) == variable) {
-            return decodeURIComponent(pair[1]);
-        }
-    }
-    console.log("Query variable %s not found", variable);
+function darkMode(isOled) {
+    var darkColor = isOled ? "black" : "#161616";
+    document.querySelector("body:not(#compatibility-box)").style.color = "white";
+    document.querySelector("body:not(#compatibility-box)").style.background = darkColor;
+    document.querySelector(".box").style.background = "grey";
+}
+
+if (navigator.userAgent.toLowerCase().indexOf("dark") != -1) {
+    darkMode(navigator.userAgent.toLowerCase().indexOf("oled") != -1);
 }
