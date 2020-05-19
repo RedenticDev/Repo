@@ -29,48 +29,48 @@ $(function() {
                 // document.getElementById("miniOS").innerHTML = $(this).find("miniOS").text();
                 // document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
 
-                document.title = $(this).find("name").text();
+                document.title = $(this).find("name").text().trim();
 
-                compatible($(this).find("miniOS").text(), $(this).find("maxiOS").text());
+                compatible($(this).find("miniOS").text().trim(), $(this).find("maxiOS").text().trim());
 
                 $(xml).find("description").each(function() {
-                    $("#description").append("<li>" + $(this).text() + "</li>");
+                    $("#description").append("<li>" + $(this).text().trim() + "</li>");
                 });
 
                 $(xml).find("dependency").each(function() {
-                    $("#dependencies").append("<li>" + $(this).text() + "</li>");
+                    $("#dependencies").append("<li>" + $(this).text().trim() + "</li>");
                 });
 
                 $(xml).find("change").each(function() {
-                    $("#changelog").append("<li><h1>" + $(this).find("changeVersion").text() + "</h1>");
+                    $("#changelog").append("<li><h1>" + $(this).find("changeVersion").text().trim() + "</h1>");
                     $(this).find("changeDescription").each(function() {
-                        $("#changelog").append("<h2>- " + $(this).text() + "<h2>");
+                        $("#changelog").append("<h2>- " + $(this).text().trim() + "<h2>");
                     });
                     $("#changelog").append("<li>");
                 });
 
                 $(xml).find("screen").each(function() {
                     shouldShowNoScreenshots = false;
-                    $("#screenshots").append('<li><a href="' + pathTo + "/" + $(this).text() + '" target="_blank"><img src="' + pathTo + "/" + $(this).text() + '" draggable="false" /></a></li>');
+                    $("#screenshots").append('<li><a href="' + pathTo + "/" + $(this).text().trim() + '" target="_blank"><img src="' + pathTo + "/" + $(this).text().trim() + '" draggable="false" /></a></li>');
                 });
 
                 if (shouldShowNoScreenshots) {
                     $("#screenshots").append('<li style="padding-top: 20px; padding-bottom:20px">No screenshots provided.</li>');
                 }
 
-                $("#infoTable").append('<tr><th>Developer</th><td>' + $(this).find("developer").text() + '</td></tr>');
-                $("#infoTable").append('<tr><th>Price</th><td>' + $(this).find("price").text() + '</td></tr>');
-                $("#infoTable").append('<tr><th>Version</th><td>' + $(this).find("version").text() + '</td></tr>');
-                $("#infoTable").append('<tr><th>iOS Version</th><td>iOS ' + $(this).find("miniOS").text() + ' to ' + $(this).find("maxiOS").text() + '</td></tr>');
-                $("#infoTable").append('<tr><th>Last update</th><td>' + $(this).find("lastupdate").text() + '</td></tr>');
-                $("#infoTable").append('<tr><th>Release date</th><td>' + $(this).find("release").text() + '</td></tr>');
+                $("#infoTable").append('<tr><th>Developer</th><td>' + $(this).find("developer").text().trim() + '</td></tr>');
+                $("#infoTable").append('<tr><th>Price</th><td>' + $(this).find("price").text().trim() + '</td></tr>');
+                $("#infoTable").append('<tr><th>Version</th><td>' + $(this).find("version").text().trim() + '</td></tr>');
+                $("#infoTable").append('<tr><th>iOS Version</th><td>iOS ' + $(this).find("miniOS").text().trim() + ' to ' + $(this).find("maxiOS").text().trim() + '</td></tr>');
+                $("#infoTable").append('<tr><th>Last update</th><td>' + $(this).find("lastupdate").text().trim() + '</td></tr>');
+                $("#infoTable").append('<tr><th>Release date</th><td>' + $(this).find("release").text().trim() + '</td></tr>');
                 // $("#infoTable").append('<tr><th>Downloads</th><td>' +  + '</td></tr>');
-                $("#infoTable").append('<tr><th>Category</th><td>' + $(this).find("category").text() + '</td></tr>');
+                $("#infoTable").append('<tr><th>Category</th><td>' + $(this).find("category").text().trim() + '</td></tr>');
 
-                $("#links").append('<tr><td><a href="' + $(this).find("github").text() + '" target="_blank"><img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/4b/75/74/4b757442-8ff0-1bcb-dfde-8d39fba370c4/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.png" />Github</a></td></tr>');
-                $("#links").append('<tr><td><a href="' + $(this).find("twitter").text() + '" target="_blank"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/d3/95/33/d3953380-0fbb-a92e-3be4-d9c0daf90499/ProductionAppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.png" />Twitter</a></td></tr>');
-                $("#links").append('<tr><td><a href="' + $(this).find("mail").text() + '" target="_blank"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/c7/40/e5/c740e5f0-2a62-4fa7-dc1b-66ea3d519545/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-10.png/460x0w.png" />Mail</a></td></tr>');
-                $("#links").append('<tr><td><a href="' + $(this).find("paypal").text() + '" target="_blank"><img src="https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/47/91/55/4791557c-5d1e-7357-9d5e-1eb20d3bb42b/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.png" />Paypal</a></td></tr>');
+                $("#links").append('<tr><td><a href="' + $(this).find("github").text().trim() + '" target="_blank"><img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/4b/75/74/4b757442-8ff0-1bcb-dfde-8d39fba370c4/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.png" />Github</a></td></tr>');
+                $("#links").append('<tr><td><a href="' + $(this).find("twitter").text().trim() + '" target="_blank"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/d3/95/33/d3953380-0fbb-a92e-3be4-d9c0daf90499/ProductionAppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.png" />Twitter</a></td></tr>');
+                $("#links").append('<tr><td><a href="' + $(this).find("mail").text().trim() + '" target="_blank"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/c7/40/e5/c740e5f0-2a62-4fa7-dc1b-66ea3d519545/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-10.png/460x0w.png" />Mail</a></td></tr>');
+                $("#links").append('<tr><td><a href="' + $(this).find("paypal").text().trim() + '" target="_blank"><img src="https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/47/91/55/4791557c-5d1e-7357-9d5e-1eb20d3bb42b/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.png" />Paypal</a></td></tr>');
             });
         }
     });
