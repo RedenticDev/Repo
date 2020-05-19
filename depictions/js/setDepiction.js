@@ -42,11 +42,11 @@ $(function() {
                 });
 
                 $(xml).find("change").each(function() {
-                    $("#changelog").append("<li><h1>" + $(this).find("changeVersion").text().trim() + "</h1>");
+                    $("#changelog").append('<li><h1>' + $(this).find("changeVersion").text().trim() + '</h1>');
                     $(this).find("changeDescription").each(function() {
-                        $("#changelog").append("<h2>- " + $(this).text().trim() + "<h2>");
+                        $("#changelog").append('<h2>- ' + $(this).text().trim() + '</h2>');
                     });
-                    $("#changelog").append("<li>");
+                    $("#changelog").append('</li>');
                 });
 
                 $(xml).find("screen").each(function() {
