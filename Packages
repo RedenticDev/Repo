@@ -1,0 +1,18 @@
+Package: com.redenticdev.sbcolors
+Version: 1.0.0-1+debug
+Architecture: iphoneos-arm
+Maintainer: RedenticDev <redenticdev@gmail.com>
+Installed-Size: 852
+Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common (>= 1.11), ws.hbang.alderis | org.thebigboss.libcolorpicker (>= 1.6.3)
+Filename: ./debs/com.redenticdev.sbcolors_1.0.0_iphoneos-arm.deb
+Size: 467968
+MD5sum: 18bb87e7ca5ff81ea0d2ce290537ecea
+SHA1: 9e8d6d89e20400b10eedea39b92bcde827c777ef
+SHA256: c29b2b069eaa6aa6b8a09c7f02bb6c7d8e87b7fed444d518ca9bdcd985a278ec
+Section: Tweaks
+Description: Easily change your status bar colors!
+Author: RedenticDev <redenticdev@gmail.com>
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.sbcolors
+Icon: https://raw.githubusercontent.com/RedenticDev/SBColors/master/assets/icon-large.png
+Name: SBColors
+
