@@ -7,6 +7,7 @@ $(function() {
     }
 
     var shouldShowNoScreenshots = true;
+    var changelogExport = "";
 
     console.log("Package: " + getQueryVariable('p'));
     console.log("Fetching XML");
@@ -42,11 +43,12 @@ $(function() {
                 });
 
                 $(xml).find("change").each(function() {
-                    $("#changelog").append('<li><h1>' + $(this).find("changeVersion").text().trim() + '</h1>');
+                    changelogExport += "<li><h1>" + $(this).find("changeVersion").text().trim() + "</h1>";
                     $(this).find("changeDescription").each(function() {
-                        $("#changelog").append('<h2>- ' + $(this).text().trim() + '</h2>');
+                        changelogExport += "<h2>- " + $(this).text().trim() + "</h2>";
                     });
-                    $("#changelog").append('</li>');
+                    changelogExport += "</li>";
+                    $("#changelog").append(changelogExport);
                 });
 
                 $(xml).find("screen").each(function() {
