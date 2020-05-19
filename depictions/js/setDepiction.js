@@ -1,12 +1,14 @@
 $(function() {
     var bundle = getQueryVariable('p');
 
-    if (bundle != undefined) {
-        //Now fetch the appropriate file from this query string
+    if (bundle == undefined) {
+        console.log("Package not found. Aborting.");
+        return;
     }
 
+    var shouldShowNoScreenshots = true;
 
-    console.log("Package:" + getQueryVariable('p'));
+    console.log("Package: " + getQueryVariable('p'));
     console.log("Fetching XML");
     var getUrl = window.location;
     var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
@@ -27,6 +29,8 @@ $(function() {
                 // document.getElementById("miniOS").innerHTML = $(this).find("miniOS").text();
                 // document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
 
+                document.title = $(this).find("name").text();
+
                 compatible($(this).find("miniOS").text(), $(this).find("maxiOS").text());
 
                 $(xml).find("description").each(function() {
@@ -38,21 +42,28 @@ $(function() {
                 });
 
                 $(xml).find("change").each(function() {
-                    $("#changeLog").append("<li><h1>" + $(this).find("changeVersion").text() + "</h1>");
+                    $("#changelog").append("<li><h1>" + $(this).find("changeVersion").text() + "</h1>");
                     $(this).find("changeDescription").each(function() {
-                        $("#changeLog").append("<h2>- " + $(this).text() + "<h2>");
+                        $("#changelog").append("<h2>- " + $(this).text() + "<h2>");
                     });
-                    $("#changeLog").append("<li>");
+                    $("#changelog").append("<li>");
                 });
 
                 $(xml).find("screen").each(function() {
+                    shouldShowNoScreenshots = false;
                     $("#screenshots").append('<li><a href="' + pathTo + "/" + $(this).text() + '" target="_blank"><img src="' + pathTo + "/" + $(this).text() + '" draggable="false" /></a></li>');
                 });
 
+                if (shouldShowNoScreenshots) {
+                    $("#screenshots").append('<li style="padding-top: 20px; padding-bottom:20px">No screenshots provided.</li>');
+                }
+
                 $("#infoTable").append('<tr><th>Developer</th><td>' + $(this).find("developer").text() + '</td></tr>');
                 $("#infoTable").append('<tr><th>Price</th><td>' + $(this).find("price").text() + '</td></tr>');
-                $("#infoTable").append('<tr><th>Version</th><td>iOS ' + $(this).find("miniOS").text() + ' to ' + $(this).find("maxiOS").text() + '</td></tr>');
-                $("#infoTable").append('<tr><th>Last update</th><td>' + $(this).find("lastdate").text() + '</td></tr>');
+                $("#infoTable").append('<tr><th>Version</th><td>' + $(this).find("version").text() + '</td></tr>');
+                $("#infoTable").append('<tr><th>iOS Version</th><td>iOS ' + $(this).find("miniOS").text() + ' to ' + $(this).find("maxiOS").text() + '</td></tr>');
+                $("#infoTable").append('<tr><th>Last update</th><td>' + $(this).find("lastupdate").text() + '</td></tr>');
+                $("#infoTable").append('<tr><th>Release date</th><td>' + $(this).find("release").text() + '</td></tr>');
                 // $("#infoTable").append('<tr><th>Downloads</th><td>' +  + '</td></tr>');
                 $("#infoTable").append('<tr><th>Category</th><td>' + $(this).find("category").text() + '</td></tr>');
 
@@ -65,10 +76,10 @@ $(function() {
     });
 });
 
-$("img").bind("dragstart", function(){
+$("img").bind("dragstart", function() {
     return false;
 });
-$("img").bind("mousedown", function(){
+$("img").bind("mousedown", function() {
     return false;
 });
 
@@ -113,5 +124,5 @@ function compatible(works_min, works_max) {
 }
 
 function numerize(x) {
-    return x.substring(0, x.indexOf(".")) + "." + x.substring(x.indexOf(".") + 1).replace(".", "")
+    return x.substring(0, x.indexOf(".")) + "." + x.substring(x.indexOf(".") + 1).replace(".", "");
 }

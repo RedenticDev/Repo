@@ -86,25 +86,39 @@ body {
 
 #description {
 	text-align: left;
-	white-space: pre-line;
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
 #description li {
-	margin-bottom: 10px;
+	white-space: pre-line;
+	padding-top: 5px;
+	padding-bottom: 10px;
 }
 
-#changeLog {
+#description li:first-child {
+	padding-top: 10px;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+#changelog {
 	text-align: left;
-	white-space: pre-line;
-	padding-bottom: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
-#changeLog h1 {
-	margin-top: 10px;
+#changelog li {
+	white-space: pre-line;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+#changelog li:first-child {
+	padding-top: 10px;
+}
+
+#changelog h1 {
 	margin-bottom: 5px;
 }
 
@@ -125,17 +139,6 @@ body {
 	max-height: 400px;
 	padding: 16px;
 	-webkit-user-drag: none;
-}
-
-#infos {
-	text-align: left;
-	white-space: pre-line;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-#infos li {
-	margin-bottom: 10px;
 }
 
 table {

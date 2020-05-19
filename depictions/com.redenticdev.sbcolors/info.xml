@@ -48,7 +48,8 @@
     <informations>
         <developer>RedenticDev</developer>
         <price>Free</price>
-        <lastdate>05/15/2020</lastdate>
+        <lastupdate>05/15/2020</lastupdate>
+        <release>05/15/2020</release>
         <category>Tweaks</category>
     </informations>
     <links>
@@ -56,5 +57,6 @@
         <twitter>https://twitter.com/RedenticDev</twitter>
         <mail>mailto:redenticdev@gmail.com</mail>
         <paypal>https://www.paypal.me/redenticdev</paypal>
+        <reddit>https://www.reddit.com/user/redentic</reddit>
     </links>
 </packageInfo>
