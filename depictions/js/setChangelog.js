@@ -6,6 +6,8 @@ $(function() {
         return;
     }
 
+    var changelogExport = "";
+
     console.log("Package: " + getQueryVariable('p'));
     console.log("Fetching XML");
     var getUrl = window.location;
@@ -23,24 +25,14 @@ $(function() {
             $(xml).find("packageInfo").each(function() {
                 document.title = $(this).find("name").text().trim() + "'s changelog";
 
-                compatible($(this).find("miniOS").text().trim(), $(this).find("maxiOS").text().trim());
-
-                $(xml).find("description").each(function() {
-                    $("#description").append("<li>" + $(this).text().trim() + "</li>");
-                });
-
-                $(xml).find("dependency").each(function() {
-                    $("#dependencies").append("<li>" + $(this).text().trim() + "</li>");
-                });
-
                 $(xml).find("change").each(function() {
                     changelogExport += "<li><h1>" + $(this).find("changeVersion").text().trim() + "</h1>";
                     $(this).find("changeDescription").each(function() {
                         changelogExport += "<h2>- " + $(this).text().trim() + "</h2>";
                     });
                     changelogExport += "</li>";
-                    $("#changelog").append(changelogExport);
                 });
+                $("#changelog").append(changelogExport);
             });
         }
     });
