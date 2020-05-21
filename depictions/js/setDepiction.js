@@ -24,12 +24,6 @@ $(function() {
 
             // Parse the xml file and get data
             $(xml).find("packageInfo").each(function() {
-                // document.getElementById("packageTitle").innerHTML = $(this).find("name").text();
-                // document.getElementById("bundleId").innerHTML = $(this).find("bundleId").text();
-                // document.getElementById("version").innerHTML = $(this).find("version").text();
-                // document.getElementById("miniOS").innerHTML = $(this).find("miniOS").text();
-                // document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
-
                 document.title = $(this).find("name").text().trim();
 
                 compatible($(this).find("miniOS").text().trim(), $(this).find("maxiOS").text().trim());
@@ -42,14 +36,16 @@ $(function() {
                     $("#dependencies").append("<li>" + $(this).text().trim() + "</li>");
                 });
 
-                $(xml).find("change").each(function() {
-                    changelogExport += "<li><h1>" + $(this).find("changeVersion").text().trim() + "</h1>";
+                $(xml).find("change:first").each(function() {
+                    $("#pill").append($(this).find("changeVersion").text().trim());
+                    changelogExport += "<li>";
                     $(this).find("changeDescription").each(function() {
                         changelogExport += "<h2>- " + $(this).text().trim() + "</h2>";
                     });
                     changelogExport += "</li>";
-                    $("#changelog").append(changelogExport);
                 });
+                $("#changelog-date").append($(this).find("lastupdate").text().trim());
+                $("#changelog").append(changelogExport + '<table><tr><td><a href="changelog/?p=' + bundle + '" target="_blank">Full changelog</a></td></tr></table>');
 
                 $(xml).find("screen").each(function() {
                     shouldShowNoScreenshots = false;
@@ -57,7 +53,7 @@ $(function() {
                 });
 
                 if (shouldShowNoScreenshots) {
-                    $("#screenshots").append('<li style="padding-top: 20px; padding-bottom:20px">No screenshots provided.</li>');
+                    $("#screenshots").append('<li>No screenshots provided.</li>');
                 }
 
                 $("#infoTable").append('<tr><th>Developer</th><td>' + $(this).find("developer").text().trim() + '</td></tr>');
@@ -120,7 +116,7 @@ function compatible(works_min, works_max) {
         text_container.style.backgroundColor = "lightgreen";
         text_container.style.border = "1px solid green";
     } else {
-        text.innerHTML = "Cannot determine your version. Open this page on an iPhone to check compatibility.";
+        text.innerHTML = "Cannot determine your version. Open this page on an iPhone/iPad/iPod to check compatibility.";
         text.style.fontStyle = "italic";
     }
 }

@@ -122,6 +122,46 @@ body {
 	margin-bottom: 5px;
 }
 
+#changelog table {
+	margin-top: 10px;
+	width: 100%;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 30px;
+}
+
+#changelog table tr {
+	border-top: 1px solid #ccc;
+	text-align: left;
+}
+
+.title-container {
+	position: relative;
+}
+
+.title-container > * {
+	display: inline-block;
+}
+
+#pill {
+	font-size: 75%;
+	margin-left: 10px;
+	padding: 2px;
+	padding-left: 7px;
+	padding-right: 7px;
+	background-color: lightgrey;
+	border-radius: 10px;
+}
+
+#changelog-date {
+	font-size: 75%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	float: right;
+}
+
 #screenshots {
 	overflow-x: scroll;
 	white-space: nowrap;
@@ -171,20 +211,20 @@ td {
 	text-align: left;
 }
 
-#links tr a {
+tr a {
 	color: #147dfb;
 	display: block;
 	padding-left: 10px;
 	text-decoration: none;
 }
 
-#links tr a:hover {
+tr a:hover {
 	color: #023d85;
 	background-color: rgb(240, 240, 240);
 	border-radius: 10px;
 }
 
-#links tr a:after {
+tr a:after {
 	content: "›";
 	font-weight: 300;
 	font-size: 30px;
@@ -193,13 +233,14 @@ td {
 	transform: translateY(-2px);
 }
 
-#links tr a img {
+tr a img {
 	height: 20px;
 	border-radius: 5px;
     vertical-align: -5px;
     margin-right: 5px;
 }
 
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: black;
@@ -210,8 +251,12 @@ td {
 		background-color: dimgrey;
 	}
 
-	#links tr a {
+	tr a {
 		color: white;
 		font-weight: bold;
+	}
+
+	#pill {
+		background-color: grey;
 	}
 }
