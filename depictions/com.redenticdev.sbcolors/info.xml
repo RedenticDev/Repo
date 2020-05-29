@@ -45,13 +45,13 @@
         <screen>3.png</screen>
         <screen>4.png</screen>
     </screenshots>
-    <informations>
+    <information>
         <developer>RedenticDev</developer>
         <price>Free</price>
         <lastupdate>05/15/2020</lastupdate>
         <release>05/15/2020</release>
         <category>Tweaks</category>
-    </informations>
+    </information>
     <links>
         <github>https://github.com/RedenticDev</github>
         <twitter>https://twitter.com/RedenticDev</twitter>
