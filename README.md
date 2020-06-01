@@ -7,5 +7,6 @@ This repo is available at [redentic.dev](https://redentic.dev) but [redenticdev.
 ## How to add it?
 Browse [https://redentic.dev](https://redentic.dev) and click icons to add it to your favorite package manager.
 
-## Tweaks included
+## Tweaks & Themes included
 - SBColors
+- Redentic's Respring Pack
