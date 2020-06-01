@@ -1,0 +1,116 @@
+{
+    "class": "DepictionTabView",
+    "headerImage": "https://redentic.dev/depictions/com.redenticdev.respringpack/banner.png",
+    "minVersion": "0.1",
+    "tabs": [
+        {
+            "class": "DepictionStackView",
+            "tabname": "Details",
+            "views": [
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "A free respring pack with fun icons",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionSpacerView",
+                    "spacing": 8
+                },
+                {
+                    "class": "DepictionScreenshotsView",
+                    "itemCornerRadius": 6,
+                    "itemSize": "{192, 256}",
+                    "screenshots": [
+                        {
+                            "accessibilityText": "Screenshot",
+                            "url": "https://redentic.dev/depictions/com.redenticdev.respringpack/1.png"
+                        }
+                    ]
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "Content:\n- unc0ver logo\n- checkra1n logo\n- Marvel's The Punisher's logo\n- Old Apple logo\n- iMac\n- Macbook\n- Notched iPhone\n- Non-notched iPhone\n- Apple Watch\n\nHow to use?\nThe pack is available in Snowboard. Requires Respring Extension.",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Developer",
+                    "text": "RedenticDev"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Price",
+                    "text": "Free"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Version",
+                    "text": "1.0.0"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "iOS Version",
+                    "text": "iOS 11.0 to 13.5"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Last update",
+                    "text": "06/01/2020"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Release date",
+                    "text": "06/01/2020"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Category",
+                    "text": "Themes"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Github",
+                    "action": "https://github.com/RedenticDev"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Twitter",
+                    "action": "https://twitter.com/RedenticDev"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Reddit",
+                    "action": "https://www.reddit.com/user/redentic"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Paypal",
+                    "action": "https://www.paypal.me/redenticdev"
+                }
+            ]
+        },
+        {
+            "class": "DepictionStackView",
+            "tabname": "Changelog",
+            "views": [
+                {   
+                    "class": "DepictionSubheaderView",
+                    "title": "v1.0.0",
+                    "useBoldText": true
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Initial release",
+                    "useSpacing": false
+                }
+            ]
+        }
+    ]
+}

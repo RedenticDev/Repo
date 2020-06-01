@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<packageInfo>
+    <bundleId>com.redenticdev.respringpack</bundleId>
+    <name>Respring Pack</name>
+    <version>1.0.0</version>
+    <descriptions>
+        <description>
+            A free respring pack with fun icons
+        </description>
+        <description>
+            Content:
+            - unc0ver logo
+            - checkra1n logo
+            - Marvel's The Punisher's logo
+            - Old Apple logo
+            - iMac
+            - Macbook
+            - Notched iPhone
+            - Non-notched iPhone
+            - Apple Watch
+
+            How to use?
+            The pack is available in Snowboard. Requires Respring Extension.
+        </description>
+    </descriptions>
+    <compatibility>
+        <miniOS>11.0</miniOS>
+        <maxiOS>13.5</maxiOS>
+    </compatibility>
+    <dependencies>
+        <dependency>mobilesubstrate</dependency>
+        <dependency>preferenceloader</dependency>
+        <dependency>Snowboard &amp; Snowboard Respring Extension or Anemone (untested)</dependency>
+    </dependencies>
+    <changelog>
+        <change>
+            <changeVersion>v1.0.0</changeVersion>
+            <changeDescription>Initial Release</changeDescription>
+        </change>
+    </changelog>
+    <informations>
+        <developer>RedenticDev</developer>
+        <price>Free</price>
+        <lastupdate>06/01/2020</lastupdate>
+        <release>06/01/2020</release>
+        <category>Theme</category>
+    </informations>
+    <links>
+        <github>https://github.com/RedenticDev</github>
+        <twitter>https://twitter.com/RedenticDev</twitter>
+        <mail>mailto:redenticdev@gmail.com</mail>
+        <paypal>https://www.paypal.me/redenticdev</paypal>
+        <reddit>https://www.reddit.com/user/redentic</reddit>
+    </links>
+</packageInfo>
