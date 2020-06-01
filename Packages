@@ -5,16 +5,16 @@ Maintainer: RedenticDev <redenticdev@gmail.com>
 Depends: com.spark.snowboard | com.spark.snowboard.respringextension | com.anemonetheming.anemone
 Filename: ./debs/com.redenticdev.respringpack_1.0.0_iphoneos-arm.deb
 Size: 163560
-MD5sum: 51a335758d9fbaf7cf5a49715285b867
-SHA1: 56814c20f0f89b33473bcb42bea413f36a08ce76
-SHA256: f0d9031ab6e36c2a892d446c4be7b2a0b2273bd7791f202bcf18c182a072f860
+MD5sum: 5556ecc270ebda6e4d10d6164a6afe1e
+SHA1: 345a53c0c5ee799910c80edc2f639a3af03b9418
+SHA256: dfd98d995a044125a8c661db96008a5df6000da2f88161b9ee6f016c32f68557
 Section: Themes
 Description: A free respring pack with fun icons
 Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=
-Icon: https://redentic.dev/depictions//icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.respringpack
+Icon: https://redentic.dev/depictions/com.redenticdev.respringpack/icon.png
 Name: Redentic's Respring Pack
-Sileodepiction: https://redentic.dev/depictions//sileo.json
+Sileodepiction: https://redentic.dev/depictions/com.redenticdev.respringpack/sileo.json
 
 Package: com.redenticdev.sbcolors
 Version: 1.0.0-1+debug
