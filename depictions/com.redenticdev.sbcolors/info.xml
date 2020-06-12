@@ -34,6 +34,12 @@
         <dependency>Alderis or libcolorpicker</dependency>
     </dependencies>
     <changelog>
+	<change>
+	    <changeVersion>v1.0.1</changeVersion>
+	    <changeDescription>Added support for activity indicator</changeDescription>
+	    <changeDescription>Added explanations for tweaks compatibilities</changeDescription>
+	    <changeDescription>Added localizations</changeDescription>
+	</change>
         <change>
             <changeVersion>v1.0.0</changeVersion>
             <changeDescription>Initial Release</changeDescription>
