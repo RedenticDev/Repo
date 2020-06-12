@@ -3,7 +3,7 @@
 <packageInfo>
     <bundleId>com.redenticdev.sbcolors</bundleId>
     <name>SBColors</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <descriptions>
         <description>
             Easily change your status bar colors!
@@ -54,7 +54,7 @@
     <information>
         <developer>RedenticDev</developer>
         <price>Free</price>
-        <lastupdate>05/15/2020</lastupdate>
+        <lastupdate>06/12/2020</lastupdate>
         <release>05/15/2020</release>
         <category>Tweaks</category>
     </information>
