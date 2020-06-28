@@ -1,3 +1,24 @@
+Package: com.redenticdev.fastlpm
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: RedenticDev <redenticdev@gmail.com>
+Installed-Size: 408
+Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common
+Conflicts: me.conorthedev.peep
+Replaces: com.olxios.quickpowermode
+Filename: ./debs/com.redenticdev.fastlpm_1.0.0_iphoneos-arm.deb
+Size: 65106
+MD5sum: 35f0ee6e38e4bb3276fc0889d9457821
+SHA1: 0a31ea64376b77681104ebecedafca29336cfb66
+SHA256: d6e348e3029c5306fd905803b922f53bb42814127b54397076f1173f67fe6377
+Section: Tweaks
+Description: Toggle LPM by tapping the battery icon
+Author: RedenticDev <redenticdev@gmail.com>
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.fastlpm
+Icon: https://redentic.dev/depictions/com.redenticdev.fastlpm/icon.png
+Name: FastLPM
+Sileodepiction: https://redentic.dev/depictions/com.redenticdev.fastlpm/sileo.json
+
 Package: com.redenticdev.respringpack
 Version: 1.0.0
 Architecture: iphoneos-arm
