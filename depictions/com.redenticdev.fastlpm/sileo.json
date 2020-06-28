@@ -30,7 +30,7 @@
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "This tweaks allows you to simply tap on the status bar battery to toggle Low Power Mode.\n\n##Features:\n- Easy-to-use\n- Full rewrite & replacement of QuickPowerMode\n- Ability to trigger a vibration on toggle\n- Choose between 6 total vibrations depending on your device",
+                    "markdown": "This tweak allows you to simply tap on the status bar battery to toggle Low Power Mode.\n\n##Features:\n- Easy-to-use\n- Full rewrite & replacement of QuickPowerMode\n- Ability to trigger a vibration on toggle\n- Choose between 6 total vibrations depending on your device",
                     "useSpacing": true
                 },
                 {
