@@ -8,6 +8,12 @@
             "title": "SBColors",
             "package": "com.redenticdev.sbcolors",
             "hideShadow": false
+        },
+        {
+            "url": "https://redentic.dev/depictions/com.redenticdev.fastlpm/banner.png",
+            "title": "FastLPM",
+            "package": "com.redenticdev.fastlpm",
+            "hideShadow": false
         }
     ]
 }

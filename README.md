@@ -9,4 +9,5 @@ Browse [https://redentic.dev](https://redentic.dev) and click icons to add it to
 
 ## Tweaks & Themes included
 - SBColors
+- FastLPM
 - Redentic's Respring Pack
