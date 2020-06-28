@@ -3,7 +3,7 @@
 <packageInfo>
     <bundleId>com.redenticdev.fastlpm</bundleId>
     <name>FastLPM</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <descriptions>
         <description>
             Toggle LPM by tapping the battery icon
@@ -28,6 +28,9 @@
         <dependency>preferenceloader</dependency>
     </dependencies>
     <changelog>
+	<change>
+	    <changeVersion>v1.0.1</changeVersion>
+	    <changeDescription>Fixed a bug causing respring loops</changeDescription>
         <change>
             <changeVersion>v1.0.0</changeVersion>
             <changeDescription>Initial Release</changeDescription>
