@@ -28,9 +28,10 @@
         <dependency>preferenceloader</dependency>
     </dependencies>
     <changelog>
-	<change>
-	    <changeVersion>v1.0.1</changeVersion>
-	    <changeDescription>Fixed a bug causing respring loops</changeDescription>
+        <change>
+            <changeVersion>v1.0.1</changeVersion>
+            <changeDescription>Fixed a bug causing respring loops</changeDescription>
+        </change>
         <change>
             <changeVersion>v1.0.0</changeVersion>
             <changeDescription>Initial Release</changeDescription>

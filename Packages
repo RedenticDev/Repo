@@ -28,10 +28,10 @@ Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common
 Conflicts: me.conorthedev.peep
 Replaces: com.olxios.quickpowermode
 Filename: ./debs/com.redenticdev.fastlpm_1.0.1_iphoneos-arm.deb
-Size: 65040
-MD5sum: 6037c7be42d6755f2a9acb7ac1bcba07
-SHA1: 8b26164358a7a282fdaa886739e4d1daf2f0c60e
-SHA256: 0ee8198e84107f6f8e2a56be6f5a7eebd11e35fa86c597d2d433c10e4f4019b4
+Size: 65388
+MD5sum: 1925d4d4225c5ee7257f92c3b9c41d27
+SHA1: 2d1d19889fa59086cd964fc55f8ce13ad0d85662
+SHA256: f3d08aac55cdee9d126b38e51c1f3a6d0f925ad878d5faa24d0e69ccea56ddf0
 Section: Tweaks
 Description: Toggle LPM by tapping the battery icon
 Author: RedenticDev <redenticdev@gmail.com>
