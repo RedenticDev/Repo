@@ -23,8 +23,16 @@
                     "itemSize": "{192, 256}",
                     "screenshots": [
                         {
-                            "accessibilityText": "Screenshot",
-                            "url": "https://redentic.dev/depictions/com.redenticdev.fastlpm/1.png"
+                            "accessibilityText": "Screenshot 1",
+                            "url": "https://redentic.dev/depictions/com.redenticdev.fastlpm/1.jpg"
+                        },
+                        {
+                            "accessibilityText": "Screenshot 2",
+                            "url": "https://redentic.dev/depictions/com.redenticdev.fastlpm/2.jpg"
+                        },
+                        {
+                            "accessibilityText": "Screenshot 3",
+                            "url": "https://redentic.dev/depictions/com.redenticdev.fastlpm/3.jpg"
                         }
                     ]
                 },
@@ -49,7 +57,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "1.0.1"
+                    "text": "1.1.0"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -59,7 +67,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Last update",
-                    "text": "06/28/2020"
+                    "text": "08/12/2020"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -100,6 +108,20 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "v1.1.0",
+                    "useBoldText": true
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Added support for multiple activation methods\r\n- Added repetition options for vibration\r\n- Redesigned settings for a better look and bug fixes\r\n- Removed confict with 'peep' tweak",
+                    "useSpacing": false
+                },
+                {
+                    "class": "DepictionSpacerView",
+                    "spacing": 8
+                },
                 {
                     "class": "DepictionSubheaderView",
                     "title": "v1.0.1",

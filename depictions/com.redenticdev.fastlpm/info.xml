@@ -3,7 +3,7 @@
 <packageInfo>
     <bundleId>com.redenticdev.fastlpm</bundleId>
     <name>FastLPM</name>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <descriptions>
         <description>
             Toggle LPM by tapping the battery icon
@@ -29,6 +29,13 @@
     </dependencies>
     <changelog>
         <change>
+            <changeVersion>v1.1.0</changeVersion>
+            <changeDescription>Added support for multiple activation methods</changeDescription>
+            <changeDescription>Added repetition options for vibration</changeDescription>
+            <changeDescription>Redesigned settings for a better look and bug fixes</changeDescription>
+            <changeDescription>Removed confict with 'peep' tweak</changeDescription>
+        </change>
+        <change>
             <changeVersion>v1.0.1</changeVersion>
             <changeDescription>Fixed a bug causing respring loops</changeDescription>
         </change>
@@ -38,12 +45,14 @@
         </change>
     </changelog>
     <screenshots>
-        <screen>1.png</screen>
+        <screen>1.jpg</screen>
+        <screen>2.jpg</screen>
+        <screen>3.jpg</screen>
     </screenshots>
     <informations>
         <developer>RedenticDev</developer>
         <price>Free</price>
-        <lastupdate>06/28/2020</lastupdate>
+        <lastupdate>08/12/2020</lastupdate>
         <release>06/28/2020</release>
         <category>Tweaks</category>
     </informations>
