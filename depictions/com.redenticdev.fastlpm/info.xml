@@ -30,10 +30,14 @@
     <changelog>
         <change>
             <changeVersion>v1.1.0</changeVersion>
-            <changeDescription>Added support for multiple activation methods</changeDescription>
+            <changeDescription>Redesigned preferences for a cleaner look and bug fixes</changeDescription>
+            <changeDescription>Added support for multiple activation types (touch, hold, swipe, force touch)</changeDescription>
             <changeDescription>Added repetition options for vibration</changeDescription>
-            <changeDescription>Redesigned settings for a better look and bug fixes</changeDescription>
-            <changeDescription>Removed confict with 'peep' tweak</changeDescription>
+            <changeDescription>Added a 'reset preferences' option</changeDescription>
+            <changeDescription>Added an option to enlarge activation zone</changeDescription>
+            <changeDescription>Added info for compatibilities</changeDescription>
+            <changeDescription>Improved tweak durability</changeDescription>
+            <changeDescription>Removed confict with 'peep' by ConorTheDev</changeDescription>
         </change>
         <change>
             <changeVersion>v1.0.1</changeVersion>
@@ -45,9 +49,9 @@
         </change>
     </changelog>
     <screenshots>
-        <screen>1.jpg</screen>
-        <screen>2.jpg</screen>
-        <screen>3.jpg</screen>
+        <screen>1.png</screen>
+        <screen>2.png</screen>
+        <screen>3.png</screen>
     </screenshots>
     <informations>
         <developer>RedenticDev</developer>

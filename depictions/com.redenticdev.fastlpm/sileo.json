@@ -24,15 +24,15 @@
                     "screenshots": [
                         {
                             "accessibilityText": "Screenshot 1",
-                            "url": "https://redentic.dev/depictions/com.redenticdev.fastlpm/1.jpg"
+                            "url": "https://redentic.dev/depictions/com.redenticdev.fastlpm/1.png"
                         },
                         {
                             "accessibilityText": "Screenshot 2",
-                            "url": "https://redentic.dev/depictions/com.redenticdev.fastlpm/2.jpg"
+                            "url": "https://redentic.dev/depictions/com.redenticdev.fastlpm/2.png"
                         },
                         {
                             "accessibilityText": "Screenshot 3",
-                            "url": "https://redentic.dev/depictions/com.redenticdev.fastlpm/3.jpg"
+                            "url": "https://redentic.dev/depictions/com.redenticdev.fastlpm/3.png"
                         }
                     ]
                 },
@@ -115,7 +115,7 @@
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "- Added support for multiple activation methods\r\n- Added repetition options for vibration\r\n- Redesigned settings for a better look and bug fixes\r\n- Removed confict with 'peep' tweak",
+                    "markdown": "- Redesigned preferences for a cleaner look and bug fixes\r\n- Added support for multiple activation types (touch, hold, swipe, force touch)\r\n- Added repetition options for vibration\r\n- Added a 'reset preferences' option\r\n- Added an option to enlarge activation zone\r\n- Added info for compatibilities\r\n- Improved tweak durability\r\n- Removed confict with 'peep' by ConorTheDev",
                     "useSpacing": false
                 },
                 {
