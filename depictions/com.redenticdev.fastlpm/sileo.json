@@ -57,7 +57,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "1.1.0"
+                    "text": "1.1.1"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -67,7 +67,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Last update",
-                    "text": "08/12/2020"
+                    "text": "08/22/2020"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -108,6 +108,16 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "v1.1.1",
+                    "useBoldText": true
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Fixed welcome page being able to reappear more than once",
+                    "useSpacing": false
+                },
                 {
                     "class": "DepictionSubheaderView",
                     "title": "v1.1.0",

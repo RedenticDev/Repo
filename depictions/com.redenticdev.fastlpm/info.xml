@@ -3,7 +3,7 @@
 <packageInfo>
     <bundleId>com.redenticdev.fastlpm</bundleId>
     <name>FastLPM</name>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <descriptions>
         <description>
             Toggle LPM by tapping the battery icon
@@ -28,6 +28,10 @@
         <dependency>preferenceloader</dependency>
     </dependencies>
     <changelog>
+        <change>
+            <changeVersion>v1.1.1</changeVersion>
+            <changeDescription>Fixed welcome page being able to reappear more than once</changeDescription>
+        </change>
         <change>
             <changeVersion>v1.1.0</changeVersion>
             <changeDescription>Redesigned preferences for a cleaner look and bug fixes</changeDescription>
@@ -56,7 +60,7 @@
     <informations>
         <developer>RedenticDev</developer>
         <price>Free</price>
-        <lastupdate>08/12/2020</lastupdate>
+        <lastupdate>08/22/2020</lastupdate>
         <release>06/28/2020</release>
         <category>Tweaks</category>
     </informations>
