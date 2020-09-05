@@ -23,14 +23,18 @@
                     "itemSize": "{192, 256}",
                     "screenshots": [
                         {
-                            "accessibilityText": "Screenshot",
+                            "accessibilityText": "Screenshot 1",
                             "url": "https://redentic.dev/depictions/com.redenticdev.respringpack/1.png"
+                        },
+                        {
+                            "accessibilityText": "Screenshot 2",
+                            "url": "https://redentic.dev/depictions/com.redenticdev.respringpack/2.png"
                         }
                     ]
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "Content:\n- unc0ver logo\n- checkra1n logo\n- Marvel's The Punisher's logo\n- Old Apple logo\n- iMac\n- Macbook\n- Notched iPhone\n- Non-notched iPhone\n- Apple Watch\n\nHow to use?\nThe pack is available in Snowboard. Requires Respring Extension.",
+                    "markdown": "Content:\n- unc0ver logo\n- checkra1n logo\n- Marvel's The Punisher's logo\n- Old Apple logo\n- iMac\n- Macbook\n- Notched iPhone\n- Non-notched iPhone\n- Apple Watch\n\nAnd now:\n- Steve Jobs' head\n- Android logo\n- Microsoft logo\n- Odyssey jailbreak logo\n\nHow to use?\nThe pack is available in Snowboard. Requires Respring Extension.",
                     "useSpacing": true
                 },
                 {
@@ -49,17 +53,17 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "1.0.0"
+                    "text": "1.1.0"
                 },
                 {
                     "class": "DepictionTableTextView",
                     "title": "iOS Version",
-                    "text": "iOS 11.0 to 13.5"
+                    "text": "iOS 11.0 to 13.7"
                 },
                 {
                     "class": "DepictionTableTextView",
                     "title": "Last update",
-                    "text": "06/01/2020"
+                    "text": "09/05/2020"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -69,7 +73,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Category",
-                    "text": "Themes"
+                    "text": "Theme"
                 },
                 {
                     "class": "DepictionSeparatorView"
@@ -100,7 +104,17 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
-                {   
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "v1.1.0",
+                    "useBoldText": true
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Added Android logo\r\n- Added Microsoft logo\r\n- Added Odyssey jailbreak logo\r\n- Added Steve Jobs' head\r\n- Added installation nice script",
+                    "useSpacing": false
+                },
+                {
                     "class": "DepictionSubheaderView",
                     "title": "v1.0.0",
                     "useBoldText": true
