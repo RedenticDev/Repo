@@ -30,7 +30,7 @@
     <dependencies>
         <dependency>mobilesubstrate</dependency>
         <dependency>preferenceloader</dependency>
-        <dependency>Cephei</dependency>
+        <dependency>Cephei Tweak Support</dependency>
         <dependency>Alderis or libcolorpicker</dependency>
     </dependencies>
     <changelog>

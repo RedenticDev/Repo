@@ -26,6 +26,7 @@
     <dependencies>
         <dependency>mobilesubstrate</dependency>
         <dependency>preferenceloader</dependency>
+        <dependency>Cephei Tweak Support</dependency>
     </dependencies>
     <changelog>
         <change>

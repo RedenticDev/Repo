@@ -35,8 +35,6 @@
         <maxiOS>13.7</maxiOS>
     </compatibility>
     <dependencies>
-        <dependency>mobilesubstrate</dependency>
-        <dependency>preferenceloader</dependency>
         <dependency>Snowboard &amp; Snowboard Respring Extension or Anemone (untested)</dependency>
     </dependencies>
     <changelog>
