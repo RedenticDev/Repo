@@ -22,31 +22,35 @@ time, mark, audio, video {
 	font-size: 100%;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
+/* Custom code */
 body {
+	line-height: 1;
 	margin: 0;
 	padding: 0;
 	background-color: #efeff4;
@@ -55,6 +59,34 @@ body {
 	font: 14px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
 	width: 100%;
 	padding-bottom: 50px;
+}
+
+button {
+    z-index: 99;
+    bottom: 30px;
+    right: -100px;
+    position: fixed;
+    box-sizing: border-box;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 200%;
+    text-align: center;
+    outline: none;
+    color: white;
+    background-color: #373739;
+    border: 0;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius:35px;
+    border-radius: 35px;
+    -webkit-transition: all 250ms ease-out;
+    -moz-transition: all 250ms ease-out;
+    -ms-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+    cursor: pointer;
 }
 
 .boxTitle {
@@ -245,6 +277,11 @@ tr a img {
 	body {
 		background-color: black;
 		color: white;
+	}
+
+	button {
+		color: #373739;
+		background-color: white;
 	}
 
 	.box {

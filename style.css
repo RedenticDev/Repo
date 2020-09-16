@@ -1,41 +1,218 @@
 body {
-    font-family: Helvetica,  Arial, sans-serif;
-    padding-top: 50px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+    font-family: -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
     text-align: center;
-    color: white;
-    text-shadow: 2px 2px 8px black;
-    background: url(https://images.unsplash.com/photo-1513569771920-c9e1d31714af?ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80) no-repeat top fixed;
-    background-size: cover;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    scroll-behavior: smooth;
 }
 
+button {
+    z-index: 99;
+    bottom: 30px;
+    right: -100px;
+    position: fixed;
+    box-sizing: border-box;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 200%;
+    text-align: center;
+    outline: none;
+    color: white;
+    background-color: #373739;
+    border: 0;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius:35px;
+    border-radius: 35px;
+    -webkit-transition: all 250ms ease-out;
+    -moz-transition: all 250ms ease-out;
+    -ms-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+    cursor: pointer;
+}
+
+body > h2 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    width: 88vw;
+    max-width: 650px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > p, body > em {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > h2, body > p, body > em {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Sections */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section#add-repo {
+    display: none;
+    align-items: stretch;
+}
+
+section#contact a {
+    width: 80vw;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+section#contact a:first-child {
+    margin-bottom: 20px;
+}
+
+section#contact a:after {
+    color: white;
+	content: "›";
+	font-weight: 300;
+	font-size: 30px;
+	float: right;
+	margin-right: 5px;
+    transform: translateY(5px);
+    transition: 500ms;
+}
+
+section#contact a:hover:after {
+    transition: 500ms;
+    margin-right: 0;
+}
+
+.package {
+    color: black;
+    padding-top: 20px;
+    width: 185px;
+    transition-duration: 200ms;
+}
+
+.package img {
+    height: 150px;
+}
+
+.package:hover {
+    opacity: 60%;
+    transition-duration: 200ms;
+}
+
+footer {
+    margin-top: 100px;
+    font-size: 75%;
+}
+
+/* Animated links */
 .link {
     display: inline-block;
-    color: white;
+    color: black;
 }
 
-.link:after {
+section#add-repo .link:after {
     content: '';
     width: 0px;
     height: 1px;
     display: block;
-    background: white;
+    background: black;
     transition: 300ms;
 }
 
-body a img:hover + .link:after, .link:hover:after {
+section#add-repo a:hover > .link:after, .link:hover:after {
     width: 100%;
-    box-shadow: 2px 2px 8px black;
 }
 
-body a {
-    text-decoration: none;
-    margin: 10px;
+section#contact a, section#contact a:hover {
+    transition: 500ms;
 }
 
-body a img {
+section#contact a[href*="twitter"]:hover {
+    background-color: rgba(28, 163, 243, 0.5);
+    border-color: rgb(28, 163, 243);
+}
+
+section#contact a[href*="github"]:hover {
+    background-color: rgba(16, 18, 21, 0.5);
+    border-color: rgb(16, 18, 21);
+}
+
+section#contact a[href*="reddit"]:hover {
+    background-color: rgba(249, 69, 13, 0.5);
+    border-color: rgb(249, 69, 13);
+}
+
+section#contact a[href*="mail"]:hover {
+    background-color: rgba(28, 142, 245, 0.5);
+    border-color: rgb(28, 142, 245);
+}
+
+section#contact a[href*="paypal"]:hover {
+    background-color: rgba(4, 91, 158, 0.5);
+    border-color: rgb(4, 91, 158);
+}
+
+a img {
     height: 20px;
     vertical-align: -4px;
-    box-shadow: 2px 2px 8px grey;
-    border-radius: 5px;
+    border-radius: 20%;
     margin-right: 3px;
+}
+
+a {
+    text-decoration: none;
+    margin: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+	padding-left: 20px;
+    padding-right: 20px;
+    border: black 1px solid;
+	border-radius: 30px;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background-color: #373739;
+    }
+
+    button {
+        color: #373739;
+        background-color: white;
+    }
+    
+    a {
+        border-color: white;
+    }
+    .link {
+        color: white;
+    }
+    
+    section#add-repo .link:after {
+        background: white;
+    }
+    
+
+    .package {
+        color: white;
+    }
 }
