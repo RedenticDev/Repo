@@ -3,7 +3,7 @@
 <packageInfo>
     <bundleId>com.redenticdev.fastlpm</bundleId>
     <name>FastLPM</name>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <descriptions>
         <description>
             Toggle LPM by tapping the battery icon
@@ -21,7 +21,7 @@
     </descriptions>
     <compatibility>
         <miniOS>11.0</miniOS>
-        <maxiOS>13.6</maxiOS>
+        <maxiOS>13.7</maxiOS>
     </compatibility>
     <dependencies>
         <dependency>mobilesubstrate</dependency>
@@ -29,6 +29,10 @@
         <dependency>Cephei Tweak Support</dependency>
     </dependencies>
     <changelog>
+        <change>
+            <changeVersion>v1.1.2</changeVersion>
+            <changeDescription>Fixed preferences not loading on iOS 11 &amp; 12</changeDescription>
+        </change>
         <change>
             <changeVersion>v1.1.1</changeVersion>
             <changeDescription>Fixed welcome page being able to reappear more than once</changeDescription>
@@ -61,7 +65,7 @@
     <informations>
         <developer>RedenticDev</developer>
         <price>Free</price>
-        <lastupdate>08/22/2020</lastupdate>
+        <lastupdate>09/16/2020</lastupdate>
         <release>06/28/2020</release>
         <category>Tweaks</category>
     </informations>
