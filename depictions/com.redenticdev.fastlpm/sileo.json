@@ -10,8 +10,7 @@
                 {
                     "class": "DepictionSubheaderView",
                     "title": "Toggle LPM by tapping the battery icon",
-                    "useBoldText": true,
-                    "useBottomMargin": false
+                    "useBoldText": true
                 },
                 {
                     "class": "DepictionSpacerView",
@@ -38,7 +37,18 @@
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "This tweak allows you to simply tap on the status bar battery to toggle Low Power Mode.\n\n##Features:\n- Easy-to-use\n- Full rewrite & replacement of QuickPowerMode\n- Ability to trigger a vibration on toggle\n- Choose between 6 total vibrations depending on your device",
+                    "markdown": "This tweak allows you to simply tap on the status bar battery to toggle Low Power Mode.",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "Features:",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Easy-to-use\n- Full rewrite & replacement of QuickPowerMode\n- Ability to trigger a vibration on toggle\n- Choose between 6 total vibrations depending on your device",
                     "useSpacing": true
                 },
                 {
@@ -111,17 +121,23 @@
                 {
                     "class": "DepictionSubheaderView",
                     "title": "v1.1.2",
-                    "useBoldText": true
+                    "useBoldText": true,
+                    "useBottomMargin": false
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "- Fixed preferences not loading on iOS 11 & 12",
+                    "markdown": "- Fixed preferences not loading on iOS 11 & 12\r\n- Added Turkish locale\r\n- Added Brazilian locale",
                     "useSpacing": false
+                },
+                {
+                    "class": "DepictionSpacerView",
+                    "spacing": 8
                 },
                 {
                     "class": "DepictionSubheaderView",
                     "title": "v1.1.1",
-                    "useBoldText": true
+                    "useBoldText": true,
+                    "useBottomMargin": false
                 },
                 {
                     "class": "DepictionMarkdownView",
@@ -129,9 +145,14 @@
                     "useSpacing": false
                 },
                 {
+                    "class": "DepictionSpacerView",
+                    "spacing": 8
+                },
+                {
                     "class": "DepictionSubheaderView",
                     "title": "v1.1.0",
-                    "useBoldText": true
+                    "useBoldText": true,
+                    "useBottomMargin": false
                 },
                 {
                     "class": "DepictionMarkdownView",
@@ -145,7 +166,8 @@
                 {
                     "class": "DepictionSubheaderView",
                     "title": "v1.0.1",
-                    "useBoldText": true
+                    "useBoldText": true,
+                    "useBottomMargin": false
                 },
                 {
                     "class": "DepictionMarkdownView",
@@ -159,7 +181,8 @@
                 {   
                     "class": "DepictionSubheaderView",
                     "title": "v1.0.0",
-                    "useBoldText": true
+                    "useBoldText": true,
+                    "useBottomMargin": false
                 },
                 {
                     "class": "DepictionMarkdownView",

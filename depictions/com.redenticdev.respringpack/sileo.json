@@ -10,8 +10,7 @@
                 {
                     "class": "DepictionSubheaderView",
                     "title": "A free respring pack with fun icons",
-                    "useBoldText": true,
-                    "useBottomMargin": false
+                    "useBoldText": true
                 },
                 {
                     "class": "DepictionSpacerView",
@@ -33,8 +32,35 @@
                     ]
                 },
                 {
+                    "class": "DepictionSubheaderView",
+                    "title": "Content:",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
                     "class": "DepictionMarkdownView",
-                    "markdown": "Content:\n- unc0ver logo\n- checkra1n logo\n- Marvel's The Punisher's logo\n- Old Apple logo\n- iMac\n- Macbook\n- Notched iPhone\n- Non-notched iPhone\n- Apple Watch\n\nAnd now:\n- Steve Jobs' head\n- Android logo\n- Microsoft logo\n- Odyssey jailbreak logo\n\nHow to use?\nThe pack is available in Snowboard. Requires Respring Extension.",
+                    "markdown": "- unc0ver logo\n- checkra1n logo\n- Marvel's The Punisher's logo\n- Old Apple logo\n- iMac\n- Macbook\n- Notched iPhone\n- Non-notched iPhone\n- Apple Watch\n",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "And now:",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Steve Jobs' head\n- Android logo\n- Microsoft logo\n- Odyssey jailbreak logo\n",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "How to use?",
+                    "useBoldText": true
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "The pack is available in Snowboard. Requires Respring Extension.",
                     "useSpacing": true
                 },
                 {
@@ -107,7 +133,8 @@
                 {
                     "class": "DepictionSubheaderView",
                     "title": "v1.1.0",
-                    "useBoldText": true
+                    "useBoldText": true,
+                    "useBottomMargin": false
                 },
                 {
                     "class": "DepictionMarkdownView",
@@ -115,9 +142,14 @@
                     "useSpacing": false
                 },
                 {
+                    "class": "DepictionSpacerView",
+                    "spacing": 8
+                },
+                {
                     "class": "DepictionSubheaderView",
                     "title": "v1.0.0",
-                    "useBoldText": true
+                    "useBoldText": true,
+                    "useBottomMargin": false
                 },
                 {
                     "class": "DepictionMarkdownView",

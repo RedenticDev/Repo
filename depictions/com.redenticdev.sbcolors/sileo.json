@@ -11,8 +11,7 @@
                 {
                     "class": "DepictionSubheaderView",
                     "title": "Easily change your status bar colors!",
-                    "useBoldText": true,
-                    "useBottomMargin": false
+                    "useBoldText": true
                 },
                 {
                     "class": "DepictionSpacerView",
@@ -43,7 +42,18 @@
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "This tweaks allows you to change the color of your status bar items, individually.\n\n##Features:\n- Individual change of the color of each status bar element\n- Juice Beta and Prysm support!\n- Modern and clean settings\n- Use of both libcolorpicker and the brand new Alderis Color Picker\n- Reset or disable options\n- Support from iOS 11 to iOS 13\n- Support for both notched and non-notched iPhone (A12 and A13 included)\n- More to come! (Background support, individual reset...)",
+                    "markdown": "This tweaks allows you to change the color of your status bar items, individually.\n",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "Features:",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Individual change of the color of each status bar element\n- Juice Beta and Prysm support!\n- Modern and clean settings\n- Use of both libcolorpicker and the brand new Alderis Color Picker\n- Reset or disable options\n- Support from iOS 11 to iOS 13\n- Support for both notched and non-notched iPhone (A12 and A13 included)\n- More to come! (Background support, individual reset...)",
                     "useSpacing": true
                 },
                 {
@@ -113,24 +123,26 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
-		{
-		    "class": "DepictionSubheaderView",
-		    "title": "v1.0.1",
-		    "useBoldText": true
-		},
-		{
-		    "class": "DepictionMarkdownView",
-		    "markdown": "- Added support for activity indicator\r\n- Added explanations for tweaks compatibilities\r\n- Added localizations",
-		    "useSpacing": false
-		},
-		{
-		    "class": "DepictionSpacerView",
-		    "spacing": 8
-		},
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "v1.0.1",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Added support for activity indicator\r\n- Added explanations for tweaks compatibilities\r\n- Added localizations",
+                    "useSpacing": false
+                },
+                {
+                    "class": "DepictionSpacerView",
+                    "spacing": 8
+                },
                 {   
                     "class": "DepictionSubheaderView",
                     "title": "v1.0.0",
-                    "useBoldText": true
+                    "useBoldText": true,
+                    "useBottomMargin": false
                 },
                 {
                     "class": "DepictionMarkdownView",

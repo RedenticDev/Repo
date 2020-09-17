@@ -32,6 +32,8 @@
         <change>
             <changeVersion>v1.1.2</changeVersion>
             <changeDescription>Fixed preferences not loading on iOS 11 &amp; 12</changeDescription>
+            <changeDescription>Added Turkish locale</changeDescription>
+            <changeDescription>Added Brazilian locale</changeDescription>
         </change>
         <change>
             <changeVersion>v1.1.1</changeVersion>
