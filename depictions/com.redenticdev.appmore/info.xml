@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<packageInfo>
+    <bundleId>com.redenticdev.appmore</bundleId>
+    <name>AppMore</name>
+    <version>1.0.0</version>
+    <descriptions>
+        <description>
+            Auto-extend app's description in AppStore updates page
+        </description>
+        <description>
+            The tweak auto-expands the description of apps in the update page of the AppStore on iOS 13. It works for both updated apps and outdated ones, and has been made after a Reddit request.
+        </description>
+        <description>
+            No options to configure.
+        </description>
+    </descriptions>
+    <compatibility>
+        <miniOS>13.0</miniOS>
+        <maxiOS>13.7</maxiOS>
+    </compatibility>
+    <dependencies>
+        <dependency>mobilesubstrate</dependency>
+    </dependencies>
+    <changelog>
+        <change>
+            <changeVersion>v1.0.0</changeVersion>
+            <changeDescription>Initial Release</changeDescription>
+        </change>
+        <change>
+            <changeVersion>v0.0.9</changeVersion>
+            <changeDescription>Initial Pre-Release</changeDescription>
+        </change>
+    </changelog>
+    <informations>
+        <developer>RedenticDev</developer>
+        <price>Free</price>
+        <lastupdate>09/27/2020</lastupdate>
+        <release>09/23/2020</release>
+        <category>Tweaks (Requests)</category>
+    </informations>
+    <links>
+        <github>https://github.com/RedenticDev</github>
+        <twitter>https://twitter.com/RedenticDev</twitter>
+        <mail>mailto:redenticdev@gmail.com</mail>
+        <paypal>https://www.paypal.me/redenticdev</paypal>
+        <reddit>https://www.reddit.com/user/redentic</reddit>
+    </links>
+</packageInfo>

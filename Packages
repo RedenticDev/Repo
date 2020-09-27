@@ -17,6 +17,25 @@ Icon: https://redentic.dev/depictions/com.redenticdev.appmore/icon.png
 Name: AppMore
 Sileodepiction: https://redentic.dev/depictions/com.redenticdev.appmore/sileo.json
 
+Package: com.redenticdev.appmore
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: RedenticDev <redenticdev@gmail.com>
+Installed-Size: 168
+Depends: firmware (>= 13)
+Filename: ./debs/com.redenticdev.appmore_1.0.0_iphoneos-arm.deb
+Size: 6336
+MD5sum: 6b08d1416047b8392cedda5de5949166
+SHA1: 0bfa3ca4969241aa9de1052946c85e3fa3f9196a
+SHA256: 779318bd9aa436028e5fe659f09ec25b7d1ac38b8d71dfbca84863165fec56fa
+Section: Tweaks (Requests)
+Description: Auto-extend app's description in AppStore updates page
+Author: RedenticDev <redenticdev@gmail.com>
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.appmore
+Icon: https://redentic.dev/depictions/com.redenticdev.appmore/icon.png
+Name: AppMore
+Sileodepiction: https://redentic.dev/depictions/com.redenticdev.appmore/sileo.json
+
 Package: com.redenticdev.fastlpm
 Version: 1.0.0
 Architecture: iphoneos-arm

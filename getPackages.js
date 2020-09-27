@@ -4,7 +4,7 @@
 $(function () {
     // I have to put existing packages manually as GitHub Pages doesn't
     // accept Node.JS/PHP, so I can't browse subfolders automatically :(
-    const packages = ["sbcolors", "fastlpm", "respringpack"];
+    const packages = ["sbcolors", "fastlpm", "respringpack", "appmore"];
 
     // Random order with Chrome/Opera
     $.each(packages, function (i, actualPackage) {
