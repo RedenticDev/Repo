@@ -24,7 +24,7 @@
         <maxiOS>13.7</maxiOS>
     </compatibility>
     <dependencies>
-        <dependency>mobilesubstrate</dependency>
+        <dependency>mobilesubstrate or com.ex.substitute</dependency>
         <dependency>preferenceloader</dependency>
         <dependency>Cephei Tweak Support</dependency>
     </dependencies>
