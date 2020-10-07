@@ -13,7 +13,6 @@ $(function () {
             url: window.location.origin + "/depictions/com.redenticdev." + actualPackage + "/info.xml",
             dataType: "xml",
             success: function (xml) {
-                console.log(i)
                 $(xml).find("packageInfo").each(function () {
                     $("section#packages").append("<a href=\"depictions/?p=com.redenticdev." + actualPackage + "\" target=\"_blank\" class=\"package\">");
                     $("section#packages a:last-child").append("<img src=\"depictions/com.redenticdev." + actualPackage + "/icon.png\" alt=\"\" />");

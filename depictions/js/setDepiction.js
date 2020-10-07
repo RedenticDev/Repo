@@ -94,13 +94,17 @@ function getQueryVariable(variable) {
     console.log("Query variable %s not found", variable);
 }
 
-// Inspired by repo.conorthedev.me/depiction/web
+// Inspired by repo.conorthedev.me/depiction/web (Silica?)
 function compatible(works_min, works_max) {
+    // iOS version detection by Dylan Duff
+    // Does not work for iPadOS, as iPadOS is seen by the browser as a Mac :/
     let currentiOS = parseFloat(('' + (/CPU.*OS ([0-9_]{1,})|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0,''])[1]).replace('undefined', '3_2').replace('_', '.').replace('_', ''));
     works_min = numerize(works_min);
     works_max = numerize(works_max);
+
     let text = document.getElementById("compatibility");
     let text_container = document.getElementById("compatibility-box");
+
     if (currentiOS < works_min) {
         text.innerHTML = "Your version of iOS is too old for this package. This package works from iOS " + works_min + "to iOS " + works_max + ".";
         text.style.color = "red";
@@ -117,7 +121,7 @@ function compatible(works_min, works_max) {
         text_container.style.backgroundColor = "lightgreen";
         text_container.style.border = "1px solid green";
     } else {
-        text.innerHTML = "Cannot determine your version. Open this page on an iPhone/iPad/iPod to check compatibility.";
+        text.innerHTML = "Cannot determine your version. Open this page on an iOS device to check compatibility.";
         text.style.fontStyle = "italic";
     }
 }
