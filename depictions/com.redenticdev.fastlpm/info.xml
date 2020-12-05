@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
 <packageInfo>
-    <bundleId>com.redenticdev.fastlpm</bundleId>
     <name>FastLPM</name>
     <version>1.1.3</version>
     <descriptions>
@@ -70,16 +69,13 @@
     </screenshots>
     <informations>
         <developer>RedenticDev</developer>
-        <price>Free</price>
-        <lastupdate>11/21/2020</lastupdate>
-        <release>06/28/2020</release>
         <category>Tweaks</category>
     </informations>
     <links>
         <github>https://github.com/RedenticDev</github>
         <twitter>https://twitter.com/RedenticDev</twitter>
+        <reddit>https://www.reddit.com/user/redentic</reddit>
         <mail>mailto:redenticdev@gmail.com</mail>
         <paypal>https://www.paypal.me/redenticdev</paypal>
-        <reddit>https://www.reddit.com/user/redentic</reddit>
     </links>
 </packageInfo>

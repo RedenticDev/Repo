@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
 <packageInfo>
-    <bundleId>com.redenticdev.appmore</bundleId>
     <name>AppMore</name>
     <version>1.0.0</version>
     <descriptions>
@@ -35,15 +34,13 @@
     <informations>
         <developer>RedenticDev</developer>
         <price>Free</price>
-        <lastupdate>09/27/2020</lastupdate>
-        <release>09/23/2020</release>
         <category>Tweaks (Requests)</category>
     </informations>
     <links>
         <github>https://github.com/RedenticDev</github>
         <twitter>https://twitter.com/RedenticDev</twitter>
+        <reddit>https://www.reddit.com/user/redentic</reddit>
         <mail>mailto:redenticdev@gmail.com</mail>
         <paypal>https://www.paypal.me/redenticdev</paypal>
-        <reddit>https://www.reddit.com/user/redentic</reddit>
     </links>
 </packageInfo>

@@ -1,64 +1,14 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+body {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
 	display: block;
-}
-
-ol, ul {
-	list-style: none;
-}
-
-blockquote, q {
-	quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* Custom code */
-body {
-	line-height: 1;
-	margin: 0;
-	padding: 0;
-	background-color: #efeff4;
+	background-color: #eeeeee;
 	-webkit-font-smoothing: antialiased;
-	margin: 0;
-	font: 14px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
-	width: 100%;
+	font-family: -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
+	text-align: center;
 	padding-bottom: 50px;
+	scroll-behavior: smooth;
 }
 
 button {
@@ -89,6 +39,18 @@ button {
     cursor: pointer;
 }
 
+h1, h2, ul, li, p, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 14px;
+	vertical-align: baseline;
+}
+
+ul {
+	list-style: none;
+}
+
 .boxTitle {
 	margin-top: 35px;
 	margin-bottom: 10px;
@@ -97,6 +59,9 @@ button {
 	width: 88vw;
 	max-width: 760px;
 	text-align: left;
+}
+
+.boxTitle, .boxTitle > h1 {
 	font-size: 17px;
 }
 
@@ -152,6 +117,10 @@ button {
 
 #changelog h1 {
 	margin-bottom: 5px;
+}
+
+#changelog h1 span {
+	color: grey;
 }
 
 #changelog table {
@@ -296,4 +265,21 @@ tr a img {
 	#pill {
 		background-color: grey;
 	}
+	
+	#changelog h1 span {
+		color: lightgrey;
+	}
+
+    .not-safari::-webkit-scrollbar {
+        background-color: #202324;
+        color: #aba499;
+    }
+
+    .not-safari::-webkit-scrollbar-corner {
+        background-color: #181a1b;
+    }
+
+    .not-safari::-webkit-scrollbar-thumb {
+        background-color: #454a4d;
+    }
 }

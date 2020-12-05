@@ -1,4 +1,14 @@
 /**
+ * Browser detector
+ */
+if (!navigator.userAgent.search("Safari")) {
+	console.log("Non-safari browser detected");
+	document.getElementsByTagName("body")[0].className += " not-safari";
+} else {
+	console.log("Safari detected");
+}
+
+/**
  * Scroll-to-top
  * https://github.com/iamdustan/smoothscroll/blob/master/src/smoothscroll.js
  */
@@ -13,7 +23,7 @@ window.addEventListener("load", function () {
 			btn.style.right = "30px";
 			btn.style.transform = "none";
 		}
-		window.addEventListener("scroll", function(ev) {
+		window.addEventListener("scroll", function() {
 			var btnRight = window.getComputedStyle(btn, null)
 				.getPropertyValue('right')
 				.replace(/px$/, '')
