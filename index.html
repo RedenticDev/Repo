@@ -110,9 +110,9 @@
     <script src="getPackages.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        document.getElementById("markdown").innerHTML = marked(
-            getContentOfURL("https://raw.githubusercontent.com/RedenticDev/RedenticDev/master/README.md")
-        );
+        getContentOfURL("https://raw.githubusercontent.com/RedenticDev/RedenticDev/master/README.md").then(res => {
+            document.getElementById("markdown").innerHTML = marked(res);
+        });
     </script>
     <script src="scrollToTop.js"></script>
 </body>

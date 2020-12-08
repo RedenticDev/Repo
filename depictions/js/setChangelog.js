@@ -11,45 +11,22 @@ $(function () {
     console.log("Package: " + getQueryVariable('p'));
     console.log("Fetching XML");
     var bundlePath = location.href.split("/").slice(0, -2).join("/") + "/" + bundle;
+    var apiDebs = "https://api.github.com/repos/RedenticDev/redenticdev.github.io/commits?path=debs/";
 
     $.ajax({
         type: "GET",
         url: bundlePath + "/info.xml",
         dataType: "xml",
         success: function (xml) {
-            console.log("Beginning XML Parsing");
+            console.log("Beginning XML parsing");
 
             // Parse the xml file and get data
             $(xml).find("packageInfo").each(function () {
-                var tweakName = "Changelog of " + $(this).find("name").text().trim();
-                var tweakDescription = $(xml).find("description:first").text().trim();
-                document.title = tweakName;
-                document.querySelector('meta[name="title"]').setAttribute("content", tweakName);
-                document.querySelector('meta[name="description"]').setAttribute("content", tweakDescription);
-                document.querySelector('meta[property="og:url"]').setAttribute("content", location.href);
-                document.querySelector('meta[property="og:title"]').setAttribute("content", tweakName);
-                document.querySelector('meta[property="og:description"]').setAttribute("content", tweakDescription);
-                document.querySelector('meta[name="twitter:url"]').setAttribute("content", location.href);
-                document.querySelector('meta[name="twitter:title"]').setAttribute("content", tweakName);
-                document.querySelector('meta[name="twitter:description"]').setAttribute("content", tweakDescription);
-
-                // Dynamic banner/icon handling for twitter cards
-                if (fileExists(bundlePath + "/banner.png") || fileExists(bundlePath + "/banner.jpg")) {
-                    var bext = fileExists(bundlePath + "/banner.png") ? ".png" : ".jpg";
-                    document.querySelector('meta[name="twitter:card"]').setAttribute("content", "summary_large_image");
-                    document.querySelector('meta[property="og:image"]').setAttribute("content", bundlePath + "/banner" + bext);
-                    document.querySelector('meta[name="twitter:image"]').setAttribute("content", bundlePath + "/banner" + bext);
-                    document.querySelector('meta[name="twitter:image:alt"]').setAttribute("content", "Banner of " + tweakName);
-                } else if (fileExists(bundlePath + "/icon.png") || fileExists(bundlePath + "/icon.jpg")) {
-                    var iext = fileExists(bundlePath + "/icon.png") ? ".png" : ".jpg";
-                    document.querySelector('meta[property="og:image"]').setAttribute("content", bundlePath + "/icon" + iext);
-                    document.querySelector('meta[name="twitter:image"]').setAttribute("content", bundlePath + "/icon" + iext);
-                    document.querySelector('meta[name="twitter:image:alt"]').setAttribute("content", "Icon of " + tweakName);
-                }
+                document.title = "Changelog of " + $(this).find("name").text().trim();
 
                 $(xml).find("change").each(function () {
-                    changelogExport += "<li><h1>" + $(this).find("changeVersion").text().trim() + " <span>- (" +
-                        lastUpdateDate(location.href.split("/").slice(0, -3).join("/") + "/debs/" + bundle + "_" + $(this).find("changeVersion").text().replace("v", "").trim() + "_iphoneos-arm.deb") + ")</span></h1>";
+                    var version = $(this).find("changeVersion").text().trim();
+                    changelogExport += "<li><h1>" + version + " <span id=\"" + version.replaceAll(".", "") + "\"></span></h1>";
                     $(this).find("changeDescription").each(function () {
                         changelogExport += "<h2>- " + $(this).text().trim() + "</h2>";
                     });
@@ -57,6 +34,14 @@ $(function () {
                 });
                 $("#changelog").append(changelogExport);
             });
+            // Add versions at proper places
+            $(xml).find("packageInfo").each(function () {
+                $(xml).find("change").each(function () {
+                    var version = $(this).find("changeVersion").text().trim();
+                    lastUpdateDate(apiDebs + bundle + "_" + version.replace("v", "").trim() + "_iphoneos-arm.deb").then(res => $("#" + version.replaceAll(".", "")).append("- (" + res + ")"));
+                });
+            });
+            console.log("XML parsing done.");
         }
     });
 });
@@ -68,6 +53,29 @@ $("img").bind("mousedown", function () {
     return false;
 });
 
+async function lastUpdateDate(url) {
+    return await new Promise((resolve, reject) => {
+        var formatOptions = { year: "numeric", month: "2-digit", day: "2-digit" };
+        try {
+            // Switched to a GitHub-specific last commit
+            // date fetching system
+            var req = new XMLHttpRequest();
+            req.open("GET", url, true);
+            req.send();
+            req.onload = () => {
+                if (req.status == 200 && req.readyState == 4) {
+                    console.log("Date successfully fetched for url: " + url);
+                    resolve(new Date(JSON.parse(req.responseText)[0].commit.committer.date)
+                        .toLocaleDateString("en-US", formatOptions));
+                }
+                else reject("Error (status: " + req.status + ", state: " + req.readyState + ")");
+            }
+        } catch (er) {
+            reject(er.message);
+        }
+    });
+}
+
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');
@@ -78,30 +86,4 @@ function getQueryVariable(variable) {
         }
     }
     console.log("Query variable %s not found", variable);
-}
-
-function fileExists(url) {
-    try {
-        var req = new XMLHttpRequest();
-        req.open("HEAD", url, false);
-        req.send(null);
-        return req.status != 404;
-    } catch (er) {
-        return er.message;
-    }
-}
-
-function lastUpdateDate(url) {
-    var formatOptions = {year: "numeric", month: "2-digit", day: "2-digit"};
-    try {
-        var req = new XMLHttpRequest();
-        req.open("HEAD", url, false);
-        req.send(null);
-        if (req.status == 200)
-            return new Date(req.getResponseHeader('Last-Modified'))
-                .toLocaleDateString("en-US", formatOptions);
-        else return "Unknown";
-    } catch (er) {
-        return er.message;
-    }
 }

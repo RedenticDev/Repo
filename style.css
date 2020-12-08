@@ -205,7 +205,7 @@ section#contact > a::after {
 }
 
 section#contact button#collapsible::after {
-    transform: translateY(-10px);
+    line-height: 50%;
 }
 
 section#contact > a:hover::after {
@@ -214,7 +214,7 @@ section#contact > a:hover::after {
 
 
 section#contact button#collapsible.active::after {
-    transform: rotate(90deg) translateX(-7px);
+    transform: rotate(90deg) translate(3px, -1px);
 }
 
 /* WHOAMI button */
@@ -231,7 +231,7 @@ section#contact button#collapsible {
     font-size: medium;
     border: black 1px solid;
     border-radius: 30px;
-    padding: 15px 20px 0 20px;
+    padding: 16px 20px;
     margin: 10px 10px 0 10px;
     -webkit-transition: 500ms;
     -moz-transition: 500ms;

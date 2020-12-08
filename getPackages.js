@@ -12,19 +12,21 @@ document.getElementById("collapsible").addEventListener("click", function () {
 /**
  * Function to get html content as a string (for markdown parser)
  */
-function getContentOfURL(url) {
-    try {
-        var req = new XMLHttpRequest();
-        req.open("GET", url, false);
-        req.send(null);
-        if (req.readyState == 4 && req.status == 200) {
-            return req.responseText;
+async function getContentOfURL(url) {
+    return await new Promise((resolve, reject) => {
+        try {
+            var req = new XMLHttpRequest();
+            req.open("GET", url, true);
+            req.send();
+            req.onload = () => {
+                if (req.readyState == 4 && req.status == 200) resolve(req.responseText);
+                reject("An error occurred.\n(readyState = "
+                    + req.readyState + ", status = " + req.status + ")");
+            }
+        } catch (er) {
+            reject(er.message);
         }
-        return "An error occurred.\n(readyState = "
-            + req.readyState + ", status = " + req.status + ")";
-    } catch (er) {
-        console.log(er.message);
-    }
+    });
 }
 
 /**
@@ -136,7 +138,6 @@ document.addEventListener("readystatechange", function () {
         });
         content += "</td></tr>\n";
     });
-    console.log(content);
 
     document.getElementById("devices-list").innerHTML += content;
 
