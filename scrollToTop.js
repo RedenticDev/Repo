@@ -1,11 +1,11 @@
 /**
  * Browser detector
  */
-if (!navigator.userAgent.search("Safari")) {
-	console.log("Non-safari browser detected");
-	document.getElementsByTagName("body")[0].className += " not-safari";
+if (!/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+	console.log("Non-Apple product detected");
+	document.getElementsByTagName("body")[0].className += " not-apple";
 } else {
-	console.log("Safari detected");
+	console.log("Apple product detected");
 }
 
 /**
