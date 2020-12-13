@@ -270,16 +270,16 @@ tr a img {
 		color: lightgrey;
 	}
 
-    .not-safari::-webkit-scrollbar {
+    .not-apple::-webkit-scrollbar {
         background-color: #202324;
         color: #aba499;
     }
 
-    .not-safari::-webkit-scrollbar-corner {
+    .not-apple::-webkit-scrollbar-corner {
         background-color: #181a1b;
     }
 
-    .not-safari::-webkit-scrollbar-thumb {
+    .not-apple::-webkit-scrollbar-thumb {
         background-color: #454a4d;
     }
 }
