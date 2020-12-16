@@ -98,7 +98,7 @@ document.addEventListener("readystatechange", function () {
         ["checkra1n", "iPhone 6s", "iOS 13.7", "128 Go", "Space Grey"],
         ["checkra1n", "iPhone 6", "iOS 12.4.9", "64 Go", "Gold"],
         ["checkra1n", "iPad 6", "iPadOS 14.2", "32 Go", "Gold"],
-        ["MacBook 2017", "macOS 10.15.7 Catalina", "i5", "8 Go / 512 Go", "Space Grey"],
+        ["MacBook 2017", "macOS 11.1 Big Sur", "i5", "8 Go / 512 Go", "Space Grey"],
         ["Apple Watch Series 5", "watchOS 6.2.8", "Space Grey"],
         ["AirPods", "1st Gen", "Wireless Case"]
     ];
