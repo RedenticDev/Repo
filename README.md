@@ -1,4 +1,4 @@
-# Redentic's Tweak Repository
+# Redentic's Tweaks Repository
 [![GitHub license](https://img.shields.io/github/license/RedenticDev/redenticdev.github.io)](https://github.com/RedenticDev/redenticdev.github.io/blob/master/LICENSE)
 ![GitHub language count](https://img.shields.io/github/languages/count/RedenticDev/redenticdev.github.io)
 ![Lines of code](https://img.shields.io/tokei/lines/github/RedenticDev/redenticdev.github.io)
