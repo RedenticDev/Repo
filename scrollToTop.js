@@ -4,7 +4,10 @@
 if (!/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
 	console.log("Non-Apple product detected");
 	document.getElementsByTagName("body")[0].className += " not-apple";
-	document.getElementById("screenshots").classList.add("not-apple");
+	var screensdiv = document.getElementById("screenshots");
+	if (screensdiv) {
+		screensdiv.classList.add("not-apple");
+	}
 } else {
 	console.log("Apple product detected");
 }
