@@ -35,7 +35,7 @@ async function getContentOfURL(url) {
 $(function () {
     // I have to put existing packages manually as GitHub Pages doesn't
     // accept Node.JS/PHP, so I can't browse subfolders automatically :(
-    const packages = ["sbcolors", "fastlpm", "respringpack", "appmore"];
+    const packages = ["sbcolors", "fastlpm", "respringpack", "appmore", "shortlook.plugin.contact-photo.telegram"];
 
     // Random order with Chrome/Opera
     $.each(packages, function (i, actualPackage) {
