@@ -231,19 +231,3 @@ Icon: https://redentic.dev/depictions/com.redenticdev.sbcolors/icon.png
 Name: SBColors
 Sileodepiction: https://redentic.dev/depictions/com.redenticdev.sbcolors/sileo.json
 
-Package: com.redenticdev.shortlook.plugin.contact-photo.telegram
-Version: 1.0.0
-Architecture: iphoneos-arm
-Maintainer: RedenticDev
-Installed-Size: 200
-Depends: mobilesubstrate, co.dynastic.ios.tweak.shortlook
-Filename: ./debs/com.redenticdev.shortlook.plugin.contact-photo.telegram_1.0.0_iphoneos-arm.deb
-Size: 10252
-MD5sum: 304851d44e38abb5d7a6772d9d306b0e
-SHA1: 3e73c367fc037e1b2bb16ad49dac9dbd952e875b
-SHA256: fd640c0f794f563a35ab8545fa6b63a0ea338824c734b059ac729431cd642a0c
-Section: Tweaks (ShortLook)
-Description: Show Telegram Contact Photos in ShortLook when you receive a Telegram notification!
-Author: RedenticDev
-Name: Telegram Contact Photos for ShortLook
-
