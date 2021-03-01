@@ -99,7 +99,7 @@ document.addEventListener("readystatechange", function () {
         ["checkra1n", "iPhone 6", "iOS 12.5.1", "64 Go", "Gold"],
         ["checkra1n", "iPad 6", "iPadOS 14.4", "32 Go", "Gold"],
         ["MacBook 2017", "macOS 11.2.2 Big Sur", "i5", "8 Go / 512 Go", "Space Grey"],
-        ["Apple Watch Series 5", "watchOS 6.2.8", "Space Grey"],
+        ["Apple Watch Series 5", "watchOS 7.3.1", "Space Grey"],
         ["AirPods", "1st Gen", "Wireless Case"]
     ];
     var content = "";
