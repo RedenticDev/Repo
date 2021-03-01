@@ -93,13 +93,13 @@ document.addEventListener("readystatechange", function () {
     if (document.readyState != "interactive") return;
 
     const devices = [
-        ["unc0ver", "iPhone XS", "iOS 14.3", "64 Go", "Space Grey", "<strong><em>(Main device)</em></strong>"],
+        ["unc0ver", "iPhone XS", "iOS 14.3", "64 Go", "Space Gray", "<strong><em>(Main device)</em></strong>"],
         ["checkra1n", "iPhone 7", "iOS 14.3", "128 Go", "PRODUCT(RED)"],
-        ["checkra1n", "iPhone 6s", "iOS 13.7", "128 Go", "Space Grey"],
+        ["checkra1n", "iPhone 6s", "iOS 13.7", "128 Go", "Space Gray"],
         ["checkra1n", "iPhone 6", "iOS 12.5.1", "64 Go", "Gold"],
         ["checkra1n", "iPad 6", "iPadOS 14.4", "32 Go", "Gold"],
-        ["MacBook 2017", "macOS 11.2.2 Big Sur", "i5", "8 Go / 512 Go", "Space Grey"],
-        ["Apple Watch Series 5", "watchOS 7.3.1", "Space Grey"],
+        ["MacBook 2017", "macOS 11.2.2 Big Sur", "i5", "8 Go / 512 Go", "Space Gray"],
+        ["Apple Watch Series 5", "watchOS 7.3.1", "Space Gray"],
         ["AirPods", "1st Gen", "Wireless Case"]
     ];
     var content = "";
