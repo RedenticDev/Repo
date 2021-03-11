@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<packageInfo>
+    <name>Star Wars Respring Pack</name>
+    <version>1.0.0</version>
+    <descriptions>
+        <description>
+            A nice Star Wars respring pack
+        </description>
+        <description>
+            Content:
+            - 501st (logo & minimalist)
+            - Boba Fett head
+            - Clone Phase 1 & 2
+            - Darth Vador
+            - Empire icon
+            - First Order icon
+            - Galactic Republic icon
+            - Jedi Order icon
+            - Rebel Alliance icon
+	    - Shoretrooper head
+	    - Stormtrooper heads (Empire & First Order)
+	    - Mando head
+	    - Tie Fighter (logo & minimalist)
+	    - X-wing (logo & minimalist)
+
+            How to use?
+            The pack is available in Snowboard. Requires Respring Extension.
+        </description>
+    </descriptions>
+    <compatibility>
+        <miniOS>11.0</miniOS>
+        <maxiOS>14.3</maxiOS>
+    </compatibility>
+    <dependencies>
+        <dependency>Snowboard &amp; Snowboard Respring Extension or Anemone (untested)</dependency>
+    </dependencies>
+    <changelog>
+        <change>
+            <changeVersion>v1.0.0</changeVersion>
+            <changeDescription>Initial Release</changeDescription>
+        </change>
+    </changelog>
+    <screenshots>
+        <screen>1.png</screen>
+        <screen>2.png</screen>
+    </screenshots>
+    <informations>
+        <developer>RedenticDev</developer>
+        <category>Theme</category>
+    </informations>
+    <links>
+        <github>https://github.com/RedenticDev</github>
+        <twitter>https://twitter.com/RedenticDev</twitter>
+        <reddit>https://www.reddit.com/user/redentic</reddit>
+        <mail>mailto:redenticdev@gmail.com</mail>
+        <paypal>https://www.paypal.me/redenticdev</paypal>
+    </links>
+</packageInfo>

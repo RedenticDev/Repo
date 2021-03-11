@@ -231,3 +231,21 @@ Icon: https://redentic.dev/depictions/com.redenticdev.sbcolors/icon.png
 Name: SBColors
 Sileodepiction: https://redentic.dev/depictions/com.redenticdev.sbcolors/sileo.json
 
+Package: com.redenticdev.swrespringpack
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: RedenticDev <redenticdev@gmail.com>
+Depends: com.spark.snowboard | com.spark.snowboard.respringextension | com.anemonetheming.anemone
+Filename: ./debs/com.redenticdev.swrespringpack_1.0.0_iphoneos-arm.deb
+Size: 921760
+MD5sum: ecdc14ac2001594f9c4480e812a86722
+SHA1: 7957c45f32bbc6623d17f2c416820736c3353424
+SHA256: 7dee838a1fa88b790f6eb19ffc1cf70e35ce31c16277650ff37f6997e2d06b12
+Section: Themes
+Description: A nice Star Wars respring pack
+Author: RedenticDev <redenticdev@gmail.com>
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.swrespringpack
+Icon: https://redentic.dev/depictions/com.redenticdev.swrespringpack/icon.png
+Name: Star Wars Respring Pack
+Sileodepiction: https://redentic.dev/depictions/com.redenticdev.swrespringpack/sileo.json
+
