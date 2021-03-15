@@ -41,6 +41,17 @@
                     "markdown": "- 501st (logo & minimalist)\n- Boba Fett head\n- Clone Phase 1 & 2\n- Darth Vador\n- Empire icon\n- First Order icon\n- Galactic Republic icon\n- Jedi Order icon\n- Rebel Alliance icon\n- Shoretrooper head\n- Stormtrooper heads (Empire & First Order)\n- Mando head\n- Tie Fighter (logo & minimalist)\n- X-wing (logo & minimalist)\n",
                     "useSpacing": true
                 },
+	        {
+                    "class": "DepictionSubheaderView",
+                    "title": "And now:",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Baby Yoda\n- Captain Rex\n- 332nd clone\n",
+                    "useSpacing": true
+                },
                 {
                     "class": "DepictionSubheaderView",
                     "title": "How to use?",
@@ -67,17 +78,17 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "1.0.0"
+                    "text": "1.1.0"
                 },
                 {
                     "class": "DepictionTableTextView",
                     "title": "iOS Version",
-                    "text": "iOS 11.0 to 14.3"
+                    "text": "iOS 11.0 to 14.4"
                 },
                 {
                     "class": "DepictionTableTextView",
                     "title": "Last update",
-                    "text": "03/11/2021"
+                    "text": "03/15/2021"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -118,6 +129,21 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "v1.1.0",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Added Baby Yoda\r\n- Added Captain Rex\r\n- Added 332nd clone\r\n- Fixed a typo",
+                    "useSpacing": false
+                },
+                {
+                    "class": "DepictionSpacerView",
+                    "spacing": 8
+                },
                 {
                     "class": "DepictionSubheaderView",
                     "title": "v1.0.0",

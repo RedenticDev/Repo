@@ -24,18 +24,30 @@
 	    - Tie Fighter (logo &amp; minimalist)
 	    - X-wing (logo &amp; minimalist)
 
+	    And now:
+	    - Baby Yoda
+	    - Captain Rex
+	    - 332nd clone
+
             How to use?
             The pack is available in Snowboard. Requires Respring Extension.
         </description>
     </descriptions>
     <compatibility>
         <miniOS>11.0</miniOS>
-        <maxiOS>14.3</maxiOS>
+        <maxiOS>14.4</maxiOS>
     </compatibility>
     <dependencies>
         <dependency>Snowboard &amp; Snowboard Respring Extension or Anemone (untested)</dependency>
     </dependencies>
     <changelog>
+        <change>
+            <changeVersion>v1.1.0</changeVersion>
+            <changeDescription>Added Baby Yoda</changeDescription>
+	    <changeDescription>Added Captain Rex</changeDescription>
+	    <changeDescription>Added 332nd clone</changeDescription>
+	    <changeDescription>Fixed a typo</changeDescription>
+        </change>
         <change>
             <changeVersion>v1.0.0</changeVersion>
             <changeDescription>Initial Release</changeDescription>
