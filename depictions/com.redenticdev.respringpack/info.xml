@@ -2,7 +2,7 @@
 <!DOCTYPE xml>
 <packageInfo>
     <name>Respring Pack</name>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <descriptions>
         <description>
             A free respring pack with fun icons
@@ -24,6 +24,9 @@
             - Android logo
             - Microsoft logo
             - Odyssey jailbreak logo
+            - Electra jailbreak logo
+            - Chimera jailbreak logo
+            - Taurine jailbreak logo
 
             How to use?
             The pack is available in Snowboard. Requires Respring Extension.
@@ -31,12 +34,18 @@
     </descriptions>
     <compatibility>
         <miniOS>11.0</miniOS>
-        <maxiOS>13.7</maxiOS>
+        <maxiOS>14.4</maxiOS>
     </compatibility>
     <dependencies>
         <dependency>Snowboard &amp; Snowboard Respring Extension or Anemone (untested)</dependency>
     </dependencies>
     <changelog>
+    	<change>
+        	<changeVersion>v1.2.0</changeVersion>
+        	<changeDescription>Added Electra jailbreak logo</changeDescription>
+        	<changeDescription>Added Chimera jailbreak logo</changeDescription>
+        	<changeDescription>Added Taurine jailbreak logo</changeDescription>
+        </change>
         <change>
             <changeVersion>v1.1.0</changeVersion>
             <changeDescription>Added Android logo</changeDescription>

@@ -50,7 +50,7 @@
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "- Steve Jobs' head\n- Android logo\n- Microsoft logo\n- Odyssey jailbreak logo\n",
+                    "markdown": "- Steve Jobs' head\n- Android logo\n- Microsoft logo\n- Odyssey jailbreak logo\n- Electra jailbreak logo\n- Chimera jailbreak logo\n- Taurine jailbreak logo\n",
                     "useSpacing": true
                 },
                 {
@@ -79,17 +79,17 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "1.1.0"
+                    "text": "1.2.0"
                 },
                 {
                     "class": "DepictionTableTextView",
                     "title": "iOS Version",
-                    "text": "iOS 11.0 to 13.7"
+                    "text": "iOS 11.0 to 14.4"
                 },
                 {
                     "class": "DepictionTableTextView",
                     "title": "Last update",
-                    "text": "09/05/2020"
+                    "text": "04/03/2021"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -130,6 +130,21 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+            	{
+            	    "class": "DepictionSubheaderView",
+            	    "title": "v1.2.0",
+            	    "useBoldText": true,
+            	    "useBottomMargin": false
+            	},
+            	{
+            	    "class": "DepictionMarkdownView",
+            	    "markdown": "- Added Electra jailbreak logo\r\n- Added Chimera jailbreak logo\r\n- Added Taurine jailbreak logo",
+            	    "useSpacing": false
+            	},
+            	{
+              	    "class": "DepictionSpacerView",
+              	    "spacing": 8
+              	},
                 {
                     "class": "DepictionSubheaderView",
                     "title": "v1.1.0",
