@@ -22,7 +22,7 @@ Tweak | Version | Description | Compatibility
 :---:|:---:|:---:|:---:
 **[SBColors](https://github.com/RedenticDev/SBColors)** | v1.0.1 | Easily change your status bar colors! | iOS 11.0 - 13.5
 **[FastLPM](https://github.com/RedenticDev/FastLPM)** | v1.1.3 | Toggle LPM by tapping the battery icon | iOS 11.0 - 13.7
-**Redentic's Respring Pack** | v1.1.0 | A free respring pack with fun icons | iOS 11.0 - 13.7
+**Redentic's Respring Pack** | v1.2.0 | A free respring pack with fun icons | iOS 11.0 - 14.4
 **[AppMore](https://github.com/RedenticDev/AppMore)** | v1.0.0 | Auto-extend app's description in AppStore updates page | iOS 13.0 - 13.7
 **Star Wars Respring Pack** | v1.1.0 | A nice Star Wars respring pack | iOS 11.0 - 14.4
 
