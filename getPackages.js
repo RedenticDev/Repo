@@ -93,7 +93,7 @@ document.addEventListener("readystatechange", function () {
     if (document.readyState != "interactive") return;
 
     const devices = [
-        ["unc0ver", "iPhone XS", "iOS 14.3", "64 Go", "Space Gray", "<strong><em>(Main device)</em></strong>"],
+        ["taurine", "iPhone XS", "iOS 14.3", "64 Go", "Space Gray", "<strong><em>(Main device)</em></strong>"],
         ["checkra1n", "iPhone 7", "iOS 14.3", "128 Go", "PRODUCT(RED)"],
         ["checkra1n", "iPhone 6s", "iOS 13.7", "128 Go", "Space Gray"],
         ["checkra1n", "iPhone 6", "iOS 12.5.2", "64 Go", "Gold"],
@@ -111,6 +111,30 @@ document.addEventListener("readystatechange", function () {
             switch (word) {
                 case "unc0ver":
                     word = "<img src=\"https://unc0ver.dev/favicon.ico\" alt=\"" + word + "\" />";
+                    content += word;
+                    spaceplease = true;
+                    return;
+
+                case "taurine":
+                    word = "<img src=\"https://taurine.app/assets/images/favicon.png\" alt=\"" + word + "\" />";
+                    content += word;
+                    spaceplease = true;
+                    return;
+
+                case "odyssey":
+                    word = "<img src=\"https://theodyssey.dev/assets/images/favicon.png\" alt=\"" + word + "\" />";
+                    content += word;
+                    spaceplease = true;
+                    return;
+
+                case "chimera":
+                    word = "<img src=\"https://chimera.coolstar.org/img/icon.png\" alt=\"" + word + "\" />";
+                    content += word;
+                    spaceplease = true;
+                    return;
+
+                case "electra":
+                    word = "<img src=\"https://coolstar.org/electra/favicon.ico\" alt=\"" + word + "\" />";
                     content += word;
                     spaceplease = true;
                     return;
