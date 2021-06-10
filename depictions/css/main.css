@@ -3,40 +3,39 @@ body {
 	padding: 0;
 	border: 0;
 	display: block;
-	background-color: #eeeeee;
 	-webkit-font-smoothing: antialiased;
-	font-family: -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
+	font-family: system-ui, -apple-system, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
 	text-align: center;
-	padding-bottom: 50px;
+	margin-bottom: 50px;
 	scroll-behavior: smooth;
 }
 
 button {
-    z-index: 99;
-    bottom: 30px;
-    right: -100px;
-    position: fixed;
-    box-sizing: border-box;
-    padding: 0;
-    width: 50px;
-    height: 50px;
-    font-size: 200%;
-    text-align: center;
-    outline: none;
-    color: white;
-    background-color: #373739;
-    border: 0;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    -ms-border-radius: 35px;
-    -o-border-radius:35px;
-    border-radius: 35px;
-    -webkit-transition: all 250ms ease-out;
-    -moz-transition: all 250ms ease-out;
-    -ms-transition: all 250ms ease-out;
-    -o-transition: all 250ms ease-out;
-    transition: all 250ms ease-out;
-    cursor: pointer;
+	z-index: 99;
+	bottom: 30px;
+	right: -100px;
+	position: fixed;
+	box-sizing: border-box;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	font-size: 200%;
+	text-align: center;
+	outline: none;
+	color: white;
+	background-color: black;
+	border: 0;
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
+	-ms-border-radius: 35px;
+	-o-border-radius: 35px;
+	border-radius: 35px;
+	-webkit-transition: all 250ms ease-out;
+	-moz-transition: all 250ms ease-out;
+	-ms-transition: all 250ms ease-out;
+	-o-transition: all 250ms ease-out;
+	transition: all 250ms ease-out;
+	cursor: pointer;
 }
 
 h1, h2, ul, li, p, tr, th, td {
@@ -236,8 +235,8 @@ tr a:after {
 tr a img {
 	height: 20px;
 	border-radius: 5px;
-    vertical-align: -5px;
-    margin-right: 5px;
+	vertical-align: -5px;
+	margin-right: 5px;
 }
 
 /* Dark mode */
@@ -248,7 +247,7 @@ tr a img {
 	}
 
 	button {
-		color: #373739;
+		color: black;
 		background-color: white;
 	}
 
@@ -269,16 +268,16 @@ tr a img {
 		color: lightgrey;
 	}
 
-    .not-apple::-webkit-scrollbar {
-        background-color: #202324;
-        color: #aba499;
-    }
+	.not-apple::-webkit-scrollbar {
+		background-color: #202324;
+		color: #aba499;
+	}
 
-    .not-apple::-webkit-scrollbar-corner {
-        background-color: #181a1b;
-    }
+	.not-apple::-webkit-scrollbar-corner {
+		background-color: #181a1b;
+	}
 
-    .not-apple::-webkit-scrollbar-thumb {
-        background-color: #454a4d;
-    }
+	.not-apple::-webkit-scrollbar-thumb {
+		background-color: #454a4d;
+	}
 }

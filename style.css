@@ -1,11 +1,11 @@
 /* Body style */
 body {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	display: block;
-	-webkit-font-smoothing: antialiased;
-    font-family: -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    font-family: system-ui, -apple-system, ".Helvetica NeueUI", "Helvetica Neue", Arial, sans-serif;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -44,12 +44,12 @@ body {
     text-align: center;
     outline: none;
     color: white;
-    background-color: #373739;
+    background-color: black;
     border: 0;
     -webkit-border-radius: 35px;
     -moz-border-radius: 35px;
     -ms-border-radius: 35px;
-    -o-border-radius:35px;
+    -o-border-radius: 35px;
     border-radius: 35px;
     -webkit-transition: all 250ms ease-out;
     -moz-transition: all 250ms ease-out;
@@ -363,7 +363,7 @@ section#devices table tbody#devices-list tr td img {
 @media (prefers-color-scheme: dark) {
     body {
         color: white;
-        background-color: #373739;
+        background-color: black;
     }
 
     hr {
@@ -371,7 +371,7 @@ section#devices table tbody#devices-list tr td img {
     }
 
     .top {
-        color: #373739;
+        color: black;
         background-color: white;
     }
     
