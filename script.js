@@ -1,4 +1,9 @@
 /**
+ * Automatically get date for footer
+ */
+document.getElementsByTagName("footer")[0].innerHTML = "<p>© Copyright 2020-" + new Date().getFullYear() + " • Redentic</p>";
+
+/**
  * Toggle on/off the dropdown spoiler '_WHOAMI'
  */
 document.getElementById("collapsible").addEventListener("click", function () {
@@ -6,14 +11,16 @@ document.getElementById("collapsible").addEventListener("click", function () {
     var content = this.nextElementSibling;
     if (content.style.height === '0px' || content.style.height === '') {
         content.style.height = content.scrollHeight + "px"; // magic property
-    } else content.style.height = "0px";
+    } else {
+        content.style.height = "0px";
+    }
 });
 
 /**
  * Function to get html content as a string (for markdown parser)
  */
 async function getContentOfURL(url) {
-    return await new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         try {
             var req = new XMLHttpRequest();
             req.open("GET", url, true);
@@ -28,6 +35,13 @@ async function getContentOfURL(url) {
         }
     });
 }
+
+/**
+ * Dynamic markdown section in _WHOAMI
+ */
+getContentOfURL("https://raw.githubusercontent.com/RedenticDev/RedenticDev/master/README.md").then(res => {
+    document.getElementById("markdown").innerHTML = marked(res);
+});
 
 /**
  * Add packages (almost) automatically in the appropriate section
@@ -166,3 +180,17 @@ document.addEventListener("readystatechange", function () {
     document.getElementById("devices-list").innerHTML += content;
 
 }, false);
+
+/**
+ * Browser detector
+ */
+if (!/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+	console.log("Non-Apple product detected");
+	document.getElementsByTagName("body")[0].className += " not-apple";
+	var screensdiv = document.getElementById("screenshots");
+	if (screensdiv) {
+		screensdiv.classList.add("not-apple");
+	}
+} else {
+	console.log("Apple product detected");
+}

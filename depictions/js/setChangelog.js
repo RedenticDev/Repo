@@ -54,7 +54,7 @@ $("img").bind("mousedown", function () {
 });
 
 async function lastUpdateDate(url) {
-    return await new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         var formatOptions = { year: "numeric", month: "2-digit", day: "2-digit" };
         try {
             // Switched to a GitHub-specific last commit
@@ -79,8 +79,8 @@ async function lastUpdateDate(url) {
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');
-    for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split('=');
+    for (let vari of vars) {
+        var pair = vari.split('=');
         if (decodeURIComponent(pair[0]) == variable) {
             return decodeURIComponent(pair[1]);
         }
