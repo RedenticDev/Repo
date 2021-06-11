@@ -10,9 +10,9 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
     scroll-behavior: smooth;
-    animation: fadeInAnimation 2s ease;
+    animation: fadeInAnimation 3s ease;
     animation-fill-mode: forwards;
-    -webkit-animation: fadeInAnimation 2s ease;
+    -webkit-animation: fadeInAnimation 3s ease;
     -webkit-animation-fill-mode: forwards;
 }
 
@@ -28,12 +28,10 @@ body {
 
 @-webkit-keyframes fadeInAnimation {
     from {
-        margin-top: 100px;
         opacity: 0;
     }
 
     to {
-        margin-top: 50px;
         opacity: 1;
     }
 }
@@ -69,7 +67,7 @@ body {
 
 /* ==== GLOBAL TAGS STYLE ==== */
 /* Section titles */
-body > h2 {
+body h2 {
     margin-top: 50px;
     margin-bottom: 10px;
     width: 88vw;
@@ -89,7 +87,7 @@ body > em {
 }
 
 /* Section titles & add to repo info */
-body > h2, body > em {
+body h2, body > em {
     padding-left: 20px;
     padding-right: 20px;
 }
