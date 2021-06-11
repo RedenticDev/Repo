@@ -14,11 +14,7 @@ All the redesigns and improvements since its creation have been done by myself. 
 This repo is available at [redentic.dev](https://redentic.dev).
 
 ## How to add it in my package manager?
-Browse [redentic.dev](https://redentic.dev) and click icons to add it to your favorite package manager from your i(Pad)OS device. Shortcuts:
-- [Cydia](cydia://url/https://cydia.saurik.com/api/share#?source=https://redentic.dev)
-- [Zebra](zbra://sources/add/https://redentic.dev)
-- [Installer](installer://add/https://redentic.dev)
-- [Sileo](sileo://source/https://redentic.dev)
+Browse [redentic.dev](https://redentic.dev) and click icons to add it to your favorite package manager from your i(Pad)OS device.
 
 ## Tweaks & Themes included
 Tweaks (& themes) I do are and will always be free and open-source. Here they are:
