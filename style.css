@@ -67,7 +67,7 @@ body {
 
 /* ==== GLOBAL TAGS STYLE ==== */
 /* Section titles */
-body h2 {
+body section > h2 {
     margin-top: 50px;
     margin-bottom: 10px;
     width: 88vw;
@@ -87,7 +87,7 @@ body > em {
 }
 
 /* Section titles & add to repo info */
-body h2, body > em {
+body section > h2, body > em {
     padding-left: 20px;
     padding-right: 20px;
 }

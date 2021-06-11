@@ -10,7 +10,7 @@ body {
 	scroll-behavior: smooth;
 }
 
-button {
+.top {
 	z-index: 99;
 	bottom: 30px;
 	right: -100px;
@@ -246,7 +246,7 @@ tr a img {
 		color: white;
 	}
 
-	button {
+	.top {
 		color: black;
 		background-color: white;
 	}
