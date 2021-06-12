@@ -421,6 +421,7 @@ section#devices table tbody#devices-list tr td img {
     }
 
     section#devices table tbody#devices-list tr td img[src*="checkra.in"] {
+        -webkit-filter: invert();
         filter: invert();
     }
 
