@@ -51,11 +51,11 @@ $(function () {
     // accept Node.JS/PHP, so I can't browse subfolders automatically :(
     const packages = ["sbcolors", "fastlpm", "respringpack", "appmore", "swrespringpack"];
 
-    // Random order with Chrome/Opera
+    // Random order with Chrome/Opera/Safari 14(?)+
     $.each(packages, function (i, actualPackage) {
         $.ajax({
             type: "GET",
-            url: location.origin + location.pathname + "depictions/com.redenticdev." + actualPackage + "/info.xml",
+            url: location.href + "depictions/com.redenticdev." + actualPackage + "/info.xml",
             dataType: "xml",
             success: function (xml) {
                 $(xml).find("packageInfo").each(function () {

@@ -43,7 +43,7 @@ $(function () {
                     });
                     changelogExport += "</li>";
                 });
-                lastUpdateDate(apiDebs + bundle + "_" + $(this).find("version").text().replace("v", "").trim() + "_iphoneos-arm.deb").then(res => { $("#changelog-date").append(res) });
+                lastUpdateDate(apiDebs + bundle + "_" + $(this).find("version").text().replace("v", "").trim() + "_iphoneos-arm.deb").then(res => $("#changelog-date").append(res));
                 $("#changelog").append(changelogExport + "<table><tr><td><a href=\"changelog/?p=" + bundle + "\" target=\"_blank\">Full changelog</a></td></tr></table>");
 
                 $(xml).find("screen").each(function () {
@@ -59,8 +59,8 @@ $(function () {
                 $("#infoTable").append("<tr><th>iOS Version</th><td>iOS " + $(this).find("miniOS").text().trim() + " to " + $(this).find("maxiOS").text().trim() + "</td></tr>");
                 $("#infoTable").append("<tr><th>Last update</th></td><td id=\"last-update\"></td></tr>");
                 $("#infoTable").append("<tr><th>Release date</th></td><td id=\"release-date\"></td></tr>");
-                lastUpdateDate(apiDebs + bundle + "_" + $(this).find("version").text().replace("v", "").trim() + "_iphoneos-arm.deb").then(res => { $("#last-update").append(res) });
-                lastUpdateDate(apiDebs + bundle + "_" + $(this).find("changeVersion:last").text().replace("v", "").trim() + "_iphoneos-arm.deb").then(res => { $("#release-date").append(res) });
+                lastUpdateDate(apiDebs + bundle + "_" + $(this).find("version").text().replace("v", "").trim() + "_iphoneos-arm.deb").then(res => $("#last-update").append(res));
+                lastUpdateDate(apiDebs + bundle + "_" + $(this).find("changeVersion:last").text().replace("v", "").trim() + "_iphoneos-arm.deb").then(res => $("#release-date").append(res));
                 // $("#infoTable").append("<tr><th>Downloads</th><td>" +  + "</td></tr>");
                 $("#infoTable").append("<tr><th>Category</th><td>" + $(this).find("category").text().trim() + "</td></tr>");
 
@@ -106,7 +106,7 @@ async function lastUpdateDate(url) {
 }
 
 function getQueryVariable(variable) {
-    var query = window.location.search.substring(1);
+    var query = location.search.substring(1);
     var vars = query.split("&");
     for (let vari of vars) {
         var pair = vari.split("=");
@@ -118,6 +118,10 @@ function getQueryVariable(variable) {
 }
 
 // Inspired by Silica
+function numerize(x) {
+    return x.substring(0, x.indexOf(".")) + "." + x.substring(x.indexOf(".") + 1).replace(".", "");
+}
+
 function compatible(works_min, works_max) {
     // iOS version detection by Dylan Duff
     // Does not work for iPadOS, as iPadOS is seen by the browser as a Mac :/
@@ -147,8 +151,4 @@ function compatible(works_min, works_max) {
         text.innerHTML = "Cannot determine your version. Open this page on an iOS device to check compatibility.";
         text.style.fontStyle = "italic";
     }
-}
-
-function numerize(x) {
-    return x.substring(0, x.indexOf(".")) + "." + x.substring(x.indexOf(".") + 1).replace(".", "");
 }

@@ -77,10 +77,10 @@ async function lastUpdateDate(url) {
 }
 
 function getQueryVariable(variable) {
-    var query = window.location.search.substring(1);
-    var vars = query.split('&');
+    var query = location.search.substring(1);
+    var vars = query.split("&");
     for (let vari of vars) {
-        var pair = vari.split('=');
+        var pair = vari.split("=");
         if (decodeURIComponent(pair[0]) == variable) {
             return decodeURIComponent(pair[1]);
         }
