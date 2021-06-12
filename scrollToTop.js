@@ -2,7 +2,7 @@
  * Scroll-to-top
  * https://github.com/iamdustan/smoothscroll/blob/master/src/smoothscroll.js
  */
- window.addEventListener("load", function () {
+window.addEventListener("load", function () {
 	var btn = document.getElementsByClassName("top")[0];
 	if (btn) {
 		// Click to scroll to top
@@ -19,8 +19,8 @@
 		window.addEventListener("scroll", function () {
 			if (window.scrollY < 0) return;
 			var btnRight = window.getComputedStyle(btn, null)
-			.getPropertyValue('right')
-			.replace(/px$/, '');
+				.getPropertyValue('right')
+				.replace(/px$/, '');
 			if (window.scrollY >= 10) {
 				if (btnRight <= 0) {
 					btn.style.right = "30px";
@@ -31,7 +31,7 @@
 				btn.style.transform = "rotate(-90deg)";
 			}
 		}, {
-            passive: true
-        });
+			passive: true
+		});
 	}
 });

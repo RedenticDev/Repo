@@ -185,9 +185,9 @@ document.addEventListener("readystatechange", function () {
  * Browser detector
  */
 if (!/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
-	document.getElementsByTagName("body")[0].className += " not-apple";
-	var screensdiv = document.getElementById("screenshots");
-	if (screensdiv) {
-		screensdiv.classList.add("not-apple");
-	}
+    document.getElementsByTagName("body")[0].className += " not-apple";
+    var screensdiv = document.getElementById("screenshots");
+    if (screensdiv) {
+        screensdiv.classList.add("not-apple");
+    }
 }

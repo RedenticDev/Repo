@@ -67,7 +67,7 @@ body {
 
 /* ==== GLOBAL TAGS STYLE ==== */
 /* Section titles */
-body section > h2 {
+body section>h2 {
     margin-top: 50px;
     margin-bottom: 10px;
     width: 88vw;
@@ -78,7 +78,7 @@ body section > h2 {
 }
 
 /* Add to repo desktop info */
-body > em {
+body>em {
     display: flex;
     max-width: 650px;
     margin-left: auto;
@@ -87,7 +87,8 @@ body > em {
 }
 
 /* Section titles & add to repo info */
-body section > h2, body > em {
+body section>h2,
+body>em {
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -174,14 +175,15 @@ section#add-repo .link::after {
     transition: 300ms;
 }
 
-section#add-repo a:hover > .link::after, .link:hover::after {
+section#add-repo a:hover>.link::after,
+.link:hover::after {
     width: 100%;
 }
 
 /* ==== */
 
 /* ==== CONTACT SECTION ==== */
-section#contact > a {
+section#contact>a {
     width: 80vw;
     text-align: left;
     margin-bottom: 0;
@@ -192,7 +194,8 @@ section#contact > a {
     transition: 500ms;
 }
 
-section#contact > a::after, section#contact button#collapsible::after {
+section#contact>a::after,
+section#contact button#collapsible::after {
     content: "›";
     color: black;
     font-weight: medium;
@@ -206,7 +209,7 @@ section#contact > a::after, section#contact button#collapsible::after {
     transition: 500ms;
 }
 
-section#contact > a::after {
+section#contact>a::after {
     transform: translateY(5px);
 }
 
@@ -214,7 +217,7 @@ section#contact button#collapsible::after {
     line-height: 50%;
 }
 
-section#contact > a:hover::after {
+section#contact>a:hover::after {
     margin-right: 0;
 }
 
@@ -271,7 +274,7 @@ section#contact div.content {
     overflow: hidden;
 }
 
-section#contact div.content > a {
+section#contact div.content>a {
     padding: 20px 0 10px 0;
     font-size: large;
     background: none;
@@ -283,7 +286,7 @@ section#contact div.content > a {
     transition: 250ms;
 }
 
-section#contact div.content > a:hover {
+section#contact div.content>a:hover {
     font-weight: bold;
 }
 
@@ -314,27 +317,28 @@ section#contact div.content div#markdown a img {
 
 /* end of WHOAMI */
 
-section#contact > a[href*="twitter"]:hover {
+section#contact>a[href*="twitter"]:hover {
     background-color: rgba(28, 163, 243, 0.5);
     border-color: rgb(28, 163, 243);
 }
 
-section#contact > a[href*="github"]:hover, section#contact button#collapsible:hover {
+section#contact>a[href*="github"]:hover,
+section#contact button#collapsible:hover {
     background-color: rgba(16, 18, 21, 0.5);
     border-color: rgb(16, 18, 21);
 }
 
-section#contact > a[href*="reddit"]:hover {
+section#contact>a[href*="reddit"]:hover {
     background-color: rgba(249, 69, 13, 0.5);
     border-color: rgb(249, 69, 13);
 }
 
-section#contact > a[href*="mail"]:hover {
+section#contact>a[href*="mail"]:hover {
     background-color: rgba(28, 142, 245, 0.5);
     border-color: rgb(28, 142, 245);
 }
 
-section#contact > a[href*="paypal"]:hover {
+section#contact>a[href*="paypal"]:hover {
     background-color: rgba(4, 91, 158, 0.5);
     border-color: rgb(4, 91, 158);
 }
@@ -380,21 +384,23 @@ section#devices table tbody#devices-list tr td img {
         color: black;
         background-color: white;
     }
-    
+
     .link {
         color: white;
     }
-    
-    a, section#contact button#collapsible {
+
+    a,
+    section#contact button#collapsible {
         color: white;
         border-color: white;
     }
-    
+
     section#add-repo .link::after {
         background: white;
     }
-    
-    section#contact > a::after, section#contact button#collapsible::after {
+
+    section#contact>a::after,
+    section#contact button#collapsible::after {
         color: white;
     }
 
@@ -412,6 +418,10 @@ section#devices table tbody#devices-list tr td img {
 
     section#devices table tbody#devices-list tr:not(:last-child) {
         border-bottom: 1px solid white;
+    }
+
+    section#devices table tbody#devices-list tr td img[src*="checkra.in"] {
+        filter: invert();
     }
 
     .not-apple::-webkit-scrollbar {

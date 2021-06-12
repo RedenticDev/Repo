@@ -1,9 +1,9 @@
-{  
+{
     "class": "FeaturedBannersView",
     "itemSize": "{263, 148}",
     "itemCornerRadius": 10,
-    "banners": [  
-        {  
+    "banners": [
+        {
             "url": "https://redentic.dev/depictions/com.redenticdev.sbcolors/banner.png",
             "title": "SBColors",
             "package": "com.redenticdev.sbcolors",

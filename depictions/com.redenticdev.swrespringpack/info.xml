@@ -44,9 +44,9 @@
         <change>
             <changeVersion>v1.1.0</changeVersion>
             <changeDescription>Added Baby Yoda</changeDescription>
-	    <changeDescription>Added Captain Rex</changeDescription>
-	    <changeDescription>Added 332nd clone</changeDescription>
-	    <changeDescription>Fixed a typo</changeDescription>
+            <changeDescription>Added Captain Rex</changeDescription>
+            <changeDescription>Added 332nd clone</changeDescription>
+            <changeDescription>Fixed a typo</changeDescription>
         </change>
         <change>
             <changeVersion>v1.0.0</changeVersion>

@@ -38,7 +38,14 @@ body {
 	cursor: pointer;
 }
 
-h1, h2, ul, li, p, tr, th, td {
+h1,
+h2,
+ul,
+li,
+p,
+tr,
+th,
+td {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -60,7 +67,8 @@ ul {
 	text-align: left;
 }
 
-.boxTitle, .boxTitle > h1 {
+.boxTitle,
+.boxTitle>h1 {
 	font-size: 17px;
 }
 
@@ -140,7 +148,7 @@ ul {
 	position: relative;
 }
 
-.title-container > * {
+.title-container>* {
 	display: inline-block;
 }
 
@@ -263,7 +271,7 @@ tr a img {
 	#pill {
 		background-color: grey;
 	}
-	
+
 	#changelog h1 span {
 		color: lightgrey;
 	}
