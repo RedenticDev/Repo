@@ -2,7 +2,6 @@
 <!DOCTYPE xml>
 <packageInfo>
     <name>AppMore</name>
-    <version>1.0.0</version>
     <descriptions>
         <description>
             Auto-extend app's description in AppStore updates page

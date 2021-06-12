@@ -24,6 +24,7 @@ $(function () {
             // Parse the xml file and get data
             $(xml).find("packageInfo").each(function () {
                 document.title = $(this).find("name").text().trim();
+                let latestVersion = $(this).find("changeVersion:first").text().replace("v", "").trim();
 
                 compatible($(this).find("miniOS").text().trim(), $(this).find("maxiOS").text().trim());
 
@@ -43,7 +44,7 @@ $(function () {
                     });
                     changelogExport += "</li>";
                 });
-                lastUpdateDate(apiDebs + bundle + "_" + $(this).find("version").text().replace("v", "").trim() + "_iphoneos-arm.deb").then(res => $("#changelog-date").append(res));
+                lastUpdateDate(apiDebs + bundle + "_" + latestVersion + "_iphoneos-arm.deb").then(res => $("#changelog-date").append(res));
                 $("#changelog").append(changelogExport + "<table><tr><td><a href=\"changelog/?p=" + bundle + "\" target=\"_blank\">Full changelog</a></td></tr></table>");
 
                 $(xml).find("screen").each(function () {
@@ -55,11 +56,11 @@ $(function () {
 
                 $("#infoTable").append("<tr><th>Developer</th><td>" + $(this).find("developer").text().trim() + "</td></tr>");
                 $("#infoTable").append("<tr><th>Price</th><td>Free</td></tr>");
-                $("#infoTable").append("<tr><th>Version</th><td>" + $(this).find("version").text().trim() + "</td></tr>");
+                $("#infoTable").append("<tr><th>Version</th><td>" + latestVersion + "</td></tr>");
                 $("#infoTable").append("<tr><th>iOS Version</th><td>iOS " + $(this).find("miniOS").text().trim() + " to " + $(this).find("maxiOS").text().trim() + "</td></tr>");
                 $("#infoTable").append("<tr><th>Last update</th></td><td id=\"last-update\"></td></tr>");
                 $("#infoTable").append("<tr><th>Release date</th></td><td id=\"release-date\"></td></tr>");
-                lastUpdateDate(apiDebs + bundle + "_" + $(this).find("version").text().replace("v", "").trim() + "_iphoneos-arm.deb").then(res => $("#last-update").append(res));
+                lastUpdateDate(apiDebs + bundle + "_" + latestVersion + "_iphoneos-arm.deb").then(res => $("#last-update").append(res));
                 lastUpdateDate(apiDebs + bundle + "_" + $(this).find("changeVersion:last").text().replace("v", "").trim() + "_iphoneos-arm.deb").then(res => $("#release-date").append(res));
                 // $("#infoTable").append("<tr><th>Downloads</th><td>" +  + "</td></tr>");
                 $("#infoTable").append("<tr><th>Category</th><td>" + $(this).find("category").text().trim() + "</td></tr>");
@@ -93,9 +94,9 @@ async function lastUpdateDate(url) {
             req.send();
             req.onload = () => {
                 if (req.status == 200 && req.readyState == 4) {
-                    console.log("Date successfully fetched for url: " + url);
-                    resolve(new Date(JSON.parse(req.responseText)[0].commit.committer.date)
-                        .toLocaleDateString("en-US", formatOptions));
+                    let date = new Date(JSON.parse(req.responseText)[0].commit.committer.date);
+                    console.log("Date successfully fetched for url: " + url + " (" + date + ")");
+                    resolve(date.toLocaleDateString("en-US", formatOptions));
                 }
                 else reject("Error (status: " + req.status + ", state: " + req.readyState + ")");
             }

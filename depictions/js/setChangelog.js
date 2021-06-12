@@ -64,9 +64,9 @@ async function lastUpdateDate(url) {
             req.send();
             req.onload = () => {
                 if (req.status == 200 && req.readyState == 4) {
-                    console.log("Date successfully fetched for url: " + url);
-                    resolve(new Date(JSON.parse(req.responseText)[0].commit.committer.date)
-                        .toLocaleDateString("en-US", formatOptions));
+                    let date = new Date(JSON.parse(req.responseText)[0].commit.committer.date);
+                    console.log("Date successfully fetched for url: " + url + " (" + date + ")");
+                    resolve(date.toLocaleDateString("en-US", formatOptions));
                 }
                 else reject("Error (status: " + req.status + ", state: " + req.readyState + ")");
             }

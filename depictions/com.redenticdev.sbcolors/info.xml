@@ -2,7 +2,6 @@
 <!DOCTYPE xml>
 <packageInfo>
     <name>SBColors</name>
-    <version>1.0.1</version>
     <descriptions>
         <description>
             Easily change your status bar colors!
