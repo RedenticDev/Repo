@@ -1,11 +1,10 @@
 # Redentic's Tweaks Repository
-[![GitHub license](https://img.shields.io/github/license/RedenticDev/redenticdev.github.io)](https://github.com/RedenticDev/redenticdev.github.io/blob/master/LICENSE)
 ![GitHub language count](https://img.shields.io/github/languages/count/RedenticDev/redenticdev.github.io)
 ![Lines of code](https://img.shields.io/tokei/lines/github/RedenticDev/redenticdev.github.io)
+![GitHub repo size](https://img.shields.io/github/repo-size/RedenticDev/redenticdev.github.io)
 ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fredentic.dev)
 ![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fredentic.dev)
-[![GitHub issues](https://img.shields.io/github/issues/RedenticDev/redenticdev.github.io)](https://github.com/RedenticDev/redenticdev.github.io/issues)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/RedenticDev/redenticdev.github.io)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/RedenticDev/redenticdev.github.io)
 
 This repo has been made with [Maxwell Dausch's tutorial](https://github.com/MDausch/Example-Cydia-Repository) and improved with the help of [Litten's Repo](https://github.com/schneelittchen/Repository).  
 All the redesigns and improvements since its creation have been done by myself. Feel free to take whatever you want from it!

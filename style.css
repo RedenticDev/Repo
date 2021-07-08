@@ -333,6 +333,11 @@ section#contact>a[href*="reddit"]:hover {
     border-color: rgb(249, 69, 13);
 }
 
+section#contact>a[href*="discord"]:hover {
+    background-color: rgba(87, 105, 242, 0.5);
+    border-color: rgb(87, 105, 242);
+}
+
 section#contact>a[href*="mail"]:hover {
     background-color: rgba(28, 142, 245, 0.5);
     border-color: rgb(28, 142, 245);
