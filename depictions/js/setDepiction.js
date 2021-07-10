@@ -23,7 +23,7 @@ $(() => {
         type: "GET",
         url: bundlePath + "/info.xml",
         dataType: "xml",
-        success: xml => {
+        success: function (xml) {
             console.log("Beginning XML parsing");
 
             // Parse the xml file and get data

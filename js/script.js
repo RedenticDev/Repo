@@ -6,9 +6,9 @@ document.getElementsByTagName("footer")[0].innerHTML = "<p>© Copyright 2020-" +
 /**
  * Toggle on/off the dropdown spoiler '_WHOAMI'
  */
-document.getElementById("collapsible").addEventListener("click", () => {
-    this.classList.toggle("active");
-    const content = this.nextElementSibling;
+document.getElementById("collapsible").addEventListener("click", (e) => {
+    e.currentTarget.classList.toggle("active");
+    const content = e.currentTarget.nextElementSibling;
     if (content.style.height === "0px" || content.style.height === "") {
         content.style.height = content.scrollHeight + "px"; // magic property
     } else {
@@ -51,7 +51,7 @@ $(() => {
             type: "GET",
             url: location.href + "depictions/com.redenticdev." + actualPackage + "/info.xml",
             dataType: "xml",
-            success: (xml) => {
+            success: function (xml) {
                 $(xml).find("packageInfo").each(() => {
                     $("section#packages").append("<a href=\"depictions/?p=com.redenticdev." + actualPackage + "\" target=\"_blank\" class=\"package\">");
                     $("section#packages a:last-child").append("<img src=\"depictions/com.redenticdev." + actualPackage + "/icon.png\" alt=\"\" />");
