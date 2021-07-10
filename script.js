@@ -6,10 +6,10 @@ document.getElementsByTagName("footer")[0].innerHTML = "<p>© Copyright 2020-" +
 /**
  * Toggle on/off the dropdown spoiler '_WHOAMI'
  */
-document.getElementById("collapsible").addEventListener("click", function () {
+document.getElementById("collapsible").addEventListener("click", () => {
     this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.height === '0px' || content.style.height === '') {
+    const content = this.nextElementSibling;
+    if (content.style.height === "0px" || content.style.height === "") {
         content.style.height = content.scrollHeight + "px"; // magic property
     } else {
         content.style.height = "0px";
@@ -17,56 +17,46 @@ document.getElementById("collapsible").addEventListener("click", function () {
 });
 
 /**
- * Function to get html content as a string (for markdown parser)
- */
-async function getContentOfURL(url) {
-    return new Promise((resolve, reject) => {
-        try {
-            var req = new XMLHttpRequest();
-            req.open("GET", url, true);
-            req.send();
-            req.onload = () => {
-                if (req.readyState == 4 && req.status == 200) resolve(req.responseText);
-                reject("An error occurred.\n(readyState = "
-                    + req.readyState + ", status = " + req.status + ")");
-            }
-        } catch (er) {
-            reject(er.message);
-        }
-    });
-}
-
-/**
  * Dynamic markdown section in _WHOAMI
  */
-getContentOfURL("https://raw.githubusercontent.com/RedenticDev/RedenticDev/master/README.md").then(res => {
-    document.getElementById("markdown").innerHTML = marked(res);
-});
+new Promise((resolve, reject) => {
+    try {
+        const req = new XMLHttpRequest();
+        req.onload = () => {
+            if (req.readyState == 4 && req.status == 200) resolve(req.responseText);
+            reject("An error occurred.\n(readyState = "
+                + req.readyState + ", status = " + req.status + ")");
+        }
+        req.open("GET", "https://raw.githubusercontent.com/RedenticDev/RedenticDev/master/README.md", true);
+        req.send();
+    } catch (er) {
+        reject(er.message);
+    }
+}).then(
+    resolve => document.getElementById("markdown").innerHTML = marked(resolve),
+    reject => document.getElementById("markdown").innerHTML = reject
+);
 
 /**
  * Add packages (almost) automatically in the appropriate section
  */
-$(function () {
+$(() => {
     // I have to put existing packages manually as GitHub Pages doesn't
     // accept Node.JS/PHP, so I can't browse subfolders automatically :(
     const packages = ["sbcolors", "fastlpm", "respringpack", "appmore", "swrespringpack"];
 
     // Random order with Chrome/Opera/Safari 14(?)+
-    $.each(packages, function (i, actualPackage) {
+    $.each(packages, (i, actualPackage) => {
         $.ajax({
             type: "GET",
             url: location.href + "depictions/com.redenticdev." + actualPackage + "/info.xml",
             dataType: "xml",
-            success: function (xml) {
-                $(xml).find("packageInfo").each(function () {
+            success: (xml) => {
+                $(xml).find("packageInfo").each(() => {
                     $("section#packages").append("<a href=\"depictions/?p=com.redenticdev." + actualPackage + "\" target=\"_blank\" class=\"package\">");
                     $("section#packages a:last-child").append("<img src=\"depictions/com.redenticdev." + actualPackage + "/icon.png\" alt=\"\" />");
-                    $(xml).find("name").each(function () {
-                        $("section#packages a:last-child").append("<h3>" + $(this).text().trim() + "</h3>");
-                    });
-                    $(xml).find("description:first").each(function () {
-                        $("section#packages a:last-child").append("<p>" + $(this).text().trim() + "</p>");
-                    });
+                    $(xml).find("name").each(() => $("section#packages a:last-child").append("<h3>" + $(this).text().trim() + "</h3>"));
+                    $(xml).find("description:first").each(() => $("section#packages a:last-child").append("<p>" + $(this).text().trim() + "</p>"));
                     $("section#packages").append("</a>");
                 });
             }
@@ -77,12 +67,12 @@ $(function () {
 /**
  * Remove "Add to" section if not on iOS/iPadOS
  */
-document.addEventListener("readystatechange", function () {
+document.addEventListener("readystatechange", () => {
     if (document.readyState != "interactive") return;
 
-    var section = document.getElementById("add-repo");
-    var alert = document.getElementById("alert");
-    function iOS() {
+    const section = document.getElementById("add-repo");
+    const alert = document.getElementById("alert");
+    function iOS () {
         return [
             'iPad Simulator',
             'iPhone Simulator',
@@ -103,21 +93,21 @@ document.addEventListener("readystatechange", function () {
 /**
  * Add devices in section dynamically
  */
-document.addEventListener("readystatechange", function () {
+document.addEventListener("readystatechange", () => {
     if (document.readyState != "interactive") return;
 
     const devices = [
-        ["taurine", "iPhone XS", "iOS 14.3", "64 Go", "Space Gray", "<strong><em>(Main device)</em></strong>"],
-        ["checkra1n", "iPhone 7", "iOS 14.3", "128 Go", "PRODUCT(RED)"],
-        ["checkra1n", "iPhone 6s", "iOS 13.7", "128 Go", "Space Gray"],
-        ["checkra1n", "iPhone 6", "iOS 12.5.3", "64 Go", "Gold"],
-        ["checkra1n", "iPad 6", "iPadOS 14.5.1", "32 Go", "Gold"],
-        ["MacBook 2017", "macOS 11.3.1 Big Sur", "i5", "8 Go / 512 Go", "Space Gray"],
+        ["taurine", "iPhone XS", "iOS 14.3", "64 GB", "Space Gray", "<strong><em>(Main device)</em></strong>"],
+        ["checkra1n", "iPhone 7", "iOS 14.3", "128 GB", "PRODUCT(RED)"],
+        ["checkra1n", "iPhone 6s", "iOS 13.7", "128 GB", "Space Gray"],
+        ["checkra1n", "iPhone 6", "iOS 12.5.4", "64 GB", "Gold"],
+        ["checkra1n", "iPad 6", "iPadOS 14.5.1", "32 GB", "Gold"],
+        ["MacBook 2017", "macOS 11.4 Big Sur", "i5", "8 GB / 512 GB", "Space Gray"],
         ["Apple Watch Series 5", "watchOS 7.3.3", "Space Gray"],
         ["AirPods", "1st Gen", "Wireless Case"]
     ];
-    var content = "";
-    var spaceplease = false;
+    let content = "";
+    let spaceplease = false;
 
     devices.forEach(line => {
         content += "<tr><td>";
@@ -164,7 +154,7 @@ document.addEventListener("readystatechange", function () {
             }
             if (index == 0) {
                 if (!word.startsWith("<")) content += "<strong>" + word + "</strong>";
-            } else if ((index == line.length - 1 && line[index].startsWith("<")) || spaceplease) {
+            } else if ((index == line.length - 1 && word.startsWith("<")) || spaceplease) {
                 if (spaceplease) {
                     word = "<strong>" + word + "</strong>";
                     spaceplease = false;
@@ -186,8 +176,5 @@ document.addEventListener("readystatechange", function () {
  */
 if (!/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
     document.getElementsByTagName("body")[0].className += " not-apple";
-    var screensdiv = document.getElementById("screenshots");
-    if (screensdiv) {
-        screensdiv.classList.add("not-apple");
-    }
+    document.getElementById("screenshots")?.classList.add("not-apple");
 }

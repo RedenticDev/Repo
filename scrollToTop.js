@@ -2,11 +2,11 @@
  * Scroll-to-top
  * https://github.com/iamdustan/smoothscroll/blob/master/src/smoothscroll.js
  */
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
 	var btn = document.getElementsByClassName("top")[0];
 	if (btn) {
 		// Click to scroll to top
-		btn.addEventListener("click", function (e) {
+		btn.addEventListener("click", e => {
 			e.preventDefault();
 			scroll({ top: 0, left: 0, behavior: 'smooth' });
 		});
@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
 			btn.style.transform = "none";
 		}
 		// Scroll dynamic triggering
-		window.addEventListener("scroll", function () {
+		window.addEventListener("scroll", () => {
 			if (window.scrollY < 0) return;
 			var btnRight = window.getComputedStyle(btn, null)
 				.getPropertyValue('right')
