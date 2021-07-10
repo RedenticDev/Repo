@@ -23,23 +23,28 @@ $(() => {
         type: "GET",
         url: bundlePath + "/info.xml",
         dataType: "xml",
-        success: function (xml) {
+        success: xml => {
             console.log("Beginning XML parsing");
 
             // Parse the xml file and get data
-            $(xml).find("packageInfo").each(() => {
+            $(xml).find("packageInfo").each(function () {
                 document.title = $(this).find("name").text().trim();
                 const latestVersion = $(this).find("changeVersion:first").text().replace("v", "").trim();
 
                 compatible($(this).find("miniOS").text().trim(), $(this).find("maxiOS").text().trim());
 
-                $(xml).find("description").each(() => $("#description").append("<li>" + $(this).text().trim() + "</li>"));
-                $(xml).find("dependency").each(() => $("#dependencies").append("<li>" + $(this).text().trim() + "</li>"));
+                $(xml).find("description").each(function () {
+                    $("#description").append("<li>" + $(this).text().trim() + "</li>")
+                });
 
-                $(xml).find("change:first").each(() => {
+                $(xml).find("dependency").each(function () {
+                    $("#dependencies").append("<li>" + $(this).text().trim() + "</li>")
+                });
+
+                $(xml).find("change:first").each(function () {
                     $("#pill").append($(this).find("changeVersion").text().trim());
                     changelogExport += "<li>";
-                    $(this).find("changeDescription").each(() => {
+                    $(this).find("changeDescription").each(function () {
                         changelogExport += "<h2>- " + $(this).text().trim() + "</h2>";
                     });
                     changelogExport += "</li>";
@@ -47,7 +52,7 @@ $(() => {
                 lastUpdateDate(debsAPI + bundle + "_" + latestVersion + "_iphoneos-arm.deb").then(res => $("#changelog-date").append(res));
                 $("#changelog").append(changelogExport + "<table><tr><td><a href=\"changelog/?p=" + bundle + "\" target=\"_blank\">Full changelog</a></td></tr></table>");
 
-                $(xml).find("screen").each(() => {
+                $(xml).find("screen").each(function () {
                     shouldShowNoScreenshots = false;
                     $("#screenshots").append("<li><a href=\"" + bundlePath + "/" + $(this).text().trim() + "\" target=\"_blank\"><img src=\"" + bundlePath + "/" + $(this).text().trim() + "\" draggable=\"false\" /></a></li>");
                 });

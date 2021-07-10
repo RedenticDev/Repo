@@ -51,12 +51,16 @@ $(() => {
             type: "GET",
             url: location.href + "depictions/com.redenticdev." + actualPackage + "/info.xml",
             dataType: "xml",
-            success: function (xml) {
+            success: xml => {
                 $(xml).find("packageInfo").each(() => {
                     $("section#packages").append("<a href=\"depictions/?p=com.redenticdev." + actualPackage + "\" target=\"_blank\" class=\"package\">");
                     $("section#packages a:last-child").append("<img src=\"depictions/com.redenticdev." + actualPackage + "/icon.png\" alt=\"\" />");
-                    $(xml).find("name").each(() => $("section#packages a:last-child").append("<h3>" + $(this).text().trim() + "</h3>"));
-                    $(xml).find("description:first").each(() => $("section#packages a:last-child").append("<p>" + $(this).text().trim() + "</p>"));
+                    $(xml).find("name").each(function () {
+                        $("section#packages a:last-child").append("<h3>" + $(this).text().trim() + "</h3>")
+                    });
+                    $(xml).find("description:first").each(function () {
+                        $("section#packages a:last-child").append("<p>" + $(this).text().trim() + "</p>")
+                    });
                     $("section#packages").append("</a>");
                 });
             }

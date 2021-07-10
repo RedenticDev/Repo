@@ -22,17 +22,17 @@ $(() => {
         type: "GET",
         url: bundlePath + "/info.xml",
         dataType: "xml",
-        success: function (xml) {
+        success: xml => {
             console.log("Beginning XML parsing");
 
             // Parse the xml file and get data
-            $(xml).find("packageInfo").each(() => {
+            $(xml).find("packageInfo").each(function () {
                 document.title = "Changelog of " + $(this).find("name").text().trim();
 
-                $(xml).find("change").each(() => {
+                $(xml).find("change").each(function () {
                     const version = $(this).find("changeVersion").text().trim();
                     changelogExport += "<li><h1>" + version + " <span id=\"" + version.replaceAll(".", "") + "\"></span></h1>";
-                    $(this).find("changeDescription").each(() => {
+                    $(this).find("changeDescription").each(function () {
                         changelogExport += "<h2>- " + $(this).text().trim() + "</h2>";
                     });
                     changelogExport += "</li>";
@@ -40,8 +40,8 @@ $(() => {
                 $("#changelog").append(changelogExport);
             });
             // Add versions at proper places
-            $(xml).find("packageInfo").each(() => {
-                $(xml).find("change").each(() => {
+            $(xml).find("packageInfo").each(function () {
+                $(xml).find("change").each(function () {
                     const version = $(this).find("changeVersion").text().trim();
                     lastUpdateDate(debsAPI + bundle + "_" + version.replace("v", "").trim() + "_iphoneos-arm.deb").then(res => $("#" + version.replaceAll(".", "")).append("- (" + res + ")"));
                 });
