@@ -76,7 +76,7 @@ document.addEventListener("readystatechange", () => {
 
     const section = document.getElementById("add-repo");
     const alert = document.getElementById("alert");
-    function iOS () {
+    function iOS() {
         return [
             'iPad Simulator',
             'iPhone Simulator',

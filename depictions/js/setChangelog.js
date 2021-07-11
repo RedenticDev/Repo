@@ -1,7 +1,7 @@
 $(() => {
     let bundle;
-    for (let vari of location.search.substring(1).split("&")) {
-        let pair = vari.split("=");
+    for (const vari of location.search.substring(1).split("&")) {
+        const pair = vari.split("=");
         if (decodeURIComponent(pair[0]) == "p") {
             bundle = decodeURIComponent(pair[1]);
         }
