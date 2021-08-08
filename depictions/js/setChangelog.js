@@ -16,7 +16,7 @@ $(() => {
 
     console.log("Package: " + bundle);
     const bundlePath = location.href.split("/").slice(0, -2).join("/") + "/" + bundle;
-    const debsAPI = "https://api.github.com/repos/RedenticDev/redenticdev.github.io/commits?path=debs/";
+    const debsAPI = "https://api.github.com/repos/RedenticDev/Repo/commits?path=debs/";
 
     $.ajax({
         type: "GET",
