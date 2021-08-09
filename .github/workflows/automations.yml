@@ -13,6 +13,9 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
       - name: Check for dependencies
         run: |
           command -v dpkg-scanpackages || brew install dpkg
@@ -25,11 +28,26 @@ jobs:
         run: xz -5fkev $GITHUB_WORKSPACE/Packages > $GITHUB_WORKSPACE/Packages.xz
       - name: Create Packages.lzma from Packages
         run: xz -5fkev --format=lzma $GITHUB_WORKSPACE/Packages > $GITHUB_WORKSPACE/Packages.lzma
+      - name: Commit Packages files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add $GITHUB_WORKSPACE/Packages*
+          git commit -m "[Bot] Update Packages files" || true
+        # Add '|| true' to avoid marking as error an empty commit
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
         
   minify:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
       - name: Check for dependencies
         run: |
           command -v uglifyjs || npm i -g uglify-js
@@ -38,21 +56,13 @@ jobs:
         run: find $GITHUB_WORKSPACE -name "*.js" ! -name "*.min.*" -exec sh -c 'uglifyjs -c -m -o "${0%.js}.min.js" "$0"' {} \;
       - name: Minify CSS files
         run: find $GITHUB_WORKSPACE -name "*.css" ! -name "*.min.*" -exec sh -c 'uglifycss --output "${0%.css}.min.css" "$0"' {} \;
-  
-  commit-and-push:
-    runs-on: macos-latest
-    needs: [ update-repo, minify ]
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-          fetch-depth: 0
-      - name: Commit files
+      - name: Commit uglified files
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add Packages* **/*.js
-          git commit -m "[Bot] Update files" || true
+          git add $GITHUB_WORKSPACE/**/*.js
+          git commit -m "[Bot] Update minified files" || true
+        # Add '|| true' to avoid marking as error an empty commit
       - name: Push
         uses: ad-m/github-push-action@master
         with:
