@@ -16,14 +16,20 @@ jobs:
         run: |
           command -v dpkg-scanpackages || brew install dpkg
           command -v xz || brew install xz
+      - name: Check for folder
+        run: |
+          pwd
+          echo *
+          [ -d debs ] && echo "Debs folder found."
+          echo debs/*
       - name: Create Packages
-        run: dpkg-scanpackages -m debs > Packages
+        run: dpkg-scanpackages -m $GITHUB_WORKSPACE/debs/ > $GITHUB_WORKSPACE/Packages
       - name: Create Packages.bz2 from Packages
-        run: bzip2 -5fkv Packages > Packages.bz2
+        run: bzip2 -5fkv $GITHUB_WORKSPACE/Packages > $GITHUB_WORKSPACE/Packages.bz2
       - name: Create Packages.xz from Packages
-        run: xz -5fkev Packages > Packages.xz
+        run: xz -5fkev $GITHUB_WORKSPACE/Packages > $GITHUB_WORKSPACE/Packages.xz
       - name: Create Packages.lzma from Packages
-        run: xz -5fkev --format=lzma Packages > Packages.lzma
+        run: xz -5fkev --format=lzma $GITHUB_WORKSPACE/Packages > $GITHUB_WORKSPACE/Packages.lzma
         
   minify:
     runs-on: macos-latest
