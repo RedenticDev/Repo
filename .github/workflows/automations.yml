@@ -1,0 +1,55 @@
+name: Actions after push
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  update-repo:
+    runs-on: macos-latest
+    steps:
+      - name: Install dpkg & xz
+        run: |
+          brew update
+          brew install dpkg xz
+      - name: Create Packages
+        run: dpkg-scanpackages -m ./debs > Packages
+      - name: Create Packages.bz2 from Packages
+        run: bzip2 -5fkv Packages > Packages.bz2
+      - name: Create Packages.xz from Packages
+        run: xz -5fkev Packages > Packages.xz
+      - name: Create Packages.lzma from Packages
+        run: xz -5fkev --format=lzma Packages > Packages.lzma
+        
+  minify:
+    runs-on: macos-latest
+    steps:
+      - name: Install uglifiers
+        run: npm i -g uglify-js uglifycss
+      - name: Minify JavaScript files
+        run: find . -name "*.js" ! -name "*.min.*" -exec sh -c 'uglifyjs -c -m -o "${0%.js}.min.js" "$0"' {} \;
+      - name: Minify CSS files
+        run: find . -name "*.css" ! -name "*.min.*" -exec sh -c 'uglifycss --output "${0%.css}.min.css" "$0"' {} \;
+  
+  commit-and-push:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-deps: 0
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add Packages* **/*.js
+          git commit -m "[Bot] Update files"
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
