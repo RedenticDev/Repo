@@ -12,16 +12,11 @@ jobs:
   update-repo:
     runs-on: macos-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Check for dependencies
         run: |
           command -v dpkg-scanpackages || brew install dpkg
           command -v xz || brew install xz
-      - name: Check for folder
-        run: |
-          pwd
-          echo *
-          [ -d debs ] && echo "Debs folder found."
-          echo debs/*
       - name: Create Packages
         run: dpkg-scanpackages -m $GITHUB_WORKSPACE/debs/ > $GITHUB_WORKSPACE/Packages
       - name: Create Packages.bz2 from Packages
@@ -34,6 +29,7 @@ jobs:
   minify:
     runs-on: macos-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Check for dependencies
         run: |
           command -v uglifyjs || npm i -g uglify-js
