@@ -17,13 +17,13 @@ jobs:
           brew update
           brew install dpkg xz
       - name: Create Packages
-        run: dpkg-scanpackages -m ./debs > Packages
+        run: dpkg-scanpackages -m $GITHUB_WORKSPACE/debs > $GITHUB_WORKSPACE/Packages
       - name: Create Packages.bz2 from Packages
-        run: bzip2 -5fkv Packages > Packages.bz2
+        run: bzip2 -5fkv $GITHUB_WORKSPACE/Packages > $GITHUB_WORKSPACE/Packages.bz2
       - name: Create Packages.xz from Packages
-        run: xz -5fkev Packages > Packages.xz
+        run: xz -5fkev $GITHUB_WORKSPACE/Packages > $GITHUB_WORKSPACE/Packages.xz
       - name: Create Packages.lzma from Packages
-        run: xz -5fkev --format=lzma Packages > Packages.lzma
+        run: xz -5fkev --format=lzma $GITHUB_WORKSPACE/Packages > $GITHUB_WORKSPACE/Packages.lzma
         
   minify:
     runs-on: macos-latest
@@ -31,23 +31,24 @@ jobs:
       - name: Install uglifiers
         run: npm i -g uglify-js uglifycss
       - name: Minify JavaScript files
-        run: find . -name "*.js" ! -name "*.min.*" -exec sh -c 'uglifyjs -c -m -o "${0%.js}.min.js" "$0"' {} \;
+        run: find $GITHUB_WORKSPACE -name "*.js" ! -name "*.min.*" -exec sh -c 'uglifyjs -c -m -o "${0%.js}.min.js" "$0"' {} \;
       - name: Minify CSS files
-        run: find . -name "*.css" ! -name "*.min.*" -exec sh -c 'uglifycss --output "${0%.css}.min.css" "$0"' {} \;
+        run: find $GITHUB_WORKSPACE -name "*.css" ! -name "*.min.*" -exec sh -c 'uglifycss --output "${0%.css}.min.css" "$0"' {} \;
   
   commit-and-push:
     runs-on: macos-latest
+    needs: [ update-repo, minify ]
     steps:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
-          fetch-deps: 0
+          fetch-depth: 0
       - name: Commit files
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add Packages* **/*.js
-          git commit -m "[Bot] Update files"
+          git commit -m "[Bot] Update files" || true
       - name: Push
         uses: ad-m/github-push-action@master
         with:
