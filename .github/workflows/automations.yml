@@ -9,15 +9,22 @@ on:
   workflow_dispatch:
 
 jobs:
+  check-environment:
+    runs-on: macos-latest
+    steps:
+      - run: pwd
+      - run: echo $GITHUB_WORKSPACE
+      - run: ls $GITHUB_WORKSPACE
+
   update-repo:
     runs-on: macos-latest
     steps:
-      - name: Install dpkg & xz
+      - name: Check for dependencies
         run: |
-          brew update
-          brew install dpkg xz
+          command -v dpkg-scanpackages || brew install dpkg
+          command -v xz || brew install xz
       - name: Create Packages
-        run: dpkg-scanpackages -m $GITHUB_WORKSPACE/debs > $GITHUB_WORKSPACE/Packages
+        run: dpkg-scanpackages -m $GITHUB_WORKSPACE/debs/ > $GITHUB_WORKSPACE/Packages
       - name: Create Packages.bz2 from Packages
         run: bzip2 -5fkv $GITHUB_WORKSPACE/Packages > $GITHUB_WORKSPACE/Packages.bz2
       - name: Create Packages.xz from Packages
@@ -28,8 +35,10 @@ jobs:
   minify:
     runs-on: macos-latest
     steps:
-      - name: Install uglifiers
-        run: npm i -g uglify-js uglifycss
+      - name: Check for dependencies
+        run: |
+          command -v uglifyjs || npm i -g uglify-js
+          command -v uglifycss || npm i -g uglifycss
       - name: Minify JavaScript files
         run: find $GITHUB_WORKSPACE -name "*.js" ! -name "*.min.*" -exec sh -c 'uglifyjs -c -m -o "${0%.js}.min.js" "$0"' {} \;
       - name: Minify CSS files
