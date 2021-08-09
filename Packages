@@ -4,7 +4,7 @@ Architecture: iphoneos-arm
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 168
 Depends: mobilesubstrate (>= 0.9.5000)
-Filename: ./debs/com.redenticdev.appmore_0.0.9_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.appmore_0.0.9_iphoneos-arm.deb
 Size: 4264
 MD5sum: 58b1733408489fedd5ec584c56110365
 SHA1: ded282493aafac17310276681fbad90b5ad57399
@@ -23,7 +23,7 @@ Architecture: iphoneos-arm
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 168
 Depends: firmware (>= 13)
-Filename: ./debs/com.redenticdev.appmore_1.0.0_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.appmore_1.0.0_iphoneos-arm.deb
 Size: 6336
 MD5sum: 6b08d1416047b8392cedda5de5949166
 SHA1: 0bfa3ca4969241aa9de1052946c85e3fa3f9196a
@@ -37,27 +37,6 @@ Name: AppMore
 Sileodepiction: https://redentic.dev/depictions/com.redenticdev.appmore/sileo.json
 
 Package: com.redenticdev.fastlpm
-Version: 1.0.0
-Architecture: iphoneos-arm
-Maintainer: RedenticDev <redenticdev@gmail.com>
-Installed-Size: 408
-Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common
-Conflicts: me.conorthedev.peep
-Replaces: com.olxios.quickpowermode
-Filename: ./debs/com.redenticdev.fastlpm_1.0.0_iphoneos-arm.deb
-Size: 65106
-MD5sum: 35f0ee6e38e4bb3276fc0889d9457821
-SHA1: 0a31ea64376b77681104ebecedafca29336cfb66
-SHA256: d6e348e3029c5306fd905803b922f53bb42814127b54397076f1173f67fe6377
-Section: Tweaks
-Description: Toggle LPM by tapping the battery icon
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.fastlpm
-Icon: https://redentic.dev/depictions/com.redenticdev.fastlpm/icon.png
-Name: FastLPM
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.fastlpm/sileo.json
-
-Package: com.redenticdev.fastlpm
 Version: 1.0.1
 Architecture: iphoneos-arm
 Maintainer: RedenticDev <redenticdev@gmail.com>
@@ -65,7 +44,7 @@ Installed-Size: 408
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common
 Conflicts: me.conorthedev.peep
 Replaces: com.olxios.quickpowermode
-Filename: ./debs/com.redenticdev.fastlpm_1.0.1_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.fastlpm_1.0.1_iphoneos-arm.deb
 Size: 65388
 MD5sum: 1925d4d4225c5ee7257f92c3b9c41d27
 SHA1: 2d1d19889fa59086cd964fc55f8ce13ad0d85662
@@ -85,7 +64,7 @@ Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 484
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common
 Replaces: com.olxios.quickpowermode
-Filename: ./debs/com.redenticdev.fastlpm_1.1.0_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.fastlpm_1.1.0_iphoneos-arm.deb
 Size: 83364
 MD5sum: 0244b839da8952da290ed785b18b32f3
 SHA1: d06749a43ef9ad14f5252e645485d8539066e04a
@@ -105,7 +84,7 @@ Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 484
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common
 Replaces: com.olxios.quickpowermode
-Filename: ./debs/com.redenticdev.fastlpm_1.1.1_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.fastlpm_1.1.1_iphoneos-arm.deb
 Size: 83054
 MD5sum: 377f36a44ea642d0a10370448f9ac00e
 SHA1: ce88e061561070fbd7d3156ce9642386736116fd
@@ -125,7 +104,7 @@ Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 556
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common
 Replaces: com.olxios.quickpowermode
-Filename: ./debs/com.redenticdev.fastlpm_1.1.2_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.fastlpm_1.1.2_iphoneos-arm.deb
 Size: 86112
 MD5sum: 5ac5a29f8f85bf22fc1439fc85c256ea
 SHA1: 27d4a930686e11db47c21b0d410ae6392dd6d6e1
@@ -145,7 +124,7 @@ Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 524
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common
 Replaces: com.olxios.quickpowermode
-Filename: ./debs/com.redenticdev.fastlpm_1.1.3_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.fastlpm_1.1.3_iphoneos-arm.deb
 Size: 86644
 MD5sum: 0bb4a4fae132a265e0cc7f17e39cf32c
 SHA1: 364313619f649127958aa12ed44715aef89d5cef
@@ -163,7 +142,7 @@ Version: 1.0.0
 Architecture: iphoneos-arm
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Depends: com.spark.snowboard | com.spark.snowboard.respringextension | com.anemonetheming.anemone
-Filename: ./debs/com.redenticdev.respringpack_1.0.0_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.respringpack_1.0.0_iphoneos-arm.deb
 Size: 163560
 MD5sum: 5556ecc270ebda6e4d10d6164a6afe1e
 SHA1: 345a53c0c5ee799910c80edc2f639a3af03b9418
@@ -181,7 +160,7 @@ Version: 1.1.0
 Architecture: iphoneos-arm
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Depends: com.spark.snowboard | com.spark.snowboard.respringextension | com.anemonetheming.anemone
-Filename: ./debs/com.redenticdev.respringpack_1.1.0_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.respringpack_1.1.0_iphoneos-arm.deb
 Size: 367448
 MD5sum: a934b7ceae136db39848d5e8b6f6055e
 SHA1: 92245138b71e2b7be64d86bf5f2ca6cec34e905b
@@ -199,7 +178,7 @@ Version: 1.2.0
 Architecture: iphoneos-arm
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Depends: com.spark.snowboard | com.spark.snowboard.respringextension | com.anemonetheming.anemone
-Filename: ./debs/com.redenticdev.respringpack_1.2.0_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.respringpack_1.2.0_iphoneos-arm.deb
 Size: 446340
 MD5sum: ae3554962417f1553ab39f5e9042e9aa
 SHA1: 20e07119013ef5a1ceccdce54c147b2b58cf38e6
@@ -218,7 +197,7 @@ Architecture: iphoneos-arm
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 852
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common (>= 1.11), ws.hbang.alderis | org.thebigboss.libcolorpicker (>= 1.6.3)
-Filename: ./debs/com.redenticdev.sbcolors_1.0.0_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.sbcolors_1.0.0_iphoneos-arm.deb
 Size: 467968
 MD5sum: 18bb87e7ca5ff81ea0d2ce290537ecea
 SHA1: 9e8d6d89e20400b10eedea39b92bcde827c777ef
@@ -236,7 +215,7 @@ Architecture: iphoneos-arm
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 932
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common (>= 1.11), ws.hbang.alderis | org.thebigboss.libcolorpicker (>= 1.6.3)
-Filename: ./debs/com.redenticdev.sbcolors_1.0.1_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.sbcolors_1.0.1_iphoneos-arm.deb
 Size: 473070
 MD5sum: 8763a3ac6a92662b5d459349ab644566
 SHA1: 378575d56cad5c4e3878a1891de0d7e831096e90
@@ -254,7 +233,7 @@ Version: 1.0.0
 Architecture: iphoneos-arm
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Depends: com.spark.snowboard | com.spark.snowboard.respringextension | com.anemonetheming.anemone
-Filename: ./debs/com.redenticdev.swrespringpack_1.0.0_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.swrespringpack_1.0.0_iphoneos-arm.deb
 Size: 921760
 MD5sum: ecdc14ac2001594f9c4480e812a86722
 SHA1: 7957c45f32bbc6623d17f2c416820736c3353424
@@ -272,7 +251,7 @@ Version: 1.1.0
 Architecture: iphoneos-arm
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Depends: com.spark.snowboard | com.spark.snowboard.respringextension | com.anemonetheming.anemone
-Filename: ./debs/com.redenticdev.swrespringpack_1.1.0_iphoneos-arm.deb
+Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.swrespringpack_1.1.0_iphoneos-arm.deb
 Size: 1157604
 MD5sum: e2f7571d115dd17ec84d0b76828241a8
 SHA1: 4dc0e219fe58612e1b7bfb25a461cffdcbc2496f
