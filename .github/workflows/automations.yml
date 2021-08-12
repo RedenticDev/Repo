@@ -58,6 +58,7 @@ jobs:
           branch: ${{ github.ref }}
         
   minification-css-js:
+    needs: update-packages-and-release
     runs-on: macos-latest
     steps:
       - name: 📂 Checkout
