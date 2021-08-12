@@ -49,7 +49,7 @@ jobs:
         run: |
           git pull origin main
           git config user.name github-actions
-          git config user.email github-actions@github.com"
+          git config user.email github-actions@github.com
           git add Packages* Release*
           git commit -m "[Bot] Update Packages & Release files" || true
         # Add '|| true' to avoid marking as error an empty commit
@@ -80,7 +80,7 @@ jobs:
         run: |
           git pull origin main
           git config user.name github-actions
-          git config user.email github-actions@github.com"
+          git config user.email github-actions@github.com
           git add **/*.js
           git commit -m "[Bot] Update minified files" || true
         # Add '|| true' to avoid marking as error an empty commit
