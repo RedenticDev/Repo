@@ -9,61 +9,78 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-repo:
-    runs-on: macos-latest
+  update-packages-and-release:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: 📂 Checkout
+        uses: actions/checkout@v2
         with:
           persist-credentials: false
           fetch-depth: 0
-      - name: Check for dependencies
+      - name: 🔍 Check for dependencies
         run: |
-          command -v dpkg-scanpackages || brew install dpkg
-          command -v xz || brew install xz
-      - name: Create Packages
-        run: dpkg-scanpackages -m $GITHUB_WORKSPACE/debs/ > $GITHUB_WORKSPACE/Packages
-      - name: Create Packages.bz2 from Packages
-        run: bzip2 -5fkv $GITHUB_WORKSPACE/Packages > $GITHUB_WORKSPACE/Packages.bz2
-      - name: Create Packages.xz from Packages
-        run: xz -5fkev $GITHUB_WORKSPACE/Packages > $GITHUB_WORKSPACE/Packages.xz
-      - name: Create Packages.lzma from Packages
-        run: xz -5fkev --format=lzma $GITHUB_WORKSPACE/Packages > $GITHUB_WORKSPACE/Packages.lzma
-      - name: Commit Packages files
+          command -v zstd || sudo apt install zstd
+      - name: 📝 Create Packages
+        run: apt-ftparchive packages ./debs > Packages
+      - name: 📝 Create Packages.bz2 from Packages
+        run: bzip2 -c9 Packages > Packages.bz2
+      - name: 📝 Create Packages.xz from Packages
+        run: xz -c9 Packages > Packages.xz
+      - name: 📝 Create Packages.lzma from Packages
+        run: xz -5fkev --format=lzma Packages > Packages.lzma
+      - name: 📝 Create Packages.gz from Packages
+        run: gzip -c9 Packages > Packages.gz
+      - name: 📝 Create Packages.zstd from Packages
+        run: zstd -c19 Packages > Packages.zst
+      - name: 📥 Import GPG keys
+        run: |
+          echo ${{ secrets.GPG_PUBLIC_KEY }} > gpg-pub.asc
+          echo ${{ secrets.GPG_PRIVATE_KEY }} > gpg-priv.asc
+          gpg --import gpg-pub.asc
+          echo ${{ secrets.GPG_PASSWORD }} | gpg --batch --yes --pinentry-mode=loopback --passphrase-fd 0 --import gpg-priv.asc
+      - name: 🔏 Update Release files
+        run: |
+          grep -E "Origin:|Label:|Suite:|Version:|Codename:|Architectures:|Components:|Description:" Release > Base
+          apt-ftparchive release . > Release
+          cat Base Release > out && mv out Release
+          echo ${{ secrets.GPG_PASSWORD }} | gpg --batch --yes --pinentry-mode=loopback --passphrase-fd 0 -abs -u 2525C601FD94E886F120AF92AE01315BF612822A -o Release.gpg Release
+      - name: 📤 Commit Packages & Release files
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add $GITHUB_WORKSPACE/Packages*
-          git commit -m "[Bot] Update Packages files" || true
+          git add Packages* Release*
+          git commit -m "[Bot] Update Packages & Release files" || true
         # Add '|| true' to avoid marking as error an empty commit
-      - name: Push
+      - name: 🌐 Push
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
         
-  minify:
+  minification-css-js:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: 📂 Checkout
+        uses: actions/checkout@v2
         with:
           persist-credentials: false
           fetch-depth: 0
-      - name: Check for dependencies
+      - name: 🔍 Check for dependencies
         run: |
           command -v uglifyjs || npm i -g uglify-js
           command -v uglifycss || npm i -g uglifycss
-      - name: Minify JavaScript files
+      - name: 🗜 Minify JavaScript files
         run: find $GITHUB_WORKSPACE -name "*.js" ! -name "*.min.*" -exec sh -c 'uglifyjs -c -m -o "${0%.js}.min.js" "$0"' {} \;
-      - name: Minify CSS files
+      - name: 🗜 Minify CSS files
         run: find $GITHUB_WORKSPACE -name "*.css" ! -name "*.min.*" -exec sh -c 'uglifycss --output "${0%.css}.min.css" "$0"' {} \;
-      - name: Commit uglified files
+      - name: 📤 Commit uglified files
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add $GITHUB_WORKSPACE/**/*.js
+          git add **/*.js
           git commit -m "[Bot] Update minified files" || true
         # Add '|| true' to avoid marking as error an empty commit
-      - name: Push
+      - name: 🌐 Push
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -43,18 +43,18 @@ new Promise((resolve, reject) => {
 $(() => {
     // I have to put existing packages manually as GitHub Pages doesn't
     // accept Node.JS/PHP, so I can't browse subfolders automatically :(
-    const packages = ["sbcolors", "fastlpm", "respringpack", "appmore", "swrespringpack"];
+    const packages = ["com.redenticdev.sbcolors", "com.redenticdev.fastlpm", "com.redenticdev.respringpack", "com.redenticdev.appmore", "com.redenticdev.swrespringpack"];
 
     // Random order with Chrome/Opera/Safari 14(?)+
     $.each(packages, (i, actualPackage) => {
         $.ajax({
             type: "GET",
-            url: location.href + "depictions/com.redenticdev." + actualPackage + "/info.xml",
+            url: location.href + "depictions/" + actualPackage + "/info.xml",
             dataType: "xml",
             success: xml => {
                 $(xml).find("packageInfo").each(() => {
-                    $("section#packages").append("<a href=\"depictions/?p=com.redenticdev." + actualPackage + "\" target=\"_blank\" class=\"package\">");
-                    $("section#packages a:last-child").append("<img src=\"depictions/com.redenticdev." + actualPackage + "/icon.png\" alt=\"\" />");
+                    $("section#packages").append("<a href=\"depictions/?p=" + actualPackage + "\" target=\"_blank\" class=\"package\">");
+                    $("section#packages a:last-child").append("<img src=\"depictions/" + actualPackage + "/icon.png\" alt=\"\" />");
                     $(xml).find("name").each(function () {
                         $("section#packages a:last-child").append("<h3>" + $(this).text().trim() + "</h3>")
                     });

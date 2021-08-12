@@ -6,7 +6,7 @@
 ![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fredentic.dev)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/RedenticDev/Repo)
 
-This repo has been made with [Maxwell Dausch's tutorial](https://github.com/MDausch/Example-Cydia-Repository) and improved with the help of [Litten's Repo](https://github.com/schneelittchen/Repository).  
+This repo has been made with [Maxwell Dausch's tutorial](https://github.com/MDausch/Example-Cydia-Repository) and improved with the help of [Litten's Repo](https://github.com/schneelittchen/Repository). Security improvements from [doregon's tutorial](https://github.com/Doregon/signing-apt-repo-faq).  
 All the redesigns and improvements since its creation have been done by myself. Feel free to take whatever you want from it!
 
 ## URLs
