@@ -34,16 +34,16 @@ jobs:
         run: zstd -c19 Packages > Packages.zst
       - name: 📥 Import GPG keys
         run: |
-          echo ${{ secrets.GPG_PUBLIC_KEY }} > gpg-pub.asc
-          echo ${{ secrets.GPG_PRIVATE_KEY }} > gpg-priv.asc
+          echo "${{ secrets.GPG_PUBLIC_KEY }}" > gpg-pub.asc
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" > gpg-priv.asc
           gpg --import gpg-pub.asc
-          echo ${{ secrets.GPG_PASSWORD }} | gpg --batch --yes --pinentry-mode=loopback --passphrase-fd 0 --import gpg-priv.asc
+          echo "${{ secrets.GPG_PASSWORD }}" | gpg --batch --yes --pinentry-mode=loopback --passphrase-fd 0 --import gpg-priv.asc
       - name: 🔏 Update Release files
         run: |
           grep -E "Origin:|Label:|Suite:|Version:|Codename:|Architectures:|Components:|Description:" Release > Base
           apt-ftparchive release . > Release
           cat Base Release > out && mv out Release
-          echo ${{ secrets.GPG_PASSWORD }} | gpg --batch --yes --pinentry-mode=loopback --passphrase-fd 0 -abs -u 2525C601FD94E886F120AF92AE01315BF612822A -o Release.gpg Release
+          echo "${{ secrets.GPG_PASSWORD }}" | gpg --batch --yes --pinentry-mode=loopback --passphrase-fd 0 -abs -u 2525C601FD94E886F120AF92AE01315BF612822A -o Release.gpg Release
       - name: 📤 Commit Packages & Release files
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
