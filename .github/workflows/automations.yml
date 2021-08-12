@@ -17,6 +17,7 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
+          ref: 'main'
       - name: 🔍 Check for dependencies
         run: |
           command -v zstd || sudo apt install zstd
@@ -46,8 +47,9 @@ jobs:
           echo "${{ secrets.GPG_PASSWORD }}" | gpg --batch --yes --pinentry-mode=loopback --passphrase-fd 0 -abs -u 2525C601FD94E886F120AF92AE01315BF612822A -o Release.gpg Release
       - name: 📤 Commit Packages & Release files
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git pull origin main
+          git config user.name github-actions
+          git config user.email github-actions@github.com"
           git add Packages* Release*
           git commit -m "[Bot] Update Packages & Release files" || true
         # Add '|| true' to avoid marking as error an empty commit
@@ -58,7 +60,6 @@ jobs:
           branch: ${{ github.ref }}
         
   minification-css-js:
-    needs: update-packages-and-release
     runs-on: macos-latest
     steps:
       - name: 📂 Checkout
@@ -66,6 +67,7 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
+          ref: 'main'
       - name: 🔍 Check for dependencies
         run: |
           command -v uglifyjs || npm i -g uglify-js
@@ -76,8 +78,9 @@ jobs:
         run: find $GITHUB_WORKSPACE -name "*.css" ! -name "*.min.*" -exec sh -c 'uglifycss --output "${0%.css}.min.css" "$0"' {} \;
       - name: 📤 Commit uglified files
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git pull origin main
+          git config user.name github-actions
+          git config user.email github-actions@github.com"
           git add **/*.js
           git commit -m "[Bot] Update minified files" || true
         # Add '|| true' to avoid marking as error an empty commit
