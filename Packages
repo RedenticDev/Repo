@@ -1,266 +1,280 @@
 Package: com.redenticdev.appmore
-Version: 0.0.9
 Architecture: iphoneos-arm
+Version: 0.0.9
+Section: Tweaks
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 168
 Depends: mobilesubstrate (>= 0.9.5000)
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.appmore_0.0.9_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.appmore_0.0.9_iphoneos-arm.deb
 Size: 4264
 MD5sum: 58b1733408489fedd5ec584c56110365
 SHA1: ded282493aafac17310276681fbad90b5ad57399
 SHA256: 82472f58f141de0e26af209359c1ed0efd79928581dfd0c87cc9c91b1254ff6a
-Section: Tweaks
+SHA512: 6b1109939841865c0eddac3d9ec80a98e3ee35441a47b4fcb2f99475ece62eb97822d895ecffb8fcf5f5c6749df120c029b88082e15b8648b13ff5a31b986bd6
 Description: Auto-extend app's description in AppStore updates
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.appmore
-Icon: https://redentic.dev/depictions/com.redenticdev.appmore/icon.png
 Name: AppMore
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.appmore/sileo.json
+Icon: https://redentic.dev/depictions/com.redenticdev.appmore/icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.appmore
+SileoDepiction: https://redentic.dev/depictions/com.redenticdev.appmore/sileo.json
+Author: RedenticDev <redenticdev@gmail.com>
 
 Package: com.redenticdev.appmore
-Version: 1.0.0
 Architecture: iphoneos-arm
+Version: 1.0.0
+Section: Tweaks (Requests)
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 168
 Depends: firmware (>= 13)
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.appmore_1.0.0_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.appmore_1.0.0_iphoneos-arm.deb
 Size: 6336
 MD5sum: 6b08d1416047b8392cedda5de5949166
 SHA1: 0bfa3ca4969241aa9de1052946c85e3fa3f9196a
 SHA256: 779318bd9aa436028e5fe659f09ec25b7d1ac38b8d71dfbca84863165fec56fa
-Section: Tweaks (Requests)
+SHA512: d30e827842a6a486896b8c1c019a4837ed8f996e8dfdfce965facea4a0b3defb823db2c6292482289f22844cfb443026335a4f7810b562f0a4d5e0e43e57f61f
 Description: Auto-extend app's description in AppStore updates page
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.appmore
-Icon: https://redentic.dev/depictions/com.redenticdev.appmore/icon.png
 Name: AppMore
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.appmore/sileo.json
+Icon: https://redentic.dev/depictions/com.redenticdev.appmore/icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.appmore
+SileoDepiction: https://redentic.dev/depictions/com.redenticdev.appmore/sileo.json
+Author: RedenticDev <redenticdev@gmail.com>
 
 Package: com.redenticdev.fastlpm
-Version: 1.0.1
 Architecture: iphoneos-arm
+Version: 1.0.1
+Section: Tweaks
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 408
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common
 Conflicts: me.conorthedev.peep
 Replaces: com.olxios.quickpowermode
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.fastlpm_1.0.1_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.fastlpm_1.0.1_iphoneos-arm.deb
 Size: 65388
 MD5sum: 1925d4d4225c5ee7257f92c3b9c41d27
 SHA1: 2d1d19889fa59086cd964fc55f8ce13ad0d85662
 SHA256: f3d08aac55cdee9d126b38e51c1f3a6d0f925ad878d5faa24d0e69ccea56ddf0
-Section: Tweaks
+SHA512: a067e427f9d2256d922b17ffbaeac9bdd4cd67d86b23d7467298d71bd2d19c7d10a9ee0c3af0b0cc6dd8bc279f3279304d8c0b33abbe1a4240d1fe925010e2ae
 Description: Toggle LPM by tapping the battery icon
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.fastlpm
-Icon: https://redentic.dev/depictions/com.redenticdev.fastlpm/icon.png
 Name: FastLPM
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.fastlpm/sileo.json
+Icon: https://redentic.dev/depictions/com.redenticdev.fastlpm/icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.fastlpm
+SileoDepiction: https://redentic.dev/depictions/com.redenticdev.fastlpm/sileo.json
+Author: RedenticDev <redenticdev@gmail.com>
 
 Package: com.redenticdev.fastlpm
-Version: 1.1.0
 Architecture: iphoneos-arm
+Version: 1.1.0
+Section: Tweaks
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 484
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common
 Replaces: com.olxios.quickpowermode
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.fastlpm_1.1.0_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.fastlpm_1.1.0_iphoneos-arm.deb
 Size: 83364
 MD5sum: 0244b839da8952da290ed785b18b32f3
 SHA1: d06749a43ef9ad14f5252e645485d8539066e04a
 SHA256: 6821f68c50063c68ed0e56aaa33d33f68b2220c7f12a330ef81ec640696b1807
-Section: Tweaks
+SHA512: 865fd1c88e9145f150f362aebbb0d87b267221d99a1dc5dad4cfa7bc2b0adcb6e8fa19dce313b516000949b944d5f2e1b1df6d545248d09862dcd08c7dafb8a9
 Description: Toggle LPM by tapping the battery icon
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.fastlpm
-Icon: https://redentic.dev/depictions/com.redenticdev.fastlpm/icon.png
 Name: FastLPM
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.fastlpm/sileo.json
+Icon: https://redentic.dev/depictions/com.redenticdev.fastlpm/icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.fastlpm
+SileoDepiction: https://redentic.dev/depictions/com.redenticdev.fastlpm/sileo.json
+Author: RedenticDev <redenticdev@gmail.com>
 
 Package: com.redenticdev.fastlpm
-Version: 1.1.1
 Architecture: iphoneos-arm
+Version: 1.1.1
+Section: Tweaks
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 484
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common
 Replaces: com.olxios.quickpowermode
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.fastlpm_1.1.1_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.fastlpm_1.1.1_iphoneos-arm.deb
 Size: 83054
 MD5sum: 377f36a44ea642d0a10370448f9ac00e
 SHA1: ce88e061561070fbd7d3156ce9642386736116fd
 SHA256: 9f676be57599d27ee6fe42f64cd2b8f52b6da20349e49ef43c3cd2b1446b04c7
-Section: Tweaks
+SHA512: 7dcd389241e8e7ba96be0d6fca4426a2b10d2404af30f447e038f384cc131e8f63b145ac9ad637d78b1efed1cae49c712b7b3409936342211e273e6ba1549149
 Description: Toggle LPM by tapping the battery icon
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.fastlpm
-Icon: https://redentic.dev/depictions/com.redenticdev.fastlpm/icon.png
 Name: FastLPM
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.fastlpm/sileo.json
+Icon: https://redentic.dev/depictions/com.redenticdev.fastlpm/icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.fastlpm
+SileoDepiction: https://redentic.dev/depictions/com.redenticdev.fastlpm/sileo.json
+Author: RedenticDev <redenticdev@gmail.com>
 
 Package: com.redenticdev.fastlpm
-Version: 1.1.2
 Architecture: iphoneos-arm
+Version: 1.1.2
+Section: Tweaks
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 556
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common
 Replaces: com.olxios.quickpowermode
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.fastlpm_1.1.2_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.fastlpm_1.1.2_iphoneos-arm.deb
 Size: 86112
 MD5sum: 5ac5a29f8f85bf22fc1439fc85c256ea
 SHA1: 27d4a930686e11db47c21b0d410ae6392dd6d6e1
 SHA256: e24f48aea9c9be8513a455520ace389776eaf6e7252083be6fca33c63129ee3b
-Section: Tweaks
+SHA512: 444ddcd4b99712aa18da0ae373d88be4536605c57e9849c947e75b4eec7756abcc0b915efb03aa7a5ba851bfc1b40dcc3cc1a63c5592d221a035caf5062255f1
 Description: Toggle LPM by tapping the battery icon
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.fastlpm
-Icon: https://redentic.dev/depictions/com.redenticdev.fastlpm/icon.png
 Name: FastLPM
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.fastlpm/sileo.json
+Icon: https://redentic.dev/depictions/com.redenticdev.fastlpm/icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.fastlpm
+SileoDepiction: https://redentic.dev/depictions/com.redenticdev.fastlpm/sileo.json
+Author: RedenticDev <redenticdev@gmail.com>
 
 Package: com.redenticdev.fastlpm
-Version: 1.1.3
 Architecture: iphoneos-arm
+Version: 1.1.3
+Section: Tweaks
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 524
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common
 Replaces: com.olxios.quickpowermode
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.fastlpm_1.1.3_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.fastlpm_1.1.3_iphoneos-arm.deb
 Size: 86644
 MD5sum: 0bb4a4fae132a265e0cc7f17e39cf32c
 SHA1: 364313619f649127958aa12ed44715aef89d5cef
 SHA256: 539240fbd6abd5dc282e7ad3c4fac0726c04527e8a2474def446558b6bf0f674
-Section: Tweaks
+SHA512: 17b4c0f67a8ae83320789b40622cd647e0670defb4743c918490ceda7224a761387d428bfcd2dbc65a2ce490e12a1641fe9e3d054c2af26a1ef7470e86fcda35
 Description: Toggle LPM by tapping the battery icon
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.fastlpm
-Icon: https://redentic.dev/depictions/com.redenticdev.fastlpm/icon.png
 Name: FastLPM
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.fastlpm/sileo.json
+Icon: https://redentic.dev/depictions/com.redenticdev.fastlpm/icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.fastlpm
+SileoDepiction: https://redentic.dev/depictions/com.redenticdev.fastlpm/sileo.json
+Author: RedenticDev <redenticdev@gmail.com>
 
 Package: com.redenticdev.respringpack
-Version: 1.0.0
 Architecture: iphoneos-arm
+Version: 1.0.0
+Section: Themes
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Depends: com.spark.snowboard | com.spark.snowboard.respringextension | com.anemonetheming.anemone
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.respringpack_1.0.0_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.respringpack_1.0.0_iphoneos-arm.deb
 Size: 163560
 MD5sum: 5556ecc270ebda6e4d10d6164a6afe1e
 SHA1: 345a53c0c5ee799910c80edc2f639a3af03b9418
 SHA256: dfd98d995a044125a8c661db96008a5df6000da2f88161b9ee6f016c32f68557
-Section: Themes
+SHA512: c3245691d8cde7495dc66c14ec79917df2203c69f39be0d221d9bbdacbc496923c8d029faa0aeb4dad22f0a9dfeb96c745130ef20e379cb1e9627f20e993feff
 Description: A free respring pack with fun icons
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.respringpack
-Icon: https://redentic.dev/depictions/com.redenticdev.respringpack/icon.png
 Name: Redentic's Respring Pack
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.respringpack/sileo.json
+Icon: https://redentic.dev/depictions/com.redenticdev.respringpack/icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.respringpack
+SileoDepiction: https://redentic.dev/depictions/com.redenticdev.respringpack/sileo.json
+Author: RedenticDev <redenticdev@gmail.com>
 
 Package: com.redenticdev.respringpack
-Version: 1.1.0
 Architecture: iphoneos-arm
+Version: 1.1.0
+Section: Themes
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Depends: com.spark.snowboard | com.spark.snowboard.respringextension | com.anemonetheming.anemone
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.respringpack_1.1.0_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.respringpack_1.1.0_iphoneos-arm.deb
 Size: 367448
 MD5sum: a934b7ceae136db39848d5e8b6f6055e
 SHA1: 92245138b71e2b7be64d86bf5f2ca6cec34e905b
 SHA256: 40fe991f4bee3113cdbd6136535699dd4b5ad95f551c9db4450b43761dc518bd
-Section: Themes
+SHA512: 01d8bad7ec602d512ad40763abc1c4ea353248d0bc6feaad7a1cd3b3ddf4fe513c9c139c8ce2784240dc86c493d2def61d3045f0bcb32b87ac9b9800e0acf6f4
 Description: A free respring pack with fun icons
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.respringpack
-Icon: https://redentic.dev/depictions/com.redenticdev.respringpack/icon.png
 Name: Redentic's Respring Pack
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.respringpack/sileo.json
+Icon: https://redentic.dev/depictions/com.redenticdev.respringpack/icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.respringpack
+SileoDepiction: https://redentic.dev/depictions/com.redenticdev.respringpack/sileo.json
+Author: RedenticDev <redenticdev@gmail.com>
 
 Package: com.redenticdev.respringpack
-Version: 1.2.0
 Architecture: iphoneos-arm
+Version: 1.2.0
+Section: Themes
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Depends: com.spark.snowboard | com.spark.snowboard.respringextension | com.anemonetheming.anemone
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.respringpack_1.2.0_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.respringpack_1.2.0_iphoneos-arm.deb
 Size: 446340
 MD5sum: ae3554962417f1553ab39f5e9042e9aa
 SHA1: 20e07119013ef5a1ceccdce54c147b2b58cf38e6
 SHA256: 6d62c438ea6da37c1cdf81a3236f1bf7805092a4cfce14d816ef290a574cfb35
-Section: Themes
+SHA512: d2c62a2b83838ae7c6b342b92469f3f8f5d04640cf46f2aeb33a41e03ff3f6dfc45afcc6051de4ac0c3bcb9321062919e02f60404e020fe3a161972a42c6be22
 Description: A free respring pack with fun icons
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.respringpack
-Icon: https://redentic.dev/depictions/com.redenticdev.respringpack/icon.png
 Name: Redentic's Respring Pack
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.respringpack/sileo.json
+Icon: https://redentic.dev/depictions/com.redenticdev.respringpack/icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.respringpack
+SileoDepiction: https://redentic.dev/depictions/com.redenticdev.respringpack/sileo.json
+Author: RedenticDev <redenticdev@gmail.com>
 
 Package: com.redenticdev.sbcolors
-Version: 1.0.0-1+debug
 Architecture: iphoneos-arm
+Version: 1.0.0-1+debug
+Section: Tweaks
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 852
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common (>= 1.11), ws.hbang.alderis | org.thebigboss.libcolorpicker (>= 1.6.3)
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.sbcolors_1.0.0_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.sbcolors_1.0.0_iphoneos-arm.deb
 Size: 467968
 MD5sum: 18bb87e7ca5ff81ea0d2ce290537ecea
 SHA1: 9e8d6d89e20400b10eedea39b92bcde827c777ef
 SHA256: c29b2b069eaa6aa6b8a09c7f02bb6c7d8e87b7fed444d518ca9bdcd985a278ec
-Section: Tweaks
+SHA512: a4869e25e1e62581bbbae89462767442a39af4da1c87a9d73302b8c253c0b1cc3574caa5240ca1032f2d7ffb00d11fa1bcb2ad24e2649ac22ed22866d3170cf0
 Description: Easily change your status bar colors!
-Author: RedenticDev <redenticdev@gmail.com>
+Name: SBColors
 Depiction: https://redentic.dev/depictions/?p=com.redenticdev.sbcolors
 Icon: https://raw.githubusercontent.com/RedenticDev/SBColors/master/assets/icon-large.png
-Name: SBColors
+Author: RedenticDev <redenticdev@gmail.com>
 
 Package: com.redenticdev.sbcolors
-Version: 1.0.1
 Architecture: iphoneos-arm
+Version: 1.0.1
+Section: Tweaks
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Installed-Size: 932
 Depends: mobilesubstrate, preferenceloader, firmware (>= 11), ws.hbang.common (>= 1.11), ws.hbang.alderis | org.thebigboss.libcolorpicker (>= 1.6.3)
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.sbcolors_1.0.1_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.sbcolors_1.0.1_iphoneos-arm.deb
 Size: 473070
 MD5sum: 8763a3ac6a92662b5d459349ab644566
 SHA1: 378575d56cad5c4e3878a1891de0d7e831096e90
 SHA256: a05293f37acb70bc79edf088b1ef27fcb1caa14c6be68842fd429217fc7a5467
-Section: Tweaks
+SHA512: 6bc43f70a3be605b64b7afdf565be2d922df89c4d6fdac7b70f821e9f92cf5e772b202b1305c7a5277b039ef20b453f8b40d9e3b6f5c16a3096e21c7e01ec68c
 Description: Easily change your status bar colors!
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.sbcolors
-Icon: https://redentic.dev/depictions/com.redenticdev.sbcolors/icon.png
 Name: SBColors
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.sbcolors/sileo.json
+Icon: https://redentic.dev/depictions/com.redenticdev.sbcolors/icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.sbcolors
+SileoDepiction: https://redentic.dev/depictions/com.redenticdev.sbcolors/sileo.json
+Author: RedenticDev <redenticdev@gmail.com>
 
 Package: com.redenticdev.swrespringpack
-Version: 1.0.0
 Architecture: iphoneos-arm
+Version: 1.0.0
+Section: Themes
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Depends: com.spark.snowboard | com.spark.snowboard.respringextension | com.anemonetheming.anemone
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.swrespringpack_1.0.0_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.swrespringpack_1.0.0_iphoneos-arm.deb
 Size: 921760
 MD5sum: ecdc14ac2001594f9c4480e812a86722
 SHA1: 7957c45f32bbc6623d17f2c416820736c3353424
 SHA256: 7dee838a1fa88b790f6eb19ffc1cf70e35ce31c16277650ff37f6997e2d06b12
-Section: Themes
+SHA512: db6e02684fdcdb595ce63c0d81e54b9894d46bb04bdd05e5e9e76d12db6bf531cc8bdebcb37fdf03d91a63fd2524f9eb09f4d359d1ef796ef7c2ef1cbe1c8f58
 Description: A nice Star Wars respring pack
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.swrespringpack
-Icon: https://redentic.dev/depictions/com.redenticdev.swrespringpack/icon.png
 Name: Star Wars Respring Pack
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.swrespringpack/sileo.json
+Icon: https://redentic.dev/depictions/com.redenticdev.swrespringpack/icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.swrespringpack
+SileoDepiction: https://redentic.dev/depictions/com.redenticdev.swrespringpack/sileo.json
+Author: RedenticDev <redenticdev@gmail.com>
 
 Package: com.redenticdev.swrespringpack
-Version: 1.1.0
 Architecture: iphoneos-arm
+Version: 1.1.0
+Section: Themes
 Maintainer: RedenticDev <redenticdev@gmail.com>
 Depends: com.spark.snowboard | com.spark.snowboard.respringextension | com.anemonetheming.anemone
-Filename: /Users/runner/work/Repo/Repo/debs/com.redenticdev.swrespringpack_1.1.0_iphoneos-arm.deb
+Filename: ./debs/com.redenticdev.swrespringpack_1.1.0_iphoneos-arm.deb
 Size: 1157604
 MD5sum: e2f7571d115dd17ec84d0b76828241a8
 SHA1: 4dc0e219fe58612e1b7bfb25a461cffdcbc2496f
 SHA256: 764c9add9e9b02d56882b935aa1d5a9d06e0ff5eae4088085f2c418954bbe44e
-Section: Themes
+SHA512: 50fd52dde735ae550b5bb3dd1502c044927a40ce84942e8a167a7f5765549a1da27e921d158c49e8982387ce19cec885b6403044d9fc2a217c3a3495e3a9840f
 Description: A nice Star Wars respring pack
-Author: RedenticDev <redenticdev@gmail.com>
-Depiction: https://redentic.dev/depictions/?p=com.redenticdev.swrespringpack
-Icon: https://redentic.dev/depictions/com.redenticdev.swrespringpack/icon.png
 Name: Star Wars Respring Pack
-Sileodepiction: https://redentic.dev/depictions/com.redenticdev.swrespringpack/sileo.json
+Icon: https://redentic.dev/depictions/com.redenticdev.swrespringpack/icon.png
+Depiction: https://redentic.dev/depictions/?p=com.redenticdev.swrespringpack
+SileoDepiction: https://redentic.dev/depictions/com.redenticdev.swrespringpack/sileo.json
+Author: RedenticDev <redenticdev@gmail.com>
 
