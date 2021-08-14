@@ -6,36 +6,36 @@ Codename: cydia-ios
 Architectures: iphoneos-arm
 Components: main
 Description: All tweaks made by Redentic
-Date: Thu, 12 Aug 2021 14:46:45 +0000
+Date: Sat, 14 Aug 2021 10:42:41 +0000
 MD5Sum:
  ed7408363fc3321d371cf03b6b80a34e            13705 Packages
  becd84feaf8bfe57ddea0dbb180add17             3539 Packages.bz2
- 643746be8f71e83232bfaf339e70fe2d             3511 Packages.gz
+ 77deb824b9cc3cea3eb625b8c417de8d             3511 Packages.gz
  129d4c1fbec70612e3cef47097761e19             3187 Packages.lzma
  80e771c24cfcd0f755cb860f8ff8bdbc             3240 Packages.xz
  54cfc15f2e96caa0cca67e2101457ddb             3195 Packages.zst
- df32c71f2ddf0cc3ca40cc36a98c476f               38 Release
+ 5d2a6c345bf3b000d838ab6e0c0d0e49               38 Release
 SHA1:
  0d92545fc9d6a0a62881464ce4df29376bd9ef6b            13705 Packages
  e51d8d7005b3a497ec10d313db87bdf32a15358e             3539 Packages.bz2
- 1032f6870821bd4b8c88fb2a87d1370431ae00d3             3511 Packages.gz
+ e6fc9e47f12a4fe57ee742a62c08a91540ed930a             3511 Packages.gz
  d7c1692779bb91856556a9f942bdffc5f69e72cf             3187 Packages.lzma
  27d46eafae623f876856f2060d50199d086c1072             3240 Packages.xz
  cb0d69c83ad4910bf83cf77a867248623a843a20             3195 Packages.zst
- cd2720e5d6c4c7d3e64afea85f8315a134542619               38 Release
+ a659eb180c1716c63d40be0ac82ae42d3a486845               38 Release
 SHA256:
  c57c3200670a692b62bd509a0c8f6bab3ed8da2d49d4888fd1e42cbbe06967a3            13705 Packages
  f8f05ef7a3543f579873e4e4c37241b903eb210373b4d26984014a336ab32cb2             3539 Packages.bz2
- b0062c3555c929735e4aadc7abe8722a700501185d6cd551a3b7abc02333cdd5             3511 Packages.gz
+ 1ee273e5186c451287e0917fbc1af4fdedc993c492bc0fb38e81fc1c05aaf481             3511 Packages.gz
  665aa303ea787f5519d84ca09b5c42c93421c15cee4ba6cf3fbb60db8196d054             3187 Packages.lzma
  873cf5417d534e1d328a6fb828b2b3b62d3c7f67e634e4f7e9b73f7d36f05fb4             3240 Packages.xz
  776807f92b0b232719b9de680afbd146cc5ac837e575f338584613835abf09d5             3195 Packages.zst
- d4c707db658b3949ce4de64705fe68e10145656542c7a1b8cbd9452a27bd473c               38 Release
+ 576ca892466c87b0ea57d0e71ad234664cefa35dad292755b7d397d965d3c2c5               38 Release
 SHA512:
  05f2fc3d6f5860624b7d3b262f411368167ee4ff78945e165462967c1ebe55fbfded36db1a652e65e839480596f393f8fe9e7632c32b2ee058737140672b6988            13705 Packages
  7046e607e570f7792ab1a41425c8664ed466eb91ed102983ac543d3c4df831a58e423a29d771722f07f9ff2876c3600227e7efc1024d006c010bb9d8362f5fa3             3539 Packages.bz2
- 35f3974dfe37e65db2483e71567d96126f0a47c45abbfe61d0274b9165663d09d983aec89beec4fa05141a3d74291dbf84ff742da8a9d6c8033550dcdd93bd40             3511 Packages.gz
+ 3c2a77ea80d2c42bd35cc5a53cffb044f227a81d06059bb4d03dd43d426c2d44ece63165649b3b05539eb62f44bec2c1cbe19f03354bc549fcf5f23d413e95c3             3511 Packages.gz
  8e93ed9ff74581fff5f8fcd0ab6051c7f6826c1503de0226389c3f74bd277733417963b5d6e419e1a6d36bd679f63e0fc8b053d511a1f1ce8f6dc31bee593658             3187 Packages.lzma
  3a6973ceba7ba682757e1406990d53c529d37bf01b50ba7a4a0e48a08d08e103ded03408c42b81fc29943a8c3ded38b24a9efc87e5dbeb78aef77514a27512ce             3240 Packages.xz
  7d092afea92172ba1fc7c3ac0f08be4b4b70aa15dec83acf34d3f2250f0a9e3b789f57b37eb0060a68e21444319cc8f097b3303a86c180a9f60a2bda8399a559             3195 Packages.zst
- 587610cf52ae501a04c4ee0435808eb33c60271b41572bb88863299c90fbefa9d221959f2a2dcf4d4d531e813c92e03ba927dbb46b7e7ee52f3c287d1c3d40e6               38 Release
+ 5affbd04fe6b34b4a2854d8b5df474da489faa81697cd9ce97e28386a9f49ab3a6fa9330df1fc96b9deefbbd6bc5f0e0a2fbb2e991fa085ae5128b0970634944               38 Release
