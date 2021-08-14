@@ -9,7 +9,35 @@ on:
   workflow_dispatch:
 
 jobs:
+  check-for-debs-modification: # https://github.community/t/run-job-only-if-folder-changed/118292/2
+    name: Check for debs modification
+    runs-on: ubuntu-latest
+    outputs:
+      modified: ${{ steps.check-debs.outputs.modified }}
+    steps:
+      - name: 📂 Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - name: 📄 Checking for modified debs
+        id: check-debs
+        run: |
+          git diff --name-only HEAD^ HEAD > files.txt
+          while IFS= read -r file
+          do
+            echo Modified file: $file
+            if [[ $file != debs/* ]]; then
+              echo "::set-output name=modified::false"
+              break
+            else
+              echo "::set-output name=modified::true"
+            fi
+          done < files.txt
+
   update-packages-and-release:
+    name: Update Packages and Release
+    needs: check-for-debs-modification
+    if: needs.check-for-debs-modification.outputs.modified == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: 📂 Checkout
@@ -19,8 +47,7 @@ jobs:
           fetch-depth: 0
           ref: 'main'
       - name: 🔍 Check for dependencies
-        run: |
-          command -v zstd || sudo apt install zstd
+        run: command -v zstd || sudo apt install zstd
       - name: 📝 Create Packages
         run: apt-ftparchive packages ./debs > Packages
       - name: 📝 Create Packages.bz2 from Packages
@@ -60,6 +87,7 @@ jobs:
           branch: ${{ github.ref }}
         
   minification-css-js:
+    name: Minify css & js files
     runs-on: macos-latest
     steps:
       - name: 📂 Checkout
