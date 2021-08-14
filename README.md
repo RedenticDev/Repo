@@ -6,7 +6,7 @@
 ![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fredentic.dev)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/RedenticDev/Repo)
 
-This repo has been made with [Maxwell Dausch's tutorial](https://github.com/MDausch/Example-Cydia-Repository) and improved with the help of [Litten's Repo](https://github.com/schneelittchen/Repository). Security improvements from [doregon's tutorial](https://github.com/Doregon/signing-apt-repo-faq).  
+This repo has been made with [Maxwell Dausch's tutorial](https://github.com/MDausch/Example-Cydia-Repository) and improved with the help of [Litten's Repo](https://github.com/schneelittchen/Repository). Security improvements from [Doregon's tutorial](https://github.com/Doregon/signing-apt-repo-faq).  
 All the redesigns and improvements since its creation have been done by myself. Feel free to take whatever you want from it!
 
 ## URLs
@@ -29,4 +29,27 @@ Tweak | Version | Description | Compatibility
 Tweaks on other repos:
 Repo | Tweak | Version | Description | Compatibility
 :---:|:---:|:---:|:---:|:---:
-[Dynastic Repo](https://repo.dynastic.co/package/shortlook-telegram) | **[ShortLook-Telegram](https://github.com/RedenticDev/ShortLook-Telegram)** | v1.0.0 | Show Telegram Contact Photos in ShortLook when you receive a Telegram notification! | iOS 11.0 - 14.4
+[Dynastic Repo](https://repo.dynastic.co/package/shortlook-telegram) | **[ShortLook-Telegram](https://github.com/RedenticDev/ShortLook-Telegram)** | v1.1.0 | Show Telegram Contact Photos in ShortLook when you receive a Telegram notification! | iOS 11.0 - 14.7.1
+
+---
+<details>
+  <summary><strong>Public key: </strong><a href="https://github.com/RedenticDev/Repo/files/6986250/redentic-repo.gpg.zip">redentic-repo.gpg.zip</a> <em>(Click for usage)</em></summary>
+  <br/>
+  Here is how to use a public GPG key for a Cydia repository:
+  <ol>
+    <li>Download and unzip the key</li>
+    <li>
+      On iOS:
+      <ul>
+        <li>Move it to <code>/etc/apt/trusted.gpg.d/</code></li>
+      </ul>
+      On macOS:
+      <ul>
+        <li>Install <a href="https://github.com/ProcursusTeam/Procursus/wiki/Building-on-iOS-and-macOS" target="_blank">Procursus</a></li>
+        <li>Move the key to <code>/opt/procursus/etc/apt/trusted.gpg.d/</code></li>
+      </ul>
+    </li>
+    <li>Refresh your sources, no error should occur. If there is any, there might be a security issue.<br />Please report me if any <em>GPG error</em> occurs, like <code>BADSIG</code> or <code>NO_PUBKEY</code>.</li>
+  </ol>
+  <blockquote>Note: My key (this file) is already included in Procursus keyring, refreshing your sources in Sileo should be the only step needed.</blockquote>
+</details>
