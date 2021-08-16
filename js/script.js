@@ -102,7 +102,7 @@ document.addEventListener("readystatechange", () => {
 
     const devices = [
         ["taurine", "iPhone XS", "iOS 14.3", "64 GB", "Space Gray", "<strong><em>(Main device)</em></strong>"],
-        ["checkra1n", "iPhone 7", "iOS 14.3", "128 GB", "PRODUCT(RED)"],
+        ["checkra1n", "iPhone 7", "iOS 14.3", "128 GB", "(PRODUCT)<sup>RED</sup>"],
         ["checkra1n", "iPhone 6s", "iOS 13.7", "128 GB", "Space Gray"],
         ["checkra1n", "iPhone 6", "iOS 12.5.4", "64 GB", "Gold"],
         ["checkra1n", "iPad 6", "iPadOS 14.6", "32 GB", "Gold"],
