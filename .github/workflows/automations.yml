@@ -9,8 +9,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  check-for-debs-modification: # https://github.community/t/run-job-only-if-folder-changed/118292/2
-    name: Check for debs modification
+  check-for-debs-modifications: # https://github.community/t/run-job-only-if-folder-changed/118292/2
+    name: Check for debs modifications
     runs-on: ubuntu-latest
     outputs:
       modified: ${{ steps.check-debs.outputs.modified }}
@@ -36,8 +36,8 @@ jobs:
 
   update-packages-and-release:
     name: Update Packages and Release
-    needs: check-for-debs-modification
-    if: needs.check-for-debs-modification.outputs.modified == 'true'
+    needs: check-for-debs-modifications
+    if: needs.check-for-debs-modifications.outputs.modified == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: 📂 Checkout
@@ -112,7 +112,7 @@ jobs:
           git pull origin main
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add **/*.{css,js,json}
+          git add **/*.css **/*.js **/*.json
           git commit -m "[Bot] Update minified files" || true
         # Add '|| true' to avoid marking as error an empty commit
       - name: 🌐 Push
