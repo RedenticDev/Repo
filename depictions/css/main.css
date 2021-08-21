@@ -73,7 +73,7 @@ ul {
 }
 
 .box {
-	background-color: #fffdfd;
+	background-color: lightgray;
 	margin-bottom: 20px;
 	width: 90vw;
 	max-width: 800px;
@@ -86,6 +86,10 @@ ul {
 
 .box h1 {
 	display: inline-block;
+}
+
+#compatibility {
+	padding: 0 10px;
 }
 
 #description {

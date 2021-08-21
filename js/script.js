@@ -27,7 +27,7 @@ new Promise((resolve, reject) => {
             reject("An error occurred.\n(readyState = "
                 + req.readyState + ", status = " + req.status + ")");
         }
-        req.open("GET", "https://raw.githubusercontent.com/RedenticDev/RedenticDev/master/README.md", true);
+        req.open("GET", "https://raw.githubusercontent.com/RedenticDev/RedenticDev/master/README.md");
         req.send();
     } catch (er) {
         reject(er.message);
@@ -46,26 +46,25 @@ $(() => {
     const packages = ["com.redenticdev.sbcolors", "com.redenticdev.fastlpm", "com.redenticdev.respringpack", "com.redenticdev.appmore", "com.redenticdev.swrespringpack"];
 
     // Random order with Chrome/Opera/Safari 14(?)+
-    $.each(packages, (i, actualPackage) => {
+    $.each(packages, (_, actualPackage) => {
         $.ajax({
             type: "GET",
             url: location.href + "depictions/" + actualPackage + "/info.xml",
-            dataType: "xml",
-            success: xml => {
-                $(xml).find("packageInfo").each(() => {
-                    $("section#packages").append("<a href=\"depictions/?p=" + actualPackage + "\" target=\"_blank\" class=\"package\">");
-                    $("section#packages a:last-child").append("<img src=\"depictions/" + actualPackage + "/icon.png\" alt=\"\" />");
-                    $(xml).find("name").each(function () {
-                        $("section#packages a:last-child").append("<h3>" + $(this).text().trim() + "</h3>")
-                    });
-                    $(xml).find("description:first").each(function () {
-                        $("section#packages a:last-child").append("<p>" + $(this).text().trim() + "</p>")
-                    });
-                    $("section#packages").append("</a>");
+            dataType: "xml"
+        }).done(xml => {
+            $(xml).find("packageInfo").each(() => {
+                $("section#packages").append("<a href=\"depictions/?p=" + actualPackage + "\" target=\"_blank\" class=\"package\">");
+                $("section#packages a:last-child").append("<img src=\"depictions/" + actualPackage + "/icon.png\" alt=\"\" />");
+                $(xml).find("name").each(function () {
+                    $("section#packages a:last-child").append("<h3>" + $(this).text().trim() + "</h3>")
                 });
-            }
-        });
-    })
+                $(xml).find("description:first").each(function () {
+                    $("section#packages a:last-child").append("<p>" + $(this).text().trim() + "</p>")
+                });
+                $("section#packages").append("</a>");
+            });
+        }).fail(() => console.warn(actualPackage + " not found!"));
+    });
 });
 
 /**
@@ -101,7 +100,7 @@ document.addEventListener("readystatechange", () => {
     if (document.readyState != "interactive") return;
 
     const devices = [
-        ["taurine", "iPhone XS", "iOS 14.3", "64 GB", "Space Gray", "<strong><em>(Main device)</em></strong>"],
+        ["taurine", "iPhone XS", "iOS 14.3", "64 GB", "Space Gray"],
         ["checkra1n", "iPhone 7", "iOS 14.3", "128 GB", "(PRODUCT)<sup>RED</sup>"],
         ["checkra1n", "iPhone 6s", "iOS 13.7", "128 GB", "Space Gray"],
         ["checkra1n", "iPhone 6", "iOS 12.5.4", "64 GB", "Gold"],
@@ -110,69 +109,49 @@ document.addEventListener("readystatechange", () => {
         ["Apple Watch Series 5", "watchOS 7.3.3", "Space Gray"],
         ["AirPods", "1st Gen", "Wireless Case"]
     ];
-    let content = "";
-    let spaceplease = false;
 
-    devices.forEach(line => {
+    function wordToImage(word) {
+        switch (word) {
+            case "unc0ver":
+                return "<img src=\"https://unc0ver.dev/favicon.ico\" alt=\"" + word + "\" /> ";
+    
+            case "taurine":
+                return "<img src=\"https://taurine.app/assets/images/favicon.png\" alt=\"" + word + "\" /> ";
+    
+            case "odyssey":
+                return "<img src=\"https://theodyssey.dev/assets/images/favicon.png\" alt=\"" + word + "\" /> ";
+    
+            case "chimera":
+                return "<img src=\"https://chimera.coolstar.org/img/icon.png\" alt=\"" + word + "\" /> ";
+    
+            case "electra":
+                return "<img src=\"https://coolstar.org/electra/favicon.ico\" alt=\"" + word + "\" /> ";
+    
+            case "checkra1n":
+                return "<img src=\"https://checkra.in/img/favicon.png\" alt=\"" + word + "\" /> ";
+    
+            default:
+                return "<strong>" + word + "</strong>";
+        }
+    }
+
+    let content = "";
+    devices.forEach((line, lineNumber) => {
         content += "<tr><td>";
         line.forEach((word, index) => {
-            switch (word) {
-                case "unc0ver":
-                    word = "<img src=\"https://unc0ver.dev/favicon.ico\" alt=\"" + word + "\" />";
-                    content += word;
-                    spaceplease = true;
-                    return;
-
-                case "taurine":
-                    word = "<img src=\"https://taurine.app/assets/images/favicon.png\" alt=\"" + word + "\" />";
-                    content += word;
-                    spaceplease = true;
-                    return;
-
-                case "odyssey":
-                    word = "<img src=\"https://theodyssey.dev/assets/images/favicon.png\" alt=\"" + word + "\" />";
-                    content += word;
-                    spaceplease = true;
-                    return;
-
-                case "chimera":
-                    word = "<img src=\"https://chimera.coolstar.org/img/icon.png\" alt=\"" + word + "\" />";
-                    content += word;
-                    spaceplease = true;
-                    return;
-
-                case "electra":
-                    word = "<img src=\"https://coolstar.org/electra/favicon.ico\" alt=\"" + word + "\" />";
-                    content += word;
-                    spaceplease = true;
-                    return;
-
-                case "checkra1n":
-                    word = "<img src=\"https://checkra.in/img/favicon.png\" alt=\"" + word + "\" />";
-                    content += word;
-                    spaceplease = true;
-                    return;
-
-                default:
-                    break;
-            }
             if (index == 0) {
-                if (!word.startsWith("<")) content += "<strong>" + word + "</strong>";
-            } else if ((index == line.length - 1 && word.startsWith("<")) || spaceplease) {
-                if (spaceplease) {
-                    word = "<strong>" + word + "</strong>";
-                    spaceplease = false;
-                }
-                content += " " + word;
-            } else {
-                content += " • " + word;
+                word = wordToImage(word); // For all first words
+            } else if (index == 1 && wordToImage(line[0]).startsWith("<img")) {
+                word = "<strong>" + word + "</strong>"; // Backup for words after img
+            } else if (index == line.length - 1 && lineNumber == 0) {
+                word += " <strong><em>(Main device)</em></strong>"; // First line is always main device
             }
+            content += word + (index < line.length - 1 && !word.startsWith("<img") ? " • " : "");
         });
         content += "</td></tr>\n";
     });
 
     document.getElementById("devices-list").innerHTML += content;
-
 }, false);
 
 /**

@@ -1,0 +1,172 @@
+{
+    "class": "DepictionTabView",
+    "minVersion": "0.1",
+    "tabs": [
+        {
+            "class": "DepictionStackView",
+            "tabname": "Details",
+            "views": [
+                {
+                    "class": "DepictionLabelView",
+                    "text": "A nice Star Wars respring pack",
+                    "fontWeight": "medium"
+                },
+                {
+                    "class": "DepictionSpacerView",
+                    "spacing": 8
+                },
+                {
+                    "class": "DepictionScreenshotsView",
+                    "itemCornerRadius": 6,
+                    "itemSize": "{192, 256}",
+                    "screenshots": [
+                        {
+                            "accessibilityText": "Screenshot 1",
+                            "url": "https://redentic.dev/depictions/com.redenticdev.swrespringpack/1.png"
+                        },
+                        {
+                            "accessibilityText": "Screenshot 2",
+                            "url": "https://redentic.dev/depictions/com.redenticdev.swrespringpack/2.png"
+                        }
+                    ]
+                },
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "Content",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- 501st (logo & minimalist)\n- Boba Fett head\n- Clone Phase 1 & 2\n- Darth Vador\n- Empire icon\n- First Order icon\n- Galactic Republic icon\n- Jedi Order icon\n- Rebel Alliance icon\n- Shoretrooper head\n- Stormtrooper heads (Empire & First Order)\n- Mando head\n- Tie Fighter (logo & minimalist)\n- X-wing (logo & minimalist)\n",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "And now",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Baby Yoda\n- Captain Rex\n- 332nd clone\n",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "How to use?",
+                    "useBoldText": true
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "The pack is available in Snowboard. Requires Respring Extension.",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Developer",
+                    "text": "RedenticDev"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Price",
+                    "text": "Free"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Version",
+                    "text": "1.1.0"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "iOS Version",
+                    "text": "iOS 11.0 to 14.4"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Last update",
+                    "text": "03/15/2021"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Release date",
+                    "text": "03/11/2021"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Category",
+                    "text": "Theme"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Github",
+                    "action": "https://github.com/RedenticDev"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Twitter",
+                    "action": "https://twitter.com/RedenticDev"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Reddit",
+                    "action": "https://www.reddit.com/user/redentic"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Paypal",
+                    "action": "https://www.paypal.me/redenticdev"
+                }
+            ]
+        },
+        {
+            "class": "DepictionStackView",
+            "tabname": "Changelog",
+            "views": [
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "v1.1.0",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Added Baby Yoda\n- Added Captain Rex\n- Added 332nd clone\n- Fixed a typo",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "03/15/2021",
+                    "textColor": "gray",
+                    "margins": "{8, 16, 16, 16}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "v1.0.0",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Initial release",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "03/12/2021",
+                    "textColor": "gray",
+                    "margins": "{8, 16, 16, 16}"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,166 @@
+{
+    "class": "DepictionTabView",
+    "headerImage": "https://redentic.dev/depictions/com.redenticdev.sbcolors/banner.png",
+    "tintColor": "#b28ff2",
+    "minVersion": "0.1",
+    "tabs": [
+        {
+            "class": "DepictionStackView",
+            "tabname": "Details",
+            "views": [
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Easily change your status bar colors!",
+                    "fontWeight": "medium"
+                },
+                {
+                    "class": "DepictionSpacerView",
+                    "spacing": 8
+                },
+                {
+                    "class": "DepictionScreenshotsView",
+                    "itemCornerRadius": 6,
+                    "itemSize": "{192, 256}",
+                    "screenshots": [
+                        {
+                            "accessibilityText": "Screenshot 1",
+                            "url": "https://redentic.dev/depictions/com.redenticdev.sbcolors/1.png"
+                        },
+                        {
+                            "accessibilityText": "Screenshot 2",
+                            "url": "https://redentic.dev/depictions/com.redenticdev.sbcolors/2.png"
+                        },
+                        {
+                            "accessibilityText": "Screenshot 3",
+                            "url": "https://redentic.dev/depictions/com.redenticdev.sbcolors/3.png"
+                        },
+                        {
+                            "accessibilityText": "Screenshot 4",
+                            "url": "https://redentic.dev/depictions/com.redenticdev.sbcolors/4.png"
+                        }
+                    ]
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "This tweaks allows you to change the color of your status bar items, individually.\n",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "Features",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Individual change of the color of each status bar element\n- Juice Beta and Prysm support!\n- Modern and clean settings\n- Use of both libcolorpicker and the brand new Alderis Color Picker\n- Reset or disable options\n- Support from iOS 11 to iOS 13\n- Support for both notched and non-notched iPhone (A12 and A13 included)\n- More to come! (Background support, individual reset...)",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Developer",
+                    "text": "RedenticDev"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Price",
+                    "text": "Free"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Version",
+                    "text": "1.0.1"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "iOS Version",
+                    "text": "iOS 11.0 to 13.5"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Last update",
+                    "text": "06/12/2020"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Release date",
+                    "text": "05/15/2020"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Category",
+                    "text": "Tweaks"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Github",
+                    "action": "https://github.com/RedenticDev"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Twitter",
+                    "action": "https://twitter.com/RedenticDev"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Reddit",
+                    "action": "https://www.reddit.com/user/redentic"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Paypal",
+                    "action": "https://www.paypal.me/redenticdev"
+                }
+            ]
+        },
+        {
+            "class": "DepictionStackView",
+            "tabname": "Changelog",
+            "views": [
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "v1.0.1",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Added support for activity indicator\n- Added explanations for tweaks compatibilities\n- Added localizations",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "06/12/2020",
+                    "textColor": "gray",
+                    "margins": "{8, 16, 16, 16}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "v1.0.0",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Initial release",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "05/15/2020",
+                    "textColor": "gray",
+                    "margins": "{8, 16, 16, 16}"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,130 @@
+{
+    "class": "DepictionTabView",
+    "minVersion": "0.1",
+    "tabs": [
+        {
+            "class": "DepictionStackView",
+            "tabname": "Details",
+            "views": [
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Auto-extend app's description in AppStore updates page",
+                    "fontWeight": "medium"
+                },
+                {
+                    "class": "DepictionSpacerView",
+                    "spacing": 8
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "The tweak auto-expands the description of apps in the update page of the AppStore on iOS 13. It works for both updated apps and outdated ones, and has been made after a Reddit request.",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Developer",
+                    "text": "RedenticDev"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Price",
+                    "text": "Free"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Version",
+                    "text": "1.0.0"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "iOS Version",
+                    "text": "iOS 11.0 to 13.7"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Last update",
+                    "text": "09/27/2020"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Release date",
+                    "text": "09/23/2020"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Category",
+                    "text": "Tweaks (Requests)"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Github",
+                    "action": "https://github.com/RedenticDev"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Twitter",
+                    "action": "https://twitter.com/RedenticDev"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Reddit",
+                    "action": "https://www.reddit.com/user/redentic"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "Paypal",
+                    "action": "https://www.paypal.me/redenticdev"
+                }
+            ]
+        },
+        {
+            "class": "DepictionStackView",
+            "tabname": "Changelog",
+            "views": [
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "v1.0.0",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Initial release",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "09/28/2020",
+                    "textColor": "gray",
+                    "margins": "{8, 16, 16, 16}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "v0.0.9",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "- Initial pre-release",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "09/23/2020",
+                    "textColor": "gray",
+                    "margins": "{8, 16, 16, 16}"
+                }
+            ]
+        }
+    ]
+}

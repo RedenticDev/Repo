@@ -86,8 +86,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
         
-  minification-css-js:
-    name: Minify css & js files
+  minification-css-js-json:
+    name: Minify CSS, JavaScript & JSON files
     runs-on: macos-latest
     steps:
       - name: 📂 Checkout
@@ -98,18 +98,21 @@ jobs:
           ref: 'main'
       - name: 🔍 Check for dependencies
         run: |
-          command -v uglifyjs || npm i -g uglify-js
           command -v uglifycss || npm i -g uglifycss
-      - name: 🗜 Minify JavaScript files
-        run: find $GITHUB_WORKSPACE -name "*.js" ! -name "*.min.*" -exec sh -c 'uglifyjs -c -m -o "${0%.js}.min.js" "$0"' {} \;
+          command -v uglifyjs || npm i -g uglify-js
+          command -v jj || brew install tidwall/jj/jj
       - name: 🗜 Minify CSS files
         run: find $GITHUB_WORKSPACE -name "*.css" ! -name "*.min.*" -exec sh -c 'uglifycss --output "${0%.css}.min.css" "$0"' {} \;
-      - name: 📤 Commit uglified files
+      - name: 🗜 Minify JavaScript files
+        run: find $GITHUB_WORKSPACE -name "*.js" ! -name "*.min.*" -exec sh -c 'uglifyjs -c -m -o "${0%.js}.min.js" "$0"' {} \;
+      - name: 🗜 Minify JSON files
+        run: find $GITHUB_WORKSPACE -name "base.json" -exec sh -c 'jj -u < "$0" > ${0%base.json}sileo.json' {} \;
+      - name: 📤 Commit minified files
         run: |
           git pull origin main
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add **/*.js
+          git add **/*.{css,js,json}
           git commit -m "[Bot] Update minified files" || true
         # Add '|| true' to avoid marking as error an empty commit
       - name: 🌐 Push
