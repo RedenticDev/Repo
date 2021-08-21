@@ -112,7 +112,7 @@ jobs:
           git pull origin main
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add **/*.css **/*.js **/*.json
+          find . -type f \( -name "*.css" -o -name "*.js*" \) -print0 | xargs -0 git add
           git commit -m "[Bot] Update minified files" || true
         # Add '|| true' to avoid marking as error an empty commit
       - name: 🌐 Push
