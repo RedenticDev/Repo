@@ -9,6 +9,13 @@
 This repo has been made with [Maxwell Dausch's tutorial](https://github.com/MDausch/Example-Cydia-Repository) and improved with the help of [Litten's Repo](https://github.com/schneelittchen/Repository). Security improvements from [Doregon's tutorial](https://github.com/Doregon/signing-apt-repo-faq).  
 All the redesigns and improvements since its creation have been done by myself. Feel free to take whatever you want from it!
 
+## Features
+- Supports all package managers with all their features
+- Elegant and responsive website, supporting dark mode & Safari 15
+- Automation features thanks to GitHub Actions
+- GPG securities to ensure content integrity
+- Open source to help you building your repo, and open to contribution
+
 ## URLs
 This repo is available at [redentic.dev](https://redentic.dev).
 
