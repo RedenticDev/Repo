@@ -107,29 +107,29 @@ document.addEventListener("readystatechange", () => {
         ["checkra1n", "iPad 6", "iPadOS 14.8", "32 GB", "Gold"],
         ["MacBook 2017", "macOS 12.0.1 Monterey", "i5", "8 GB / 512 GB", "Space Gray"],
         ["Apple Watch Series 5", "watchOS 7.3.3", "Space Gray"],
-        ["AirPods", "3rd Gen", "Wireless Case"]
+        ["AirPods Pro", "Wireless Case"]
     ];
 
     function wordToImage(word) {
         switch (word) {
             case "unc0ver":
                 return "<img src=\"https://unc0ver.dev/favicon.ico\" alt=\"" + word + "\" /> ";
-    
+
             case "taurine":
                 return "<img src=\"https://taurine.app/assets/images/favicon.png\" alt=\"" + word + "\" /> ";
-    
+
             case "odyssey":
                 return "<img src=\"https://theodyssey.dev/assets/images/favicon.png\" alt=\"" + word + "\" /> ";
-    
+
             case "chimera":
                 return "<img src=\"https://chimera.coolstar.org/img/icon.png\" alt=\"" + word + "\" /> ";
-    
+
             case "electra":
                 return "<img src=\"https://coolstar.org/electra/favicon.ico\" alt=\"" + word + "\" /> ";
-    
+
             case "checkra1n":
                 return "<img src=\"https://checkra.in/img/favicon.png\" alt=\"" + word + "\" /> ";
-    
+
             default:
                 return "<strong>" + word + "</strong>";
         }
