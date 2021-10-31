@@ -103,11 +103,11 @@ document.addEventListener("readystatechange", () => {
         ["taurine", "iPhone XS", "iOS 14.3", "64 GB", "Space Gray"],
         ["checkra1n", "iPhone 7", "iOS 14.3", "128 GB", "(PRODUCT)<sup>RED</sup>"],
         ["checkra1n", "iPhone 6s", "iOS 13.7", "128 GB", "Space Gray"],
-        ["checkra1n", "iPhone 6", "iOS 12.5.4", "64 GB", "Gold"],
+        ["checkra1n", "iPhone 6", "iOS 12.5.5", "64 GB", "Gold"],
         ["checkra1n", "iPad 6", "iPadOS 14.8", "32 GB", "Gold"],
-        ["MacBook 2017", "macOS 11.6 Big Sur", "i5", "8 GB / 512 GB", "Space Gray"],
+        ["MacBook 2017", "macOS 12.0.1 Monterey", "i5", "8 GB / 512 GB", "Space Gray"],
         ["Apple Watch Series 5", "watchOS 7.3.3", "Space Gray"],
-        ["AirPods", "1st Gen", "Wireless Case"]
+        ["AirPods", "3rd Gen", "Wireless Case"]
     ];
 
     function wordToImage(word) {
