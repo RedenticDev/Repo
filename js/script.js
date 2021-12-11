@@ -33,7 +33,7 @@ new Promise((resolve, reject) => {
         reject(er.message);
     }
 }).then(
-    resolve => document.getElementById("markdown").innerHTML = marked(resolve),
+    resolve => document.getElementById("markdown").innerHTML = marked.parse(resolve),
     reject => document.getElementById("markdown").innerHTML = reject
 );
 
