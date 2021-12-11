@@ -240,7 +240,7 @@ section#contact button#collapsible {
     font-size: medium;
     border: black 1px solid;
     border-radius: 30px;
-    padding: 16px 20px;
+    padding: 15px 20px;
     margin: 10px 10px 0 10px;
     -webkit-transition: 500ms;
     -moz-transition: 500ms;
@@ -371,6 +371,14 @@ section#devices table tbody#devices-list tr td img {
     margin-right: 3px;
 }
 
+section#devices table>caption {
+    caption-side: bottom;
+    font-style: italic;
+    font-size: small;
+    margin-top: 10px;
+    color: dimgray;
+}
+
 /* ==== */
 
 
@@ -428,6 +436,10 @@ section#devices table tbody#devices-list tr td img {
     section#devices table tbody#devices-list tr td img[src*="checkra.in"] {
         -webkit-filter: invert();
         filter: invert();
+    }
+
+    section#devices table>caption {
+        color: gray;
     }
 
     .not-apple::-webkit-scrollbar {
