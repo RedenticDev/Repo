@@ -158,7 +158,7 @@ function lastUpdateDate(url) {
 function compatible(works_min, works_max) {
     // iOS version detection by Dylan Duff
     // Does not work for iPadOS, as iPadOS is seen by the browser as a Mac :/
-    const currentiOS = parseFloat(("" + (/CPU.*OS ([0-9_]{1,})|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0, ""])[1]).replace("undefined", "3_2").replace("_", ".").replace("_", ""));
+    const currentiOS = parseFloat(("" + (/CPU.*OS ([0-9_]+)|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0, ""])[1]).replace("undefined", "3_2").replace("_", ".").replace("_", ""));
     works_min = numerize(works_min);
     works_max = numerize(works_max);
 

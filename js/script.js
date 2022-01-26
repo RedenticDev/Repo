@@ -76,16 +76,9 @@ document.addEventListener("readystatechange", () => {
     const section = document.getElementById("add-repo");
     const alert = document.getElementById("alert");
     function iOS() {
-        return [
-            'iPad Simulator',
-            'iPhone Simulator',
-            'iPod Simulator',
-            'iPad',
-            'iPhone',
-            'iPod'
-        ].includes(navigator.platform)
-            // iPad on iOS 13+ detection
-            || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+        const platform = navigator?.userAgentData?.platform || navigator?.platform
+        return /(iPhone|iPod|iPad)/i.test(platform)
+            || (/Mac/i.test(platform) && "ontouchend" in document) // iPad on iOS 13+ detection
     }
     if (section && alert && iOS()) {
         alert.style.display = "none";
@@ -156,7 +149,7 @@ document.addEventListener("readystatechange", () => {
 /**
  * Browser detector
  */
-if (!/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+if (!/(Mac|iPhone|iPod|iPad)/i.test(navigator?.userAgentData?.platform || navigator?.platform)) {
     document.getElementsByTagName("body")[0].className += " not-apple";
     document.getElementById("screenshots")?.classList.add("not-apple");
 }
