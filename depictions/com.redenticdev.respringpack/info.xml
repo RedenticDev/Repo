@@ -39,11 +39,11 @@
         <dependency>Snowboard &amp; Snowboard Respring Extension or Anemone (untested)</dependency>
     </dependencies>
     <changelog>
-    	<change>
-        	<changeVersion>v1.2.0</changeVersion>
-        	<changeDescription>Added Electra jailbreak logo</changeDescription>
-        	<changeDescription>Added Chimera jailbreak logo</changeDescription>
-        	<changeDescription>Added Taurine jailbreak logo</changeDescription>
+        <change>
+            <changeVersion>v1.2.0</changeVersion>
+            <changeDescription>Added Electra jailbreak logo</changeDescription>
+            <changeDescription>Added Chimera jailbreak logo</changeDescription>
+            <changeDescription>Added Taurine jailbreak logo</changeDescription>
         </change>
         <change>
             <changeVersion>v1.1.0</changeVersion>
@@ -71,7 +71,7 @@
         <twitter>https://twitter.com/RedenticDev</twitter>
         <reddit>https://www.reddit.com/user/redentic</reddit>
         <discord>Redentic|0475|692312923661664256</discord>
-        <mail>mailto:redenticdev@gmail.com</mail>
+        <mail>mailto:hello@redentic.dev</mail>
         <paypal>https://www.paypal.me/redenticdev</paypal>
     </links>
 </packageInfo>

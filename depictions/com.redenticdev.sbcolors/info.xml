@@ -32,12 +32,12 @@
         <dependency>Alderis or libcolorpicker</dependency>
     </dependencies>
     <changelog>
-	<change>
-	    <changeVersion>v1.0.1</changeVersion>
-	    <changeDescription>Added support for activity indicator</changeDescription>
-	    <changeDescription>Added explanations for tweaks compatibilities</changeDescription>
-	    <changeDescription>Added localizations</changeDescription>
-	</change>
+        <change>
+            <changeVersion>v1.0.1</changeVersion>
+            <changeDescription>Added support for activity indicator</changeDescription>
+            <changeDescription>Added explanations for tweaks compatibilities</changeDescription>
+            <changeDescription>Added localizations</changeDescription>
+        </change>
         <change>
             <changeVersion>v1.0.0</changeVersion>
             <changeDescription>Initial Release</changeDescription>
@@ -59,7 +59,7 @@
         <twitter>https://twitter.com/RedenticDev</twitter>
         <reddit>https://www.reddit.com/user/redentic</reddit>
         <discord>Redentic|0475|692312923661664256</discord>
-        <mail>mailto:redenticdev@gmail.com</mail>
+        <mail>mailto:hello@redentic.dev</mail>
         <paypal>https://www.paypal.me/redenticdev</paypal>
     </links>
 </packageInfo>

@@ -10,15 +10,15 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
     scroll-behavior: smooth;
-    animation: fadeInAnimation 3s ease;
+    animation: fadeInAnimation 1s ease;
     animation-fill-mode: forwards;
-    -webkit-animation: fadeInAnimation 3s ease;
+    -webkit-animation: fadeInAnimation 1s ease;
     -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes fadeInAnimation {
     from {
-        opacity: 0;
+        opacity: .5;
     }
 
     to {
@@ -28,7 +28,7 @@ body {
 
 @-webkit-keyframes fadeInAnimation {
     from {
-        opacity: 0;
+        opacity: .5;
     }
 
     to {

@@ -92,16 +92,6 @@ document.addEventListener("readystatechange", () => {
 document.addEventListener("readystatechange", () => {
     if (document.readyState != "interactive") return;
 
-    const devices = [
-        ["iPhone 13 Pro", "iOS 15.2.1", "256 GB", "Graphite"],
-        ["taurine", "iPhone XS", "iOS 14.8", "64 GB", "Space Gray"],
-        ["checkra1n", "iPhone 7", "iOS 14.3", "128 GB", "(PRODUCT)<sup>RED</sup>"],
-        ["checkra1n", "iPhone 6s", "iOS 13.7", "128 GB", "Space Gray"],
-        ["checkra1n", "iPhone 6", "iOS 12.5.5", "64 GB", "Gold"],
-        ["checkra1n", "iPad 6", "iPadOS 14.8", "32 GB", "Gold"],
-        ["MacBook Pro 2021", "macOS 12.2 Monterey", "M1 Pro 10C/16C", "16 GB / 1 TB", "Space Gray"]
-    ];
-
     function wordToImage(word) {
         switch (word) {
             case "unc0ver":
@@ -127,23 +117,27 @@ document.addEventListener("readystatechange", () => {
         }
     }
 
-    let content = "";
-    devices.forEach((line, lineNumber) => {
-        content += "<tr><td>";
-        line.forEach((word, index) => {
-            if (index == 0) {
-                word = wordToImage(word); // For all first words
-            } else if (index == 1 && wordToImage(line[0]).startsWith("<img")) {
-                word = "<strong>" + word + "</strong>"; // Backup for words after img
-            } else if (index == line.length - 1 && lineNumber == 0) {
-                word += " <strong><em>(Main device)</em></strong>"; // First line is always main device
-            }
-            content += word + (index < line.length - 1 && !word.startsWith("<img") ? " • " : "");
-        });
-        content += "</td></tr>\n";
-    });
+    import("./devices.min.js").then(
+        file => {
+            let content = "";
+            file.getDevices().forEach((line, lineNumber) => {
+                content += "<tr><td>";
+                line.forEach((word, index) => {
+                    if (index == 0) {
+                        word = wordToImage(word); // For all first words
+                    } else if (index == 1 && wordToImage(line[0]).startsWith("<img")) {
+                        word = "<strong>" + word + "</strong>"; // Backup for words after img
+                    } else if (index == line.length - 1 && lineNumber == 0) {
+                        word += " <strong><em>(Main device)</em></strong>"; // First line is always main device
+                    }
+                    content += word + (index < line.length - 1 && !word.startsWith("<img") ? " • " : "");
+                });
+                content += "</td></tr>\n";
+            });
+            document.getElementById("devices-list").innerHTML += content;
+        }
+    ).catch(error => document.getElementById("devices-list").innerHTML = error.message);
 
-    document.getElementById("devices-list").innerHTML += content;
 }, false);
 
 /**
