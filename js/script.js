@@ -27,7 +27,7 @@ new Promise((resolve, reject) => {
             reject("An error occurred.\n(readyState = "
                 + req.readyState + ", status = " + req.status + ")");
         }
-        req.open("GET", "https://raw.githubusercontent.com/RedenticDev/RedenticDev/master/README.md");
+        req.open("GET", "https://raw.githubusercontent.com/RedenticDev/RedenticDev/main/README.md");
         req.send();
     } catch (er) {
         reject(er.message);
