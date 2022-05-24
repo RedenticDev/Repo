@@ -3,7 +3,7 @@
  * https://github.com/iamdustan/smoothscroll/blob/master/src/smoothscroll.js
  */
 window.addEventListener("load", () => {
-	var btn = document.getElementsByClassName("top")[0];
+	const btn = document.getElementsByClassName("top")[0];
 	if (btn) {
 		// Click to scroll to top
 		btn.addEventListener("click", e => {
@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
 		// Scroll dynamic triggering
 		window.addEventListener("scroll", () => {
 			if (window.scrollY < 0) return;
-			var btnRight = window.getComputedStyle(btn, null)
+			const btnRight = window.getComputedStyle(btn, null)
 				.getPropertyValue('right')
 				.replace(/px$/, '');
 			if (window.scrollY >= 10) {
