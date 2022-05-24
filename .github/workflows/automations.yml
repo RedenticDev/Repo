@@ -16,7 +16,7 @@ jobs:
       modified: ${{ steps.check-debs.outputs.modified }}
     steps:
       - name: 📂 Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.0.2
         with:
           fetch-depth: 2
       - name: 📄 Checking for modified debs
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 📂 Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.0.2
         with:
           persist-credentials: false
           fetch-depth: 0
@@ -91,7 +91,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: 📂 Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.0.2
         with:
           persist-credentials: false
           fetch-depth: 0
