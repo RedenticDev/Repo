@@ -16,7 +16,7 @@ jobs:
       modified: ${{ steps.check-debs.outputs.modified }}
     steps:
       - name: 📂 Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.0.2
         with:
           fetch-depth: 2
       - name: 📄 Checking for modified debs
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 📂 Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.0.2
         with:
           persist-credentials: false
           fetch-depth: 0
@@ -81,7 +81,7 @@ jobs:
           git commit -m "[Bot] Update Packages & Release files" || true
         # Add '|| true' to avoid marking as error an empty commit
       - name: 🌐 Push
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
@@ -91,7 +91,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: 📂 Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.0.2
         with:
           persist-credentials: false
           fetch-depth: 0
@@ -116,7 +116,7 @@ jobs:
           git commit -m "[Bot] Update minified files" || true
         # Add '|| true' to avoid marking as error an empty commit
       - name: 🌐 Push
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
